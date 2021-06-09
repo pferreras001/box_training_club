@@ -1,0 +1,19 @@
+
+//variables
+
+@import 'variables/colors';
+@import 'variables/breakpoints';
+@import 'variables/typography';
+
+
+
+
+
+
+
+
+
+body{
+  background-color: $color-bg;
+  font-family: $tg-main;
+}

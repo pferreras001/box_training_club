@@ -1,0 +1,24 @@
+@font-face {
+   font-family: 'Fajalla';
+   src: url("/imports/typography/FjallaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Ethnocentric-Italic';
+   src: url("/imports/typography/Ethnocentric-Italic.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Ethnocentric-Regular';
+   src: url("/imports/typography/Ethnocentric-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'VenusRising';
+   src: url("/imports/typography/VenusRising-Regular.ttf") format("truetype");
+}
+
+$tg-main: 'Fajalla', sans-serif;
+$tg-second: 'Ethnocentric-Regular', sans-serif;
+$tg-second-it: 'Ethnocentric-Italic', sans-serif;
+$tg-third: 'VenusRising', sans-serif;
