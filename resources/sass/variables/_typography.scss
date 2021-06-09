@@ -1,0 +1,35 @@
+@font-face {
+   font-family: 'Fjalla';
+   src: url("/imports/typography/FjallaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Ethnocentric-Italic';
+   src: url("/imports/typography/Ethnocentric-Italic.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'Ethnocentric-Regular';
+   src: url("/imports/typography/Ethnocentric-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'VenusRising';
+   src: url("/imports/typography/VenusRising-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'ApercuPro-Regular';
+   src: url("/imports/typography/ApercuPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'ApercuPro-Medium';
+   src: url("/imports/typography/ApercuPro-Medium.ttf") format("truetype");
+}
+
+$tg-fjalla: 'Fjalla', sans-serif;
+$tg-apercu-medium: 'ApercuPro-Medium', sans-serif;
+$tg-second: 'Ethnocentric-Regular', sans-serif;
+$tg-second-it: 'Ethnocentric-Italic', sans-serif;
+$tg-third: 'VenusRising', sans-serif;

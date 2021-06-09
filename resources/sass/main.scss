@@ -1,0 +1,22 @@
+
+//variables
+
+@import 'variables/colors';
+@import 'variables/breakpoints';
+@import 'variables/typography';
+
+
+
+//components
+
+@import 'components/navbar';
+
+
+
+
+
+body{
+  background: linear-gradient(180deg, rgba(49,49,50,1) 0%, rgba(22,22,24,1) 100%);
+  font-family: $tg-fjalla;
+  min-height: 1000px;
+}
