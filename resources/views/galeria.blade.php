@@ -4,7 +4,7 @@
 
 <section class="section section__galeria">
 
-  <x-galeria>
+  <x-galeria/>
 
 </section>
 

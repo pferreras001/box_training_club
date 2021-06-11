@@ -4,7 +4,7 @@
 
 <section class="section section__contacto">
 
-  <x-contacto>
+  <x-contacto/>
 
 </section>
 

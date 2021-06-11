@@ -4,7 +4,7 @@
 
 <section class="section section__actividades">
 
-  <x-actividades>
+  <x-actividades/>
 
 </section>
 

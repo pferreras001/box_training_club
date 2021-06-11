@@ -4,7 +4,7 @@
 
 <section class="section section__tienda">
 
-  <x-tienda>
+  <x-tienda/>
 
 </section>
 

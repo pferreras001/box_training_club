@@ -9,29 +9,29 @@
             <span></span>
         </div>
         <ul class="nav-list">
-            <li class="active">
-                <a href="#">Inicio</a>
+            <li class="{{ (Request::route()->getName()=='inicio') ? 'active' : '' }}">
+                <a href="{{ route('inicio') }}">Inicio</a>
             </li>
-            <li>
-              <a href="#">Horarios</a>
+            <li class="{{ (Request::route()->getName()=='horarios') ? 'active' : '' }}">
+              <a href="{{ route('horarios') }}">Horarios</a>
             </li>
-            <li>
-                <a href="#">Actividades</a>
+            <li class="{{ (Request::route()->getName()=='actividades') ? 'active' : '' }}">
+                <a href="{{ route('actividades') }}">Actividades</a>
             </li>
-            <li>
-              <a href="#">Cuotas</a>
+            <li class="{{ (Request::route()->getName()=='cuotas') ? 'active' : '' }}">
+              <a href="{{ route('cuotas') }}">Cuotas</a>
             </li>
-            <li>
-              <a href="#">Blog</a>
+            <li class="{{ (Request::route()->getName()=='blog') ? 'active' : '' }}">
+              <a href="{{ route('blog') }}">Blog</a>
             </li>
-            <li>
-              <a href="#">Galeria</a>
+            <li class="{{ (Request::route()->getName()=='galeria') ? 'active' : '' }}">
+              <a href="{{ route('galeria') }}">Galeria</a>
             </li>
-            <li>
-              <a href="#">Tienda</a>
+            <li class="{{ (Request::route()->getName()=='tienda') ? 'active' : '' }}">
+              <a href="{{ route('tienda') }}">Tienda</a>
             </li>
-            <li>
-              <a href="#">Contacto</a>
+            <li class="{{ (Request::route()->getName()=='contacto') ? 'active' : '' }}">
+              <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             <li>
                 <button class="btn">Iniciar Sesión</button>

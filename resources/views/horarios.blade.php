@@ -4,7 +4,7 @@
 
 <section class="section section__horarios">
 
-  <x-horarios>
+  <x-horarios/>
 
 </section>
 

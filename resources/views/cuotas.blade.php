@@ -4,7 +4,7 @@
 
 <section class="section section__home">
 
-  <x-cuotas>
+  <x-cuotas/>
 
 </section>
 
