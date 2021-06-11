@@ -1,9 +1,5 @@
 @font-face {
-<<<<<<< HEAD
-  font-family: "Fjalla";
-=======
   font-family: "Fajalla";
->>>>>>> main
   src: url("/imports/typography/FjallaOne-Regular.ttf") format("truetype");
 }
 @font-face {
@@ -286,9 +282,4 @@ body {
   background: linear-gradient(180deg, #313132 0%, #161618 100%);
   font-family: "Fjalla", sans-serif;
   min-height: 1000px;
-=======
-body {
-  background-color: black;
-  font-family: "Fajalla", sans-serif;
->>>>>>> main
 }
