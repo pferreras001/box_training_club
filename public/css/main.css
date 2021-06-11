@@ -278,6 +278,6 @@ nav ul.dropdown-list {
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(90deg, #313132 0%, #161618 100%);
   font-family: "Fajalla", sans-serif;
 }
