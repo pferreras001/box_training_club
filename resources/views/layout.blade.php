@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+<<<<<<< HEAD
+=======
+  @meta_tags
+>>>>>>> main
   
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -29,7 +33,11 @@
 
 
 
+<<<<<<< HEAD
   <x-navbar/>
+=======
+  <x-menu/>
+>>>>>>> main
 
 
   <div class="">

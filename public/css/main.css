@@ -1,5 +1,9 @@
 @font-face {
+<<<<<<< HEAD
   font-family: "Fjalla";
+=======
+  font-family: "Fajalla";
+>>>>>>> main
   src: url("/imports/typography/FjallaOne-Regular.ttf") format("truetype");
 }
 @font-face {
@@ -14,6 +18,7 @@
   font-family: "VenusRising";
   src: url("/imports/typography/VenusRising-Regular.ttf") format("truetype");
 }
+<<<<<<< HEAD
 @font-face {
   font-family: "ApercuPro-Regular";
   src: url("/imports/typography/ApercuPro-Regular.ttf") format("truetype");
@@ -281,4 +286,9 @@ body {
   background: linear-gradient(180deg, #313132 0%, #161618 100%);
   font-family: "Fjalla", sans-serif;
   min-height: 1000px;
+=======
+body {
+  background-color: black;
+  font-family: "Fajalla", sans-serif;
+>>>>>>> main
 }
