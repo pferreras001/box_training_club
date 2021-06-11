@@ -33,7 +33,15 @@
 
 
 
+<<<<<<< HEAD
   <x-navbar/>
+=======
+<<<<<<< HEAD
+  <x-navbar/>
+=======
+  <x-menu/>
+>>>>>>> main
+>>>>>>> main
 
 
   <div class="">
