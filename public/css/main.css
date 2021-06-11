@@ -14,7 +14,6 @@
   font-family: "VenusRising";
   src: url("/imports/typography/VenusRising-Regular.ttf") format("truetype");
 }
-<<<<<<< HEAD
 @font-face {
   font-family: "ApercuPro-Regular";
   src: url("/imports/typography/ApercuPro-Regular.ttf") format("truetype");
@@ -68,7 +67,7 @@
 }
 
 .brand .icon {
-  fill: #FFE33C;
+  fill: #e9d800;
 }
 
 .nav-wrapper ul.nav-list {
@@ -83,7 +82,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: #FFE33C;
+  background: #e9d800;
   transition: width 0.3s;
 }
 
@@ -105,12 +104,12 @@
 }
 
 .nav-wrapper ul.nav-list li a:hover, .nav-wrapper ul.nav-list li.active a {
-  color: #FFE33C;
+  color: #e9d800;
 }
 
 .btn {
-  background: #FFE33C;
-  color: #00000F;
+  background: #e9d800;
+  color: black;
   outline: none;
   padding: 8px 20px;
   font-size: 14px;
@@ -279,7 +278,6 @@ nav ul.dropdown-list {
 }
 
 body {
-  background: linear-gradient(180deg, #313132 0%, #161618 100%);
-  font-family: "Fjalla", sans-serif;
-  min-height: 1000px;
+  background-color: black;
+  font-family: "Fajalla", sans-serif;
 }
