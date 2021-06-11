@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav>
     <div class="container nav-wrapper">
         <div class="brand">
@@ -80,3 +81,8 @@ hamburger.addEventListener('click', function() {
 
 })
 </script>
+=======
+<div>
+    <!-- He who is contented is rich. - Laozi -->
+</div>
+>>>>>>> main

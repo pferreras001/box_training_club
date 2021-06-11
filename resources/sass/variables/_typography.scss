@@ -1,5 +1,9 @@
 @font-face {
+<<<<<<< HEAD
    font-family: 'Fjalla';
+=======
+   font-family: 'Fajalla';
+>>>>>>> main
    src: url("/imports/typography/FjallaOne-Regular.ttf") format("truetype");
 }
 
@@ -18,6 +22,7 @@
    src: url("/imports/typography/VenusRising-Regular.ttf") format("truetype");
 }
 
+<<<<<<< HEAD
 @font-face {
    font-family: 'ApercuPro-Regular';
    src: url("/imports/typography/ApercuPro-Regular.ttf") format("truetype");
@@ -30,6 +35,9 @@
 
 $tg-fjalla: 'Fjalla', sans-serif;
 $tg-apercu-medium: 'ApercuPro-Medium', sans-serif;
+=======
+$tg-main: 'Fajalla', sans-serif;
+>>>>>>> main
 $tg-second: 'Ethnocentric-Regular', sans-serif;
 $tg-second-it: 'Ethnocentric-Italic', sans-serif;
 $tg-third: 'VenusRising', sans-serif;
