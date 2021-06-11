@@ -36,6 +36,7 @@
   <x-navbar/>
 
 
+
   <div class="">
 
     @yield('section')
