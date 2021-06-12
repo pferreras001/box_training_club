@@ -55,6 +55,7 @@
   transform: translate(-50%, 0);
   position: fixed;
   padding: 0 100px 0 100px;
+  z-index: 5;
 }
 
 .brand {

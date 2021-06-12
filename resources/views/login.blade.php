@@ -4,7 +4,7 @@
 
 <section class="section login__section">
 
-  <div class="container login__container">
+  <div data-aos="flip-left" class="container login__container">
 
     <?php require('svg/login/logotipo.svg')?>
 
