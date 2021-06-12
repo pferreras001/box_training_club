@@ -107,24 +107,6 @@
   color: #e9d800;
 }
 
-.btn {
-  background: #e9d800;
-  color: black;
-  outline: none;
-  padding: 8px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  border: 1px solid transparent;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn:hover {
-  background: transparent;
-  border-color: white;
-  color: white;
-}
-
 main section.header {
   display: flex;
   align-items: center;

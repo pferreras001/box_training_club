@@ -84,23 +84,6 @@
     color: $color-yellow;
 }
 
-.btn {
-    background: $color-yellow;
-    color: $color-black;
-    outline: none;
-    padding: 8px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    border: 1px solid transparent;
-    transition: all .5s ease-in-out;
-}
-
-.btn:hover {
-    background: transparent;
-    border-color: $color-white;
-    color: $color-white;
-}
 
 main section.header {
     display: flex;
