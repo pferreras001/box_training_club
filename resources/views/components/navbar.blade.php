@@ -34,7 +34,7 @@
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             <li>
-                <button class="btn">Iniciar Sesión</button>
+                <button class="btn nav__btn">Iniciar Sesión</button>
             </li>
         </ul>
     </div>

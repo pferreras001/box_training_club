@@ -19,3 +19,21 @@ body{
   background: linear-gradient(90deg, rgba(49,49,50,1) 0%, rgba(22,22,24,1) 100%);
   font-family: $tg-main;
 }
+
+.btn {
+    background: $color-yellow;
+    color: $color-black;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: $color-white;
+    color: $color-white;
+}
