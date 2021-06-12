@@ -44,6 +44,7 @@
 }
 
 .nav-wrapper {
+  background: linear-gradient(90deg, #313132 0%, #161618 100%);
   font-family: "ApercuPro-Medium", sans-serif;
   display: flex;
   align-items: center;
@@ -53,10 +54,11 @@
   left: 50%;
   transform: translate(-50%, 0);
   position: fixed;
+  padding: 0 100px 0 100px;
 }
 
 .brand {
-  margin-left: 20px;
+  margin-left: 100px;
   display: flex;
   align-items: center;
 }
@@ -71,7 +73,6 @@
 }
 
 .nav-wrapper ul.nav-list {
-  margin-top: 19px;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -205,8 +206,8 @@ nav ul.dropdown-list {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
@@ -216,6 +217,7 @@ nav ul.dropdown-list {
 }
 
 .hamburger, .brand {
+  margin-left: 0;
   z-index: 9999;
 }
 
@@ -243,6 +245,10 @@ nav ul.dropdown-list {
   padding-top: 0;
 }
 
+.mobile .nav-wrapper {
+  padding: 0 20px;
+}
+
 .mobile .nav-wrapper ul li:hover .dropdown-list {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -259,6 +265,66 @@ nav ul.dropdown-list {
   color: var(--dark-gray);
 }
 
+.login__section {
+  font-family: "ApercuPro-Medium", sans-serif;
+  text-align: center;
+}
+
+.login__container {
+  margin-top: 150px;
+}
+
+.login__section .icon--logotipo {
+  fill: #e9d800;
+  width: 200px;
+}
+
+.fieldset__login {
+  border-radius: 30px;
+  border: 8px #e9d800 solid;
+  height: 550px;
+  margin: auto;
+  width: 80vw;
+  margin-top: 100px;
+  padding: 50px 0px 50px 0px;
+}
+
+.errmsg__login {
+  float: center;
+}
+
+.login__section input {
+  float: center;
+  margin-top: 50px;
+  width: 80%;
+}
+
+.fieldset__login button {
+  margin-top: 120px;
+}
+
+.fieldset__login span a {
+  padding-top: 10px;
+  color: #9A9A9A;
+}
+
+@media only screen and (min-width: 1024px) {
+  .fieldset__login {
+    height: 550px;
+    width: 600px;
+    padding: 50px 120px 50px 120px;
+  }
+
+  .errmsg__login {
+    float: left;
+  }
+
+  .login__section input {
+    float: left;
+    margin-top: 50px;
+    width: 350px;
+  }
+}
 body {
   background: linear-gradient(90deg, #313132 0%, #161618 100%);
   font-family: "Fajalla", sans-serif;
@@ -280,4 +346,27 @@ body {
   background: transparent;
   border-color: white;
   color: white;
+}
+
+.content {
+  padding-top: 131px;
+}
+
+.errmsg {
+  background: #e9d800;
+  border-radius: 10px;
+  border: 0px;
+  height: 50px;
+  padding: 10px;
+  text-align: left;
+}
+
+input {
+  border-radius: 10px;
+  border: 0px;
+  color: #9A9A9A;
+  height: 50px;
+  outline: none;
+  padding: 10px;
+  text-align: left;
 }

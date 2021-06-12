@@ -55,6 +55,12 @@ class PagesController extends Controller
 
   }
 
+  public function login(){
+
+    return view('login');
+
+  }
+
   public function users(){
     $users = User::paginate();
     return view('users',compact('users'));

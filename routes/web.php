@@ -21,6 +21,7 @@ Route::get('/contacto', 'App\Http\Controllers\PagesController@contacto')->name('
 Route::get('/blog', 'App\Http\Controllers\PagesController@blog')->name('blog');
 Route::get('/galeria', 'App\Http\Controllers\PagesController@galeria')->name('galeria');
 Route::get('/tienda', 'App\Http\Controllers\PagesController@tienda')->name('tienda');
+Route::get('/login', 'App\Http\Controllers\PagesController@login')->name('login');
 Route::get('/users', 'App\Http\Controllers\PagesController@users')->name('users');
 Route::get('/modificar/{id}', 'App\Http\Controllers\PagesController@modificar')->name('modificar');
 Route::post('/modificar', 'App\Http\Controllers\PagesController@update')->name('update');

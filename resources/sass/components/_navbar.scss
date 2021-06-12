@@ -20,6 +20,7 @@
 }
 
 .nav-wrapper {
+    background: linear-gradient(90deg, rgba(49,49,50,1) 0%, rgba(22,22,24,1) 100%);
     font-family: $tg-apercu-medium;
     display: flex;
     align-items: center;
@@ -29,10 +30,11 @@
     left: 50%;
     transform: translate(-50%, 0);
     position: fixed;
+    padding: 0 100px 0 100px;
 }
 
 .brand {
-    margin-left: 20px;
+    margin-left: 100px;
     display: flex;
     align-items: center;
 }
@@ -47,7 +49,6 @@
 }
 
 .nav-wrapper ul.nav-list {
-    margin-top: 19px;
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -170,8 +171,8 @@ nav ul.dropdown-list {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 80px;
@@ -181,6 +182,7 @@ nav ul.dropdown-list {
 }
 
 .hamburger, .brand {
+    margin-left:0;
     z-index: 9999;
 }
 
@@ -206,6 +208,10 @@ nav ul.dropdown-list {
     overflow-y: hidden;
     transition: opacity 1s ease-in-out;
     padding-top: 0;
+}
+
+.mobile .nav-wrapper{
+  padding: 0 20px;
 }
 
 .mobile .nav-wrapper ul li:hover .dropdown-list {

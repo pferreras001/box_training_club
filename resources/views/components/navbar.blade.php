@@ -1,5 +1,5 @@
 <nav>
-    <div class="container nav-wrapper">
+    <div class="nav-wrapper">
         <div class="brand">
             <?php require('svg/navbar/logo.svg')?>
         </div>
@@ -34,7 +34,7 @@
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             <li>
-                <button class="btn nav__btn">Iniciar Sesión</button>
+                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Iniciar Sesión</a></button>
             </li>
         </ul>
     </div>

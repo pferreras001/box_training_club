@@ -10,6 +10,7 @@
 //components
 
 @import 'components/navbar';
+@import 'components/login';
 
 
 
@@ -36,4 +37,32 @@ body{
     background: transparent;
     border-color: $color-white;
     color: $color-white;
+}
+
+.content{
+    padding-top: 131px;
+}
+
+.errmsg{
+  background: $color-yellow;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 0px;
+  height: 50px;
+  padding:10px;
+  text-align: left;
+}
+
+input{
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 0px;
+  color: $color-gray;
+  height: 50px;
+  outline: none;
+  padding:10px;
+  text-align: left;
 }
