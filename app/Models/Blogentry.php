@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $descripcion
  * @property string $texto
  * @property boolean $image
- * @property string $etiquetas
+ * @property string|null $etiquetas
  * @property string $autor
  * @property Carbon $fecha
  *

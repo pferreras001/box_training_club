@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Blogentry;
+use App\Models\EtiquetasBlog;
 
 class PagesController extends Controller
 {
@@ -63,7 +64,19 @@ class PagesController extends Controller
   //control del blog ->TO DO: METERLO EN UN CONTROLADOR NUEVO
   public function blog(){  
     $blogentrys = Blogentry::paginate(3);
-    return view('blog',compact('blogentrys'));
+    $etiquetas = EtiquetasBlog::all();
+    return view('blog',compact('blogentrys','etiquetas'));
+  }
+  public function blog_search(Request $req){
+    $data=$req->etiquetas;
+      if($data!='ninguna'){
+          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(3);
+      }
+      else{
+          $blogentrys = Blogentry::paginate(3);
+      }
+    $etiquetas = EtiquetasBlog::all();
+    return view('blog',compact('blogentrys','etiquetas'));
   }
   public function create_entry(){
       return view('create_entry');
@@ -84,6 +97,18 @@ class PagesController extends Controller
           'autor'=>$req->input('autor'),
           'etiquetas'=>$req->input('etiquetas'),
       ]);
+      $etiquetacoll=$req->input('etiquetas');
+      foreach(explode(',',$etiquetacoll) as $etiqueta){
+          $test=null;
+          $test=EtiquetasBlog::find($etiqueta);
+            if($test==null){
+                EtiquetasBlog::create([
+                    'etiqueta'=>$etiqueta,
+                ]);
+            }
+           
+      }
+         
       return redirect('blog');
   }
   public function show_entry($id){

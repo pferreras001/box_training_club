@@ -27,6 +27,7 @@ Route::get('/login', 'App\Http\Controllers\PagesController@login')->name('login'
 
 //rutas para el blog
 Route::get('/blog', 'App\Http\Controllers\PagesController@blog')->name('blog');
+Route::post('/blog', 'App\Http\Controllers\PagesController@blog_search')->name('blog');
 Route::get('/create_entry', 'App\Http\Controllers\PagesController@create_entry')->name('create_entry');
 Route::post('/insert_entry', 'App\Http\Controllers\PagesController@insert_entry')->name('insert_entry');
 Route::get('/show_entry/{id}', 'App\Http\Controllers\PagesController@show_entry')->name('show_entry');
