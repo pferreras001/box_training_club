@@ -41,3 +41,8 @@ Route::get('/users', 'App\Http\Controllers\PagesController@users')->name('users'
 Route::get('/modificar/{id}', 'App\Http\Controllers\PagesController@modificar')->name('modificar');
 Route::post('/modificar', 'App\Http\Controllers\PagesController@update')->name('update');
 Route::get('/delete/{id}', 'App\Http\Controllers\PagesController@delete')->name('delete');
+
+//parte de usuarios
+Route::post('/session_start', 'App\Http\Controllers\PagesController@session_start')->name('session_start');
+Route::get('/dar_alta', 'App\Http\Controllers\PagesController@dar_alta')->name('dar_alta');
+Route::post('/send_register', 'App\Http\Controllers\PagesController@send_register')->name('send_register');

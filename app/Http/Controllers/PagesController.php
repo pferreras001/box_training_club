@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Blogentry;
 use App\Models\EtiquetasBlog;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
@@ -166,4 +167,53 @@ class PagesController extends Controller
         return redirect('users');
 
   }
+    
+    
+    
+    //control de sesion
+    public function dar_alta(){
+    return view('dar_alta');
+
+    }
+    public function send_register(Request $req){
+        $req->validate([
+          'email'=>'required',
+          'nombre'=>'required',
+          'apellidos'=>'required',
+          'birth_date'=>'required',
+      ]);
+      $confirmation=hash("sha256", random_int(10000,99999),false);
+      $recovery=hash("sha256", random_int(10000,99999),false); 
+      User::create([
+          'email'=>$req->input('email'),
+          'name'=>$req->input('nombre'),
+          'surname'=>$req->input('apellidos'),
+          'birth_date'=>$req->input('birth_date'),
+          'confirmed'=>0,
+          'confirmation_code'=>$confirmation,
+          'recovery_code'=>$recovery,
+      ]);
+        return redirect('login');
+    }
+    
+    public function session_start(Request $req){
+        
+         $req->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+        
+        $email=$req->email;
+        $password=$req->password;
+        $remember=true;
+        
+        if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
+            $req->session()->regenerate();
+            return redirect()->intended('inicio');
+        }
+        else{
+            return redirect('login');
+        }
+        
+    }
 }

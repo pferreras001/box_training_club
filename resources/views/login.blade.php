@@ -8,14 +8,14 @@
 
     <?php require('svg/login/logotipo.svg')?>
 
-    <form method="POST" action="">
+    <form method="POST" action="{{route('session_start')}}">
     @csrf
 
     <fieldset class="fieldset fieldset__login">
 
       <span class="errmsg errmsg__login">*Usuario o contraseña incorrectos</span>
 
-      <input type="text" name="usuario" placeholder="Usuario"><br>
+      <input type="text" name="email" placeholder="Email"><br>
       <input type="password" name="password" placeholder="Contraseña"><br>
 
       <button type="submit" class="btn btn__login">Iniciar Sesión</button><br>
@@ -24,8 +24,6 @@
 
     </fieldset>
 
-    
-      
     </form>
 
   </div>
