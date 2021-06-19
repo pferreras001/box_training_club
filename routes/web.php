@@ -46,3 +46,4 @@ Route::get('/delete/{id}', 'App\Http\Controllers\PagesController@delete')->name(
 Route::post('/session_start', 'App\Http\Controllers\PagesController@session_start')->name('session_start');
 Route::get('/dar_alta', 'App\Http\Controllers\PagesController@dar_alta')->name('dar_alta');
 Route::post('/send_register', 'App\Http\Controllers\PagesController@send_register')->name('send_register');
+Route::get('/confirmacion', 'App\Http\Controllers\PagesController@confirmar')->name('confirmar');

@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Blogentry;
 use App\Models\EtiquetasBlog;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\gestionSociosMailable;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -175,7 +177,7 @@ class PagesController extends Controller
     return view('dar_alta');
 
     }
-    public function send_register(Request $req){
+    public function send_register(Request $req){//TODO->CHEKEAR QUE SEA UN USUARIO NUEVO
         $req->validate([
           'email'=>'required',
           'nombre'=>'required',
@@ -193,7 +195,9 @@ class PagesController extends Controller
           'confirmation_code'=>$confirmation,
           'recovery_code'=>$recovery,
       ]);
-        return redirect('login');
+        $correo= new gestionSociosMailable($confirmation);
+        Mail::to($req->input('email'))->send($correo);
+        return redirect('confirmacion_enviada');
     }
     
     public function session_start(Request $req){
