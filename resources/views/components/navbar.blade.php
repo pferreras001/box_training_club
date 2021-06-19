@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper">
         <div class="brand">
-            <?php require('svg/navbar/logo.svg')?>
+            <a href="{{ route('inicio') }}"><?php require('svg/navbar/logo.svg')?></a>
         </div>
         <div class="hamburger">
             <span></span>
@@ -34,7 +34,7 @@
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             <li>
-                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Iniciar Sesión</a></button>
+                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Box Family</a></button>
             </li>
         </ul>
     </div>

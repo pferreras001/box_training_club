@@ -291,6 +291,7 @@ nav ul.dropdown-list {
 }
 
 .errmsg__login {
+  opacity: 0;
   float: center;
 }
 
@@ -302,6 +303,7 @@ nav ul.dropdown-list {
 
 .fieldset__login button {
   margin-top: 120px;
+  margin-bottom: 10px;
 }
 
 .fieldset__login span a {
@@ -326,6 +328,65 @@ nav ul.dropdown-list {
     width: 350px;
   }
 }
+.footer__section {
+  color: white;
+  margin-top: 150px;
+  font-family: "ApercuPro-Medium", sans-serif;
+}
+
+.footer__section a {
+  color: white;
+}
+
+.footer__container {
+  align-items: center;
+  display: flex;
+  height: 500px;
+  flex: 1;
+  padding: 40px 100px;
+  justify-content: space-between;
+}
+
+.footer__section .icon {
+  fill: white;
+  transition: all 0.2s;
+}
+
+.footer__section .icon:hover {
+  transform: scale(1.1);
+  fill: #e9d800;
+}
+
+.footer__left {
+  margin-left: 50px;
+}
+
+.footer__left ul {
+  margin-top: 50px;
+}
+
+.footer__right .icon {
+  height: 70px;
+}
+
+.footer__right ul {
+  margin-right: 200px;
+}
+
+.footer__right li {
+  margin: 0 17px;
+  display: inline;
+}
+
+.footer__right a {
+  text-decoration: none;
+}
+
+.footer__bottom {
+  text-align: center;
+  width: 100%;
+}
+
 body {
   background: linear-gradient(90deg, #313132 0%, #161618 100%);
   font-family: "Fajalla", sans-serif;
@@ -370,4 +431,8 @@ input {
   outline: none;
   padding: 10px;
   text-align: left;
+}
+
+ul {
+  list-style-type: none;
 }

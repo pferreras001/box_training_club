@@ -55,8 +55,8 @@ class PagesController extends Controller
   }
 
   public function login(){
-
-    return view('login');
+    $email = "";
+    return view('login',compact('email'));
 
   }
     
@@ -207,8 +207,8 @@ class PagesController extends Controller
             'password' => ['required'],
         ]);
         
-        $email=$req->email;
-        $password=$req->password;
+        $email=$req->input('email');
+        $password=$req->input('password');
         $remember=true;
         
         if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
@@ -216,7 +216,7 @@ class PagesController extends Controller
             return redirect()->intended('inicio');
         }
         else{
-            return redirect('login');
+            return view('login',compact('email'));
         }
         
     }
