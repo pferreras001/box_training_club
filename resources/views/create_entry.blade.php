@@ -19,7 +19,7 @@
         </div>
     @endif
     
-    <form action="{{route('insert_entry')}}" method="POST">
+    <form action="{{route('insert_entry')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="autor" value="anonimo" required/>
         <input type="text" name="titulo" placeholder="Titulo..." required class="bg-t block border-b-2 w-full h-20 text-6xl outline-none"/><br><br>

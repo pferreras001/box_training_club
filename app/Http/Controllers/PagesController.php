@@ -92,10 +92,12 @@ class PagesController extends Controller
           'texto'=>'required',
           'autor'=>'required',
       ]);
+      $imagename= uniqid().'-'. $req->titulo.'.'.$req->image->extension();
+      $req->image->move(public_path('images'),$imagename);
       Blogentry::create([
           'titulo'=>$req->input('titulo'),
           'descripcion'=>$req->input('descripcion'),
-          'image'=>$req->input('image'),
+          'image'=>$imagename,
           'texto'=>$req->input('texto'),
           'autor'=>$req->input('autor'),
           'etiquetas'=>$req->input('etiquetas'),
@@ -199,11 +201,9 @@ class PagesController extends Controller
         Mail::to($req->input('email'))->send($correo);
         return redirect('confirmacion_enviada');
     }
+    
     public function signup($code){
-        $id=User::select('id')
-            ->where('confirmation_code','=',$code)
-            ->get();
-        $user=User::find($id);
+        $user=User::where('confirmation_code',"=",$code)->first();
         if($user!=null){
             return view('signup',compact('user'));
         }
@@ -211,6 +211,7 @@ class PagesController extends Controller
             return view('inicio');
         }
     }
+    
      public function signup_update(Request $req){//->TODO:CHECKEAR EN QUE METODO HAY Q HASHEAR
         $data=User::find($req->id);
         $pass=hash("sha256",$req->input('password'),false);

@@ -8,8 +8,6 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Auth\Authenticatable;
 
 /**
  * Class User
@@ -18,18 +16,17 @@ use Illuminate\Auth\Authenticatable;
  * @property string $name
  * @property string $surname
  * @property string $email
- * @property string $password
+ * @property string|null $password
  * @property bool $confirmed
  * @property string $confirmation_code
  * @property string $recovery_code
  * @property Carbon $birth_date
+ * @property string|null $remember_token
  *
  * @package App\Models
  */
-class User extends Model implements AuthenticatableContract 
+class User extends Model
 {
-    use Authenticatable;
-    
 	protected $table = 'users';
 	public $timestamps = false;
 
@@ -42,7 +39,8 @@ class User extends Model implements AuthenticatableContract
 	];
 
 	protected $hidden = [
-		'password'
+		'password',
+		'remember_token'
 	];
 
 	protected $fillable = [
@@ -53,6 +51,7 @@ class User extends Model implements AuthenticatableContract
 		'confirmed',
 		'confirmation_code',
 		'recovery_code',
-		'birth_date'
+		'birth_date',
+		'remember_token'
 	];
 }

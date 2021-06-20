@@ -16,10 +16,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $titulo
  * @property string $descripcion
  * @property string $texto
- * @property boolean $image
  * @property string|null $etiquetas
  * @property string $autor
  * @property Carbon $fecha
+ * @property string $image
  *
  * @package App\Models
  */
@@ -27,10 +27,6 @@ class Blogentry extends Model
 {
 	protected $table = 'blogentrys';
 	public $timestamps = false;
-
-	protected $casts = [
-		'image' => 'boolean'
-	];
 
 	protected $dates = [
 		'fecha'
@@ -40,9 +36,9 @@ class Blogentry extends Model
 		'titulo',
 		'descripcion',
 		'texto',
-		'image',
 		'etiquetas',
 		'autor',
-		'fecha'
+		'fecha',
+		'image'
 	];
 }

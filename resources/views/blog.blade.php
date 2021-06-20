@@ -23,8 +23,8 @@
     <div id="entradas">
         @foreach($blogentrys as $blogentry)
             <div class ="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-                <div>
-                    <img src="data:image/jpeg;base64,{{base64_encode($blogentry->image) }}" height="100" width="100">
+                <div class="text-white">
+                    <img src="{{asset('/images/'.$blogentry->image)}}" height="300" width="300">
                 </div>
                 <div> 
                     <h2 class="text-yellow-300 font-bold text-5xl pb-4">

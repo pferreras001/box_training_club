@@ -10,7 +10,7 @@
         @csrf
         <input type="hidden" name="id" value="{{$user->id}}"/>
         email <input type="text" name="email" readonly value="{{$user->email}}"/><br><br>
-        contraseña <input type="password" name="name"/><br><br>
+        contraseña <input type="password" name="password"/><br><br>
         confirma la contraseña <input type="text" name="password2"/><br><br>
         <input type="submit" value="registrarse"/> 
     </form>
