@@ -25,6 +25,8 @@ Route::get('/login', 'App\Http\Controllers\PagesController@login')->name('login'
 
 
 
+
+
 //rutas para el blog
 Route::get('/blog', 'App\Http\Controllers\PagesController@blog')->name('blog');
 Route::post('/blog', 'App\Http\Controllers\PagesController@blog_search')->name('blog');
@@ -36,14 +38,23 @@ Route::post('/edit_entry', 'App\Http\Controllers\PagesController@update_entry')-
 Route::get('/delete_entry/{id}', 'App\Http\Controllers\PagesController@delete_entry')->name('delete_entry');
 
 
+
+
+
 //parte adrministracion
 Route::get('/users', 'App\Http\Controllers\PagesController@users')->name('users');
 Route::get('/modificar/{id}', 'App\Http\Controllers\PagesController@modificar')->name('modificar');
 Route::post('/modificar', 'App\Http\Controllers\PagesController@update')->name('update');
 Route::get('/delete/{id}', 'App\Http\Controllers\PagesController@delete')->name('delete');
 
+
+
+
+
 //parte de usuarios
 Route::post('/session_start', 'App\Http\Controllers\PagesController@session_start')->name('session_start');
 Route::get('/dar_alta', 'App\Http\Controllers\PagesController@dar_alta')->name('dar_alta');
 Route::post('/send_register', 'App\Http\Controllers\PagesController@send_register')->name('send_register');
 Route::get('/confirmacion', 'App\Http\Controllers\PagesController@confirmar')->name('confirmar');
+Route::get('/signup/{code}', 'App\Http\Controllers\PagesController@signup')->name('signup');
+Route::post('/signup', 'App\Http\Controllers\PagesController@signup_update')->name('signup_update');

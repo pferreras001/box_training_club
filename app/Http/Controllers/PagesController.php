@@ -199,6 +199,25 @@ class PagesController extends Controller
         Mail::to($req->input('email'))->send($correo);
         return redirect('confirmacion_enviada');
     }
+    public function signup($code){
+        $id=User::select('id')
+            ->where('confirmation_code','=',$code)
+            ->get();
+        $user=User::find($id);
+        if($user!=null){
+            return view('signup',compact('user'));
+        }
+        else{
+            return view('inicio');
+        }
+    }
+     public function signup_update(Request $req){//->TODO:CHECKEAR EN QUE METODO HAY Q HASHEAR
+        $data=User::find($req->id);
+        $pass=hash("sha256",$req->input('password'),false);
+        $data->password=$pass;
+        $data->save();
+        return redirect('login');
+    }
     
     public function session_start(Request $req){
         
