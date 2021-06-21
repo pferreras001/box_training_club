@@ -20,7 +20,7 @@
 
       <button type="submit" class="btn btn__login">Iniciar Sesión</button><br>
 
-      <span><a href="#">He olvidado mi contraseña</a></span>
+      <span><a href="{{route('recover_password')}}">He olvidado mi contraseña</a></span>
 
     </fieldset>
 

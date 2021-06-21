@@ -28,33 +28,38 @@ Route::get('/login', 'App\Http\Controllers\PagesController@login')->name('login'
 
 
 //rutas para el blog
-Route::get('/blog', 'App\Http\Controllers\PagesController@blog')->name('blog');
-Route::post('/blog', 'App\Http\Controllers\PagesController@blog_search')->name('blog');
-Route::get('/create_entry', 'App\Http\Controllers\PagesController@create_entry')->name('create_entry');
-Route::post('/insert_entry', 'App\Http\Controllers\PagesController@insert_entry')->name('insert_entry');
-Route::get('/show_entry/{id}', 'App\Http\Controllers\PagesController@show_entry')->name('show_entry');
-Route::get('/edit_entry/{id}', 'App\Http\Controllers\PagesController@edit_entry')->name('edit_entry');
-Route::post('/edit_entry', 'App\Http\Controllers\PagesController@update_entry')->name('update_entry');
-Route::get('/delete_entry/{id}', 'App\Http\Controllers\PagesController@delete_entry')->name('delete_entry');
+Route::get('/blog', 'App\Http\Controllers\BlogController@blog')->name('blog');
+Route::post('/blog', 'App\Http\Controllers\BlogController@blog_search')->name('blog');
+Route::get('/create_entry', 'App\Http\Controllers\BlogController@create_entry')->name('create_entry');
+Route::post('/insert_entry', 'App\Http\Controllers\BlogController@insert_entry')->name('insert_entry');
+Route::get('/show_entry/{id}', 'App\Http\Controllers\BlogController@show_entry')->name('show_entry');
+Route::get('/edit_entry/{id}', 'App\Http\Controllers\BlogController@edit_entry')->name('edit_entry');
+Route::post('/edit_entry', 'App\Http\Controllers\BlogController@update_entry')->name('update_entry');
+Route::get('/delete_entry/{id}', 'App\Http\Controllers\BlogController@delete_entry')->name('delete_entry');
 
 
 
 
 
 //parte adrministracion
-Route::get('/users', 'App\Http\Controllers\PagesController@users')->name('users');
-Route::get('/modificar/{id}', 'App\Http\Controllers\PagesController@modificar')->name('modificar');
-Route::post('/modificar', 'App\Http\Controllers\PagesController@update')->name('update');
-Route::get('/delete/{id}', 'App\Http\Controllers\PagesController@delete')->name('delete');
+Route::get('/users', 'App\Http\Controllers\AdminController@users')->name('users');
+Route::get('/modificar/{id}', 'App\Http\Controllers\AdminController@modificar')->name('modificar');
+Route::post('/modificar', 'App\Http\Controllers\AdminController@update')->name('update');
+Route::get('/delete/{id}', 'App\Http\Controllers\AdminController@delete')->name('delete');
 
 
 
 
 
 //parte de usuarios
-Route::post('/session_start', 'App\Http\Controllers\PagesController@session_start')->name('session_start');
-Route::get('/dar_alta', 'App\Http\Controllers\PagesController@dar_alta')->name('dar_alta');
-Route::post('/send_register', 'App\Http\Controllers\PagesController@send_register')->name('send_register');
-Route::get('/confirmacion', 'App\Http\Controllers\PagesController@confirmar')->name('confirmar');
-Route::get('/signup/{code}', 'App\Http\Controllers\PagesController@signup')->name('signup');
-Route::post('/signup', 'App\Http\Controllers\PagesController@signup_update')->name('signup_update');
+Route::post('/session_start', 'App\Http\Controllers\UserController@session_start')->name('session_start');
+Route::get('/dar_alta', 'App\Http\Controllers\UserController@dar_alta')->name('dar_alta');
+Route::post('/send_register', 'App\Http\Controllers\UserController@send_register')->name('send_register');
+Route::get('/confirmacion', 'App\Http\Controllers\UserController@confirmar')->name('confirmar');
+Route::get('/signup/{code}', 'App\Http\Controllers\UserController@signup')->name('signup');
+Route::post('/signup', 'App\Http\Controllers\UserController@signup_update')->name('signup_update');
+Route::get('/recover_password', 'App\Http\Controllers\UserController@password_recovery')->name('recover_password');
+Route::post('/recover_password', 'App\Http\Controllers\UserController@send_recover')->name('send_recover');
+Route::get('/recover_form/{id}', 'App\Http\Controllers\UserController@recover_form')->name('recover_form');
+Route::post('/update_pass', 'App\Http\Controllers\UserController@update_pass')->name('update_pass');
+
