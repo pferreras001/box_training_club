@@ -40,13 +40,13 @@ class UserController extends Controller
       ]);
         $correo= new gestionSociosMailable($confirmation);
         Mail::to($req->input('email'))->send($correo);
-        return redirect('confirmacion_enviada');
+        return view('confirmacion_enviada');
     }
     
-    public function signup($code){
-        $user=User::where('confirmation_code',"=",$code)->first();
+    public function signup_form($id){
+        $user=User::where('confirmation_code',"=",$id)->first();
         if($user!=null){
-            return view('signup',compact('user'));
+            return view('signup_form',compact('user'));
         }
         else{
             return view('inicio');
@@ -54,11 +54,18 @@ class UserController extends Controller
     }
     
      public function signup_update(Request $req){//->TODO:CHECKEAR EN QUE METODO HAY Q HASHEAR
-        $data=User::find($req->id);
-        $pass=hash("sha256",$req->input('password'),false);
-        $data->password=$pass;
-        $data->save();
-        return redirect('login');
+         $user=User::find($req->id);
+        if($user != null){
+            $pass=hash("sha256",$req->input('password'),false);
+            $user->password=$pass;
+            $user->confirmed='1';
+            $user->save();
+            $email=$user->email;
+            return view('login',compact('email'));
+        }
+        else{
+            return view('404');
+        }
     }
     
     public function session_start(Request $req){
@@ -103,7 +110,7 @@ class UserController extends Controller
            return view('recover_form',compact('user')); 
         }
         else{
-            //TODO->RETURN 404
+            return view('404');
         }
         
     }
@@ -118,8 +125,7 @@ class UserController extends Controller
             return view('login',compact('email'));  
         }
         else{
-            //TODO->RETURN 404
-            return view('inicio');
+            return view('404');
         }    
     }
     

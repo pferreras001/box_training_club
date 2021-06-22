@@ -56,8 +56,8 @@ Route::post('/session_start', 'App\Http\Controllers\UserController@session_start
 Route::get('/dar_alta', 'App\Http\Controllers\UserController@dar_alta')->name('dar_alta');
 Route::post('/send_register', 'App\Http\Controllers\UserController@send_register')->name('send_register');
 Route::get('/confirmacion', 'App\Http\Controllers\UserController@confirmar')->name('confirmar');
-Route::get('/signup/{code}', 'App\Http\Controllers\UserController@signup')->name('signup');
-Route::post('/signup', 'App\Http\Controllers\UserController@signup_update')->name('signup_update');
+Route::get('/signup_form/{code}', 'App\Http\Controllers\UserController@signup_form')->name('signup_form');
+Route::post('/signup_update', 'App\Http\Controllers\UserController@signup_update')->name('signup_update');
 Route::get('/recover_password', 'App\Http\Controllers\UserController@password_recovery')->name('recover_password');
 Route::post('/recover_password', 'App\Http\Controllers\UserController@send_recover')->name('send_recover');
 Route::get('/recover_form/{id}', 'App\Http\Controllers\UserController@recover_form')->name('recover_form');

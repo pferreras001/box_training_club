@@ -24,7 +24,7 @@
                 <td>{{$user->email}}</td>
                 <td><a href="{{route('modificar',['id' =>$user->id])}}">modificar</a></td>
                 <td><a onClick="eliminar({{$user->id}}); return false;" href="{{route('users')}}">dar de baja</a></td>
-                <td><a  href="{{route('signup',['code' =>$user->confirmation_code])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> editar contraseña</a></td>
+                <td><a  href="{{route('signup_form',['code' =>$user->confirmation_code])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> editar contraseña</a></td>
             </tr>
         @endforeach
     </tbody>
