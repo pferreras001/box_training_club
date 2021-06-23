@@ -46,6 +46,8 @@ Route::get('/users', 'App\Http\Controllers\AdminController@users')->name('users'
 Route::get('/modificar/{id}', 'App\Http\Controllers\AdminController@modificar')->name('modificar');
 Route::post('/modificar', 'App\Http\Controllers\AdminController@update')->name('update');
 Route::get('/delete/{id}', 'App\Http\Controllers\AdminController@delete')->name('delete');
+Route::get('/send_signup_mail/{id}', 'App\Http\Controllers\AdminController@send_signup_mail')->name('send_signup_mail');
+
 
 
 

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use App\Mail\gestionSociosMailable;
+use App\Mail\recoveryMailable;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -34,4 +38,10 @@ class AdminController extends Controller
         return redirect('users');
 
   }
+    public function send_signup_mail($id){
+        $user=User::find($id);
+        $correo= new gestionSociosMailable($user->confirmation_code);
+        Mail::to($user->email)->send($correo);
+        return view('confirmacion_enviada');
+    }
 }

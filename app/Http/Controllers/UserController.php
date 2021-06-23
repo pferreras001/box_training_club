@@ -41,21 +41,20 @@ class UserController extends Controller
         $correo= new gestionSociosMailable($confirmation);
         Mail::to($req->input('email'))->send($correo);
         return view('confirmacion_enviada');
-    }
-    
+    }   
     public function signup_form($id){
         $user=User::where('confirmation_code',"=",$id)->first();
-        if($user!=null){
+        if($user!=null && $user->confirmed!=1){
             return view('signup_form',compact('user'));
         }
         else{
-            return view('inicio');
+            return view('404');
         }
     }
     
      public function signup_update(Request $req){//->TODO:CHECKEAR EN QUE METODO HAY Q HASHEAR
          $user=User::find($req->id);
-        if($user != null){
+        if($user != null && $user->confirmed!=1){
             $pass=hash("sha256",$req->input('password'),false);
             $user->password=$pass;
             $user->confirmed='1';
@@ -76,6 +75,7 @@ class UserController extends Controller
         ]);
         
         $email=$req->input('email');
+        $email=strip_tags($email);
         $password=$req->input('password');
         $remember=true;
         
@@ -119,6 +119,8 @@ class UserController extends Controller
         $user=User::find($req->id);
         if($user != null){
             $pass=hash("sha256",$req->input('password'),false);
+            $recovery=hash("sha256", random_int(10000,99999),false);
+            $user->recovery_code=$recovery;
             $user->password=$pass;
             $user->save();
             $email=$user->email;
