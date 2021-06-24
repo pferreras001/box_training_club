@@ -33,9 +33,18 @@
             <li class="{{ (Request::route()->getName()=='contacto') ? 'active' : '' }}">
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
+            @if(session()->exists('email'))
             <li>
-                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Box Family</a></button>
+                <form action="{{ route('logout') }}" method="post">
+                    @crsf
+                     <button class="btn nav__btn" type="submit">Cerrar Sesion</button>
+                </form>  
             </li>
+            @else
+            <li>
+                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Box Family</button>
+            </li>
+            @endif
         </ul>
     </div>
 </nav>
