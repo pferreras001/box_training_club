@@ -64,5 +64,5 @@ Route::get('/recover_password', 'App\Http\Controllers\UserController@password_re
 Route::post('/recover_password', 'App\Http\Controllers\UserController@send_recover')->name('send_recover');
 Route::get('/recover_form/{id}', 'App\Http\Controllers\UserController@recover_form')->name('recover_form');
 Route::post('/update_pass', 'App\Http\Controllers\UserController@update_pass')->name('update_pass');
-Route::post('/logout', 'App\Http\Controllers\UserController@logout')->name('logout');
+Route::put('/logout', 'App\Http\Controllers\UserController@logout')->name('logout');
 

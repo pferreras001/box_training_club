@@ -84,7 +84,7 @@ class UserController extends Controller
         if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
             $req->session()->regenerate();
             $req->session()->put('email', $email);
-            $data=session()->all();
+            //$data=session()->all();
             //dd($data);
             return redirect()->intended('/');
         }
@@ -94,22 +94,14 @@ class UserController extends Controller
         
     }
     
-    public function logout(Request $request)
-    {
-        if (Auth::check()) {
-            
+    public function logout(Request $req)
+    { 
             Auth::logout();
 
-            $request->session()->invalidate();
+            $req->session()->invalidate();
 
-            $request->session()->regenerateToken();
-
+            $req->session()->regenerateToken();
             return redirect('/');
-        }
-        else{
-            return view('404');
-        }
-    
     }
     
     public function password_recovery(){

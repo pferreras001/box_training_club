@@ -33,11 +33,12 @@
             <li class="{{ (Request::route()->getName()=='contacto') ? 'active' : '' }}">
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
-            @if(session()->exists('email'))
+            @auth
             <li>
                 <form action="{{ route('logout') }}" method="post">
+                    @method('put')
                     @crsf
-                     <button class="btn nav__btn" type="submit">Cerrar Sesion</button>
+                     <button class="btn nav__btn">Cerrar Sesion</button>
                 </form>  
             </li>
             @else
