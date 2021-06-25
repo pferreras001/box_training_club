@@ -36,8 +36,8 @@ class UserController extends Controller
           'surname'=>$req->input('apellidos'),
           'birth_date'=>$req->input('birth_date'),
           'confirmed'=>0,
-          'confirmation_code'=>$confirmation,
-          'recovery_code'=>$recovery,
+          'confirmation_code'=>preg_replace('/[^A-Za-z0-9\-]/', '', $confirmation),
+          'recovery_code'=>preg_replace('/[^A-Za-z0-9\-]/', '', $recovery),
       ]);
         $correo= new gestionSociosMailable($confirmation);
         Mail::to($req->input('email'))->send($correo);
@@ -49,11 +49,11 @@ class UserController extends Controller
             return view('signup_form',compact('user'));
         }
         else{
-            return view('404');
+            abort(404);
         }
     }
     
-     public function signup_update(Request $req){//->TODO:CHECKEAR EN QUE METODO HAY Q HASHEAR
+     public function signup_update(Request $req){
          $user=User::find($req->id);
         if($user != null && $user->confirmed!=1){
             $pass=Hash::make($req->input('password'));
@@ -64,7 +64,7 @@ class UserController extends Controller
             return view('login',compact('email'));
         }
         else{
-            return view('404');
+            abort(404);
         }
     }
     
@@ -126,7 +126,7 @@ class UserController extends Controller
            return view('recover_form',compact('user')); 
         }
         else{
-            return view('404');
+            abort(404);
         }
         
     }
@@ -136,14 +136,14 @@ class UserController extends Controller
         if($user != null){
             $pass=Hash::make($req->input('password'));
             $recovery=Hash::make(random_int(10000,99999));
-            $user->recovery_code=$recovery;
+            $user->recovery_code=preg_replace('/[^A-Za-z0-9\-]/', '', $recovery);
             $user->password=$pass;
             $user->save();
             $email=$user->email;
             return view('login',compact('email'));  
         }
         else{
-            return view('404');
+            abort(404);
         }    
     }
     
