@@ -9,6 +9,7 @@ use App\Mail\gestionSociosMailable;
 use App\Mail\recoveryMailable;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+session_start();
 
 class UserController extends Controller
 {
@@ -83,7 +84,13 @@ class UserController extends Controller
         
         if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
             $req->session()->regenerate();
-            $req->session()->put('email', $email);
+            session(['email' => $email]);
+            if($email=='endikasier@gmail.com'){
+                session(['tipo' => 'admin']);
+            }
+            else{
+                session(['tipo' => 'user']);
+            }
             //$data=session()->all();
             //dd($data);
             return redirect()->intended('/');
@@ -101,6 +108,9 @@ class UserController extends Controller
             $req->session()->invalidate();
 
             $req->session()->regenerateToken();
+            session(['email' => '']);
+            session(['tipo' => '']);
+            session_destroy();
             return redirect('/');
     }
     
