@@ -343,7 +343,8 @@ nav ul.dropdown-list {
   display: flex;
   height: 500px;
   flex: 1;
-  padding: 40px 100px;
+  flex-direction: column;
+  padding: 0 20px;
   justify-content: space-between;
 }
 
@@ -358,7 +359,7 @@ nav ul.dropdown-list {
 }
 
 .footer__left {
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 .footer__left ul {
@@ -370,7 +371,7 @@ nav ul.dropdown-list {
 }
 
 .footer__right ul {
-  margin-right: 200px;
+  margin-right: 0;
 }
 
 .footer__right li {
@@ -383,10 +384,29 @@ nav ul.dropdown-list {
 }
 
 .footer__bottom {
+  margin-top: 100px;
   text-align: center;
   width: 100%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .footer__container {
+    flex-direction: row;
+    padding: 40px 100px;
+  }
+
+  .footer__left {
+    margin-left: 50px;
+  }
+
+  .footer__right ul {
+    margin-right: 200px;
+  }
+
+  .footer__bottom {
+    margin-top: 0;
+  }
+}
 .home__container {
   display: grid;
   grid-template-columns: 0;

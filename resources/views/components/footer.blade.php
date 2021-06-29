@@ -12,8 +12,9 @@
       <ul>
         <li><a href=""><?php require('imports/svg/instagram.svg')?></a></li>
         <li><a href=""><?php require('imports/svg/facebook1.svg')?></a></li>
-        <li><a href=""><?php require('imports/svg/twitter.svg')?></a></li>
+        <li><a href=""><?php require('svg/footer/tik-tok.svg')?></a></li>
         <li><a href=""><?php require('imports/svg/youtube.svg')?></a></li>
+        <li><a href=""><?php require('svg/footer/linkedin.svg')?></a></li>
       </ul>
     </div>
   </div>
