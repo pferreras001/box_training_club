@@ -12,6 +12,7 @@
 @import 'components/navbar';
 @import 'components/login';
 @import 'components/footer';
+@import 'components/home';
 
 
 
@@ -19,6 +20,7 @@
 
 body{
   background: linear-gradient(90deg, rgba(49,49,50,1) 0%, rgba(22,22,24,1) 100%);
+  color:white;
   font-family: $tg-main;
 }
 
