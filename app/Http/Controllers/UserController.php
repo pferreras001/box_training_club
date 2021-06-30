@@ -43,7 +43,8 @@ class UserController extends Controller
         $correo= new gestionSociosMailable($confirmation);
         Mail::to($req->input('email'))->send($correo);
         return view('confirmacion_enviada');
-    }   
+    }
+    
     public function signup_form($id){
         $user=User::where('confirmation_code',"=",$id)->first();
         if($user!=null && $user->confirmed!=1){

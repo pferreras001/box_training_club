@@ -53,7 +53,7 @@ Route::get('/send_signup_mail/{id}', 'App\Http\Controllers\AdminController@send_
 
 
 
-//parte de usuarios
+//parte de gestion de los usuarios
 Route::post('/session_start', 'App\Http\Controllers\UserController@session_start')->name('session_start');
 Route::get('/dar_alta', 'App\Http\Controllers\UserController@dar_alta')->name('dar_alta');
 Route::post('/send_register', 'App\Http\Controllers\UserController@send_register')->name('send_register');
@@ -66,3 +66,6 @@ Route::get('/recover_form/{id}', 'App\Http\Controllers\UserController@recover_fo
 Route::post('/update_pass', 'App\Http\Controllers\UserController@update_pass')->name('update_pass');
 Route::put('/logout', 'App\Http\Controllers\UserController@logout')->name('logout');
 
+
+//parte de usuario loggeado
+Route::get('/perfil', 'App\Http\Controllers\SociosController@perfil')->name('perfil');

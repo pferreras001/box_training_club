@@ -37,7 +37,6 @@
             <li>
                 <form action="{{ route('logout') }}" method="post">
                     @method('put')
-                    @crsf
                      <button class="btn nav__btn">Cerrar Sesion</button>
                 </form>  
             </li>
