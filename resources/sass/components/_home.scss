@@ -1,12 +1,13 @@
 .home__container{
-  display: grid;
-  grid-template-columns: 0;
+  display: flex;
+  flex-direction:column;
   margin: 100px 50px;
 }
 
 .home__left{
   align-items: center;
   display:flex;
+  text-align: center;
 }
 
 .home__container h1{
@@ -30,6 +31,10 @@
   margin-top:50px;
 }
 
+.home__container .icon--escudo--yellow{
+  fill:$color-yellow;
+}
+
 @media #{$breakpoints-medium} {
 
 }
@@ -37,17 +42,27 @@
 @media #{$breakpoints-large} {
 
 .home__container{
-  display: grid;
-  grid-template-columns: 60% 40%;
+  display: flex;
+  flex-direction:row;
   margin: 200px 100px;
 }
 
 .home__container h1{
   font-size: 100px; 
+  text-align: left;
 }
 
 .home__container h2{
   font-size:30px;
+}
+
+.home__left{
+  text-align: left;
+  width: 60%;
+}
+
+.home__right{
+  width: 40%;
 }
 
 .home__container .icon{

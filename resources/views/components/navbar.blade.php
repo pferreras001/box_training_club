@@ -42,7 +42,7 @@
             </li>
             @else
             <li>
-                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Box Family</button>
+                <button class="btn nav__btn" onclick="location.href='{{ route('login') }}'">Box Famility</button>
             </li>
             @endif
         </ul>

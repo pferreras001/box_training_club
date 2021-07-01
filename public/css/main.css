@@ -408,14 +408,15 @@ nav ul.dropdown-list {
   }
 }
 .home__container {
-  display: grid;
-  grid-template-columns: 0;
+  display: flex;
+  flex-direction: column;
   margin: 100px 50px;
 }
 
 .home__left {
   align-items: center;
   display: flex;
+  text-align: center;
 }
 
 .home__container h1 {
@@ -439,19 +440,33 @@ nav ul.dropdown-list {
   margin-top: 50px;
 }
 
+.home__container .icon--escudo--yellow {
+  fill: #e9d800;
+}
+
 @media only screen and (min-width: 1024px) {
   .home__container {
-    display: grid;
-    grid-template-columns: 60% 40%;
+    display: flex;
+    flex-direction: row;
     margin: 200px 100px;
   }
 
   .home__container h1 {
     font-size: 100px;
+    text-align: left;
   }
 
   .home__container h2 {
     font-size: 30px;
+  }
+
+  .home__left {
+    text-align: left;
+    width: 60%;
+  }
+
+  .home__right {
+    width: 40%;
   }
 
   .home__container .icon {
@@ -459,8 +474,236 @@ nav ul.dropdown-list {
     margin-top: 0;
   }
 }
+.valores__container {
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.valores__hexagons {
+  position: relative;
+  text-align: center;
+}
+
+.valores__hexagons__big {
+  opacity: 0;
+  position: absolute;
+  z-index: -15;
+}
+
+.valores__hexagons__small {
+  margin-top: 100px;
+  opacity: 1;
+  position: static;
+  z-index: 0;
+}
+
+.row {
+  display: flex;
+  height: 75px;
+  justify-content: center;
+}
+
+.blink {
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+  cursor: pointer;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.blocked {
+  filter: brightness(5%);
+  z-index: -5;
+}
+
+.box {
+  padding: 0 0px;
+  position: relative;
+}
+
+.box .icon {
+  width: 175px;
+  padding: 4px;
+}
+
+.box .icon--entrenamiento_funcional {
+  height: 54px;
+  margin-top: -10px;
+}
+
+.box .icon--resultados {
+  fill: #e9d800 !important;
+}
+
+.box__yellow .icon {
+  fill: #e9d800;
+}
+
+.box__gray .icon {
+  fill: #878787;
+}
+
+.box__white .icon {
+  fill: #EAEAEA;
+}
+
+.box__info {
+  color: black;
+  font-family: "Ethnocentric-Regular", sans-serif;
+  left: 50%;
+  margin-left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 163px;
+}
+
+.big__padding {
+  padding-top: 48px;
+}
+
+.medium__padding {
+  padding-top: 25px;
+}
+
+.small__padding {
+  padding-top: 10px;
+}
+
+.box__info h1 {
+  font-size: 21px;
+}
+
+.box__info h2 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.small__padding h3 {
+  margin-bottom: -2px;
+}
+
+.box__info h3 {
+  font-size: 12px;
+}
+
+.box__info .icon {
+  fill: black;
+  height: 49px;
+}
+
+.box__info ul {
+  font-size: 7px;
+  margin: auto;
+  width: 145px;
+}
+
+.valores__title {
+  display: flex;
+  width: auto;
+}
+
+.valores__title h1 {
+  align-self: center;
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.valores .lema {
+  font-family: "Ethnocentric-Italic", sans-serif;
+  font-size: 12px;
+  padding-top: 69px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .valores__hexagons__big {
+    opacity: 1;
+    position: static;
+    z-index: 0;
+  }
+
+  .valores__hexagons__small {
+    opacity: 0;
+    position: absolute;
+    z-index: -15;
+  }
+
+  .valores__hexagons__small .box .icon {
+    width: 0;
+  }
+
+  .valores__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .valores__hexagons {
+    width: 70%;
+  }
+
+  .valores__title {
+    width: 30%;
+  }
+
+  .valores__title h1 {
+    font-size: 100px;
+    text-align: left;
+  }
+
+  .valores .lema {
+    font-size: 2rem;
+    padding-top: 150px;
+    width: 787px;
+  }
+
+  .box {
+    padding: 0 43px;
+    position: relative;
+    width: auto;
+  }
+
+  .box__info {
+    color: black;
+    font-family: "Ethnocentric-Regular", sans-serif;
+    left: 0;
+    margin-left: 47px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translate(0, 0);
+    width: 163px;
+  }
+}
 body {
-  background: linear-gradient(90deg, #313132 0%, #161618 100%);
+  background: url("/img/body/background.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   color: white;
   font-family: "Fajalla", sans-serif;
 }
