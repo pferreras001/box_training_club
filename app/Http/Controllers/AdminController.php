@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Skill;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use App\Mail\recoveryMailable;
@@ -11,6 +12,16 @@ use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
+    public function dar_alta(){
+        if(session('tipo')=='admin'){
+            return view('dar_alta');
+        }
+        else{
+            return redirect('/');
+        }
+
+    }
+    
     public function users(){
     if(session('tipo')=='admin'){
         $users = User::paginate();
@@ -70,4 +81,15 @@ class AdminController extends Controller
             return redirect('/');
         }
     }
+    public function admin_perfil($id){
+        if(session('tipo')=='admin'){
+             $user = User::where('email',"=",$id)->first();
+             $trofeos= Skill::where('user_mail',"=",$id)->get();
+             return view('admin_perfil',compact('user','trofeos'));
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    
 }

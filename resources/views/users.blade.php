@@ -40,6 +40,9 @@
                        <a  href="{{route('send_signup_mail',['id' =>$user->id])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Reenviar Correo de Confirmacion</a>
                     @endif
                 </td>
+                <td>
+                    <a  href="{{route('admin_perfil',['id' =>$user->email])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Gestionar Trofeos</a>
+                </td>
             </tr>
         @endforeach
     </tbody>

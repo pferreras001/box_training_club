@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Skill;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use App\Mail\recoveryMailable;
@@ -14,10 +15,6 @@ session_start();
 class UserController extends Controller
 {
     //control de sesion
-    public function dar_alta(){
-    return view('dar_alta');
-
-    }
     public function send_register(Request $req){//TODO->CHEKEAR QUE SEA UN USUARIO NUEVO
         $req->validate([
           'email'=>'required',
@@ -40,7 +37,48 @@ class UserController extends Controller
           'confirmation_code'=>preg_replace('/[^A-Za-z0-9\-]/', '', $confirmation),
           'recovery_code'=>preg_replace('/[^A-Za-z0-9\-]/', '', $recovery),
       ]);
-        $correo= new gestionSociosMailable($confirmation);
+        $email=$req->input('email');
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'Boxing',
+            'trofeos'=>'0,0,0,0,0,0,0,0,0,0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'ThaiBoxing',
+            'trofeos'=>'0,0,0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'Taekwondo',
+            'trofeos'=>'0,0,0,0,0,0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'JumpRope',
+            'trofeos'=>'0,0,0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'SpeedBag',
+            'trofeos'=>'0,0,0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'PunchMitts',
+            'trofeos'=>'0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'KickingPads',
+            'trofeos'=>'0'
+        ]);
+        Skill::create([
+            'user_mail'=>$email,
+            'skill_name'=>'RopeClimb',
+            'trofeos'=>'0'
+        ]);
+        $correo= new gestionSociosMailable(preg_replace('/[^A-Za-z0-9\-]/', '', $confirmation));
         Mail::to($req->input('email'))->send($correo);
         return view('confirmacion_enviada');
     }
@@ -157,5 +195,7 @@ class UserController extends Controller
             abort(404);
         }    
     }
+    
+    
     
 }

@@ -42,11 +42,13 @@ Route::get('/delete_entry/{id}', 'App\Http\Controllers\BlogController@delete_ent
 
 
 //parte adrministracion
+Route::get('/dar_alta', 'App\Http\Controllers\AdminController@dar_alta')->name('dar_alta');
 Route::get('/users', 'App\Http\Controllers\AdminController@users')->name('users');
 Route::get('/modificar/{id}', 'App\Http\Controllers\AdminController@modificar')->name('modificar');
 Route::post('/modificar', 'App\Http\Controllers\AdminController@update')->name('update');
 Route::get('/delete/{id}', 'App\Http\Controllers\AdminController@delete')->name('delete');
 Route::get('/send_signup_mail/{id}', 'App\Http\Controllers\AdminController@send_signup_mail')->name('send_signup_mail');
+Route::get('/admin_perfil/{id}', 'App\Http\Controllers\AdminController@admin_perfil')->name('admin_perfil');
 
 
 
@@ -55,7 +57,6 @@ Route::get('/send_signup_mail/{id}', 'App\Http\Controllers\AdminController@send_
 
 //parte de gestion de los usuarios
 Route::post('/session_start', 'App\Http\Controllers\UserController@session_start')->name('session_start');
-Route::get('/dar_alta', 'App\Http\Controllers\UserController@dar_alta')->name('dar_alta');
 Route::post('/send_register', 'App\Http\Controllers\UserController@send_register')->name('send_register');
 Route::get('/confirmacion', 'App\Http\Controllers\UserController@confirmar')->name('confirmar');
 Route::get('/signup_form/{code}', 'App\Http\Controllers\UserController@signup_form')->name('signup_form');
