@@ -11,13 +11,13 @@
         <tbody>
           <tr>
             <td>{{$trofeo->skill_name}}</td>
-            <?php $copas=explode(',',$trofeo->trofeos); $num=0; ?>
+            <?php $copas=explode(',',$trofeo->trofeos); $num=-1; $skill_name=$user->skill_name?>
             @foreach($copas as $copa)
               <?php $num=$num+1; ?>
             <td>@if($copa=='0')
                 
                      Copa Bloqueada 
-                    <a href="#" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Aumentar copa {{$num}}  de {{$trofeo->skill_name}}</a>
+                    <a href="{{route('aumentarcopa',['id' =>$num.' '.$user->email.' '.$trofeo->skill_name])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Aumentar copa {{$num}}  de {{$trofeo->skill_name}}</a>
 
                  @elseif($copa=='1')
                 

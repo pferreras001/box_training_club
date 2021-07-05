@@ -70,6 +70,29 @@ class AdminController extends Controller
         }
 
   }
+    public function aumentarcopa($id){
+     if(session('tipo')=='admin'){
+         $num=strval(explode(' ',$id)[0]);
+         $email=strval(explode(' ',$id)[1]);
+         $nombre=strval(explode(' ',$id)[2]);       
+         $user = User::where('email',"=",$email)->first();
+         $trofeos= Skill::where('skill_name',"=",$nombre)->first();
+         $trophys=explode(',', $trofeos->trofeos);
+         
+         $trophy=$trophys[$num];
+         $trophys[$num]=$trophy+1;
+         $trophys2=implode(',',$trophys);
+         $trofeos->trofeos=$trophys2;
+         $trofeos->save();
+         return view('admin_perfil',compact('user','trofeos'));
+         
+     }
+        else{
+            return redirect('/');
+        }
+
+  }
+    
     public function send_signup_mail($id){
         if(session('tipo')=='admin'){
             $user=User::find($id);

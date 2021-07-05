@@ -41,7 +41,7 @@ Route::get('/delete_entry/{id}', 'App\Http\Controllers\BlogController@delete_ent
 
 
 
-//parte adrministracion
+//parte administracion
 Route::get('/dar_alta', 'App\Http\Controllers\AdminController@dar_alta')->name('dar_alta');
 Route::get('/users', 'App\Http\Controllers\AdminController@users')->name('users');
 Route::get('/modificar/{id}', 'App\Http\Controllers\AdminController@modificar')->name('modificar');
@@ -49,6 +49,7 @@ Route::post('/modificar', 'App\Http\Controllers\AdminController@update')->name('
 Route::get('/delete/{id}', 'App\Http\Controllers\AdminController@delete')->name('delete');
 Route::get('/send_signup_mail/{id}', 'App\Http\Controllers\AdminController@send_signup_mail')->name('send_signup_mail');
 Route::get('/admin_perfil/{id}', 'App\Http\Controllers\AdminController@admin_perfil')->name('admin_perfil');
+Route::get('/aumentarcopa/{id}', 'App\Http\Controllers\AdminController@aumentarcopa')->name('aumentarcopa');
 
 
 
