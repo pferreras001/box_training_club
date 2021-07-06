@@ -8,6 +8,14 @@
     @isset($senor)
         <script>alert("correo de confirmación reenviado")</script>
     @endisset
+    <form action="{{route('search_user')}}" method="POST">
+        @csrf
+        Barra de busqueda: <input type="text" name='findedUser'>
+        <input type="submit" value="Buscar Usuario">
+    </form>
+    @isset($resultado)
+        Hay {{$resultado}} resultados.<br>
+    @endisset
 <table class="text-white">
     <thead>
       <tr>
@@ -47,7 +55,11 @@
         @endforeach
     </tbody>
 </table>
-{{$users->links()}}
+    <?php
+    if (!isset($resultado))
+        $users->links()
+    ?>
+    
 </section>
 
 

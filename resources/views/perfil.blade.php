@@ -5,7 +5,8 @@
 <section class="section section__perfil">
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <div class="text-white">
-        {{$user->name}} {{$user->surname}}
+        <h1>{{$user->name}} {{$user->surname}}</h1>
+        <h2>NIVEL: {{$nivel}}</h2>
         @foreach($trofeos as $trofeo)
         <table class="text-white">
         <tbody>

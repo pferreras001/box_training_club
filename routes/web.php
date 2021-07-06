@@ -50,7 +50,8 @@ Route::get('/delete/{id}', 'App\Http\Controllers\AdminController@delete')->name(
 Route::get('/send_signup_mail/{id}', 'App\Http\Controllers\AdminController@send_signup_mail')->name('send_signup_mail');
 Route::get('/admin_perfil/{id}', 'App\Http\Controllers\AdminController@admin_perfil')->name('admin_perfil');
 Route::get('/aumentarcopa/{id}', 'App\Http\Controllers\AdminController@aumentarcopa')->name('aumentarcopa');
-
+Route::get('/disminuircopa/{id}', 'App\Http\Controllers\AdminController@disminuircopa')->name('disminuircopa');
+Route::post('/search_user', 'App\Http\Controllers\AdminController@search_user')->name('search_user');
 
 
 
