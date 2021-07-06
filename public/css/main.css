@@ -707,6 +707,7 @@ nav ul.dropdown-list {
   background: url("/img/365_dias/background-s.png") no-repeat, white;
   background-size: cover;
   height: 100vh;
+  margin-bottom: 0 !important;
 }
 
 .dias__container {
@@ -752,6 +753,92 @@ nav ul.dropdown-list {
 
   .dias__container h1 span {
     font-size: 150px;
+  }
+}
+.section__prueba {
+  color: black;
+  margin-top: 0 !important;
+}
+
+.prueba__container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.prueba__container div {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.prueba__container .left {
+  background: url("/img/prueba/background_left.png") no-repeat, white;
+  background-size: cover;
+}
+
+.prueba__container .right {
+  background: url("/img/prueba/background_right.png") no-repeat, white;
+  background-size: cover;
+}
+
+.prueba__container div h1, .prueba__container div h3 {
+  margin-left: 50px;
+}
+
+.prueba__container div h1 {
+  align-self: center;
+  font-size: 44px;
+  position: absolute;
+  width: 50%;
+}
+
+.prueba__container div h1 span {
+  color: #e9d800;
+  font-size: 59px;
+}
+
+.prueba__container div h3 {
+  align-self: flex-end;
+  position: absolute;
+}
+
+.prueba__container div h3 a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.prueba__container div h3 a:hover {
+  color: #e9d800;
+}
+
+@media only screen and (min-width: 768px) {
+  .prueba__container div h1 {
+    font-size: 80px;
+  }
+
+  .prueba__container div h1 span {
+    font-size: 109px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .prueba__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .prueba__container div {
+    height: 872px;
+  }
+
+  .prueba__container div h1 {
+    font-size: 93px;
+  }
+
+  .prueba__container div h1 span {
+    font-size: 109px;
   }
 }
 body {
