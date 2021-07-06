@@ -124,14 +124,12 @@ class UserController extends Controller
         if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
             $req->session()->regenerate();
             session(['email' => $email]);
-            if($email=='endikasier@gmail.com'){
+            if($email=='endikasier@gmail.com' || $email=='pabloadmin@gmail.com'){
                 session(['tipo' => 'admin']);
             }
             else{
                 session(['tipo' => 'user']);
             }
-            //$data=session()->all();
-            //dd($data);
             return redirect()->intended('/');
         }
         else{
