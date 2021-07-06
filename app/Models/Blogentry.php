@@ -14,7 +14,6 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property int $id
  * @property string $titulo
- * @property string $descripcion
  * @property string $texto
  * @property string|null $etiquetas
  * @property string $autor
@@ -34,7 +33,6 @@ class Blogentry extends Model
 
 	protected $fillable = [
 		'titulo',
-		'descripcion',
 		'texto',
 		'etiquetas',
 		'autor',

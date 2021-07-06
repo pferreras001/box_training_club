@@ -12,9 +12,9 @@ use Illuminate\Database\Eloquent\Model;
  * Class Skill
  * 
  * @property int $id
- * @property int $user_mail
- * @property int $skill_name
- * @property int $trofeos
+ * @property string $user_mail
+ * @property string $skill_name
+ * @property string $trofeos
  *
  * @package App\Models
  */

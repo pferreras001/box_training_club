@@ -16,7 +16,6 @@
             <input type="hidden" name="id" value="{{$entry->id}}"/>
             titulo <input type="text" name="titulo" value="{{$entry->titulo}}"/><br><br>
             autor <input type="text" name="autor" value="{{$entry->autor}}"/><br><br>
-            descripcion <input type="text" name="descripcion" value="{{$entry->descripcion}}"/><br><br>
             texto <input type="text" name="texto" value="{{$entry->texto}}"/><br><br>
             //TO DO-> EDITAR IMAGEN.
             etiquetas <input type="text" name="etiquetas" value="{{$entry->etiquetas}}"/><br><br>

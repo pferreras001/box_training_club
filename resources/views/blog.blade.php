@@ -33,9 +33,6 @@
                     <span class="text-yellow-300">
                         Escrito por <span class="font-bold italic text-white-500">{{$blogentry->autor}}</span> el dia {{date('d-m-Y',strtotime($blogentry->fecha))}}
                     </span>
-                    <p class="text-xl text-white pt-8 pb-10 leading-8">
-                        {{$blogentry->descripcion}}
-                    </p>
                     <a  href="{{route('show_entry',['id' =>$blogentry->id])}}" class="uppercase text-white font-extrabold py-4 px-8 rounded-3xl"> seguir leyendo</a>
                 </div>
             </div>

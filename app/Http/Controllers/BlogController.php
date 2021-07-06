@@ -34,7 +34,6 @@ class BlogController extends Controller
   public function insert_entry(Request $req){
       $req->validate([
           'titulo'=>'required',
-          'descripcion'=>'required',
           'image'=>'required',
           'texto'=>'required',
           'autor'=>'required',
@@ -43,7 +42,6 @@ class BlogController extends Controller
       $req->image->move(public_path('images'),$imagename);
       Blogentry::create([
           'titulo'=>$req->input('titulo'),
-          'descripcion'=>$req->input('descripcion'),
           'image'=>$imagename,
           'texto'=>$req->input('texto'),
           'autor'=>$req->input('autor'),
@@ -74,7 +72,6 @@ class BlogController extends Controller
     public function update_entry(Request $req){
         $data=Blogentry::find($req->id);
         $data->titulo=$req->titulo;
-        $data->descripcion=$req->descripcion;
         $data->texto=$req->texto;
         $data->autor=$req->autor;
         $data->etiquetas=$req->etiquetas;
