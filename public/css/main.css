@@ -841,6 +841,92 @@ nav ul.dropdown-list {
     font-size: 109px;
   }
 }
+.section__entrenamiento_personal {
+  margin-top: 0 !important;
+}
+
+.entrenamiento_personal__container {
+  background: url("/img/entrenamiento_personal/background-s.png") no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  height: 872px;
+  flex-direction: row;
+}
+
+.entrenamiento_personal__container .left {
+  background: none;
+  display: flex;
+  flex-direction: row;
+  width: 0%;
+}
+
+.entrenamiento_personal__container .right {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.entrenamiento_personal__container .right h1, .entrenamiento_personal__container .right h3 {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.entrenamiento_personal__container .right h1 {
+  font-size: 40px;
+}
+
+.entrenamiento_personal__container .right h1 span {
+  color: #e9d800;
+}
+
+.entrenamiento_personal__container .right h3 {
+  margin-top: 50px;
+}
+
+.entrenamiento_personal__container .right a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.entrenamiento_personal__container .right a:hover {
+  color: #e9d800;
+}
+
+@media only screen and (min-width: 768px) {
+  .entrenamiento_personal__container .left {
+    width: 0%;
+  }
+
+  .entrenamiento_personal__container .right {
+    text-align: right;
+    width: 100%;
+  }
+
+  .entrenamiento_personal__container .right h1 {
+    font-size: 51px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .entrenamiento_personal__container {
+    background: url("/img/entrenamiento_personal/background.png") no-repeat;
+    background-position: left;
+  }
+
+  .entrenamiento_personal__container .left {
+    width: 50%;
+  }
+
+  .entrenamiento_personal__container .right {
+    width: 50%;
+    text-align: left;
+  }
+
+  .entrenamiento_personal__container .right h1 {
+    font-size: 85px;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
@@ -896,4 +982,8 @@ input {
 
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
