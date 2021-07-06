@@ -1,0 +1,63 @@
+.section__365{
+  display: flex;
+  background: url('/img/365_dias/background-s.png') no-repeat,white;
+  background-size:cover;
+  height: 100vh;
+  margin-bottom: 0 !important;
+}
+
+.dias__container{
+  align-self: center;
+  color: $color-black;
+  margin: 0 20%;
+  width:100%;
+}
+
+.dias__container h1{
+  font-size: 53px;
+  width: 80%;
+}
+
+.dias__container h1 span{
+  color: $color-yellow;
+  font-size: 90px;
+}
+
+@media #{$breakpoints-medium} {
+
+.dias__container h1{
+  font-size: 100px;
+}
+
+.dias__container h1 span{
+  font-size: 150px;
+}
+
+}
+
+@media #{$breakpoints-large} {
+
+.section__365{
+  background: url('/img/365_dias/background.png') no-repeat,white;
+  background-size:cover;
+}
+
+.section__365{
+  height: 872px;
+}
+
+.dias__container h1{
+  font-size: 100px;
+  width: 611px;
+}
+
+.dias__container h1 span{
+  font-size: 150px;
+}
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
+}

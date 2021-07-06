@@ -1,3 +1,5 @@
-<div>
-    <!-- It is not the man who has too little, but the man who craves more, that is poor. - Seneca -->
-</div>
+<section class="section section__365">
+  <div class="dias__container">
+    <h1>ABIERTOS <span>365</span> DÍAS AL AÑO</h1>
+  </div>
+</section>
