@@ -18,9 +18,16 @@ class SociosController extends Controller
     if(session('tipo')=='user'){
         $user = User::where('email',"=",session('email'))->first();
         $trofeos= Skill::where('user_mail',"=",session('email'))->get();
-        //$trofeos=Skill::all();
-        //dd($trofeos);
-        return view('perfil',compact('user','trofeos'));
+        $nivel=0;
+        foreach($trofeos as $trofeo){
+            $trophys=explode(',', $trofeo->trofeos);
+            foreach($trophys as $trophy){
+                $nivel=$nivel+$trophy;
+            }
+        }
+        $nivel=intval($nivel*1.2);
+        
+        return view('perfil',compact('user','trofeos','nivel'));
     }
     else{
         return redirect('/');
