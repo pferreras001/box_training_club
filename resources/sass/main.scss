@@ -17,6 +17,7 @@
 @import 'components/365_dias';
 @import 'components/prueba';
 @import 'components/entrenamiento_personal';
+@import 'components/resenias';
 
 
 
@@ -87,4 +88,9 @@ ul{
 
 a{
   text-decoration: none;
+}
+
+.section-title{
+  color:$color-yellow;
+  font-size:60px;
 }

@@ -1,4 +1,8 @@
-<div id="wpac-google-review"></div>
+<section class="section section__resenias">
+  <div class="resenias__container container">
+    <h1 class="section-title">Opiniones ></h1>
+    <div id="wpac-google-review"></div>
+  </div>
 <script type="text/javascript">
 wpac_init = window.wpac_init || [];
 wpac_init.push({widget: 'GoogleReview', id: 31137, place_id: 'ChIJC68IisGvUQ0ROVi9jr1NX0U', view_mode: 'list'});
@@ -12,3 +16,7 @@ wpac_init.push({widget: 'GoogleReview', id: 31137, place_id: 'ChIJC68IisGvUQ0ROV
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
 })();
 </script>
+<script>
+  $(".wp-google-review").addClass("custom__review");
+</script>
+</section>

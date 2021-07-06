@@ -927,6 +927,15 @@ nav ul.dropdown-list {
     font-size: 85px;
   }
 }
+.wp-google-place {
+  display: none !important;
+}
+
+.wp-google-reviews {
+  display: flex !important;
+  flex-direction: row;
+}
+
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
@@ -986,4 +995,9 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.section-title {
+  color: #e9d800;
+  font-size: 60px;
 }
