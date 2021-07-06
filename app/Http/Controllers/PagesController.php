@@ -13,8 +13,17 @@ use Illuminate\Support\Facades\Mail;
 class PagesController extends Controller
 {
   public function inicio(){
-
-    return view('inicio');
+    $blogentrys = Blogentry::orderByDesc('fecha')->get();
+    $blog_array=[];
+    $num=0;
+    foreach($blogentrys as $blogentry){
+        if($num < 5){
+            $num=$num+1;
+            array_push($blog_array,$blogentry);
+        }
+    }
+    $blogentrys=$blog_array;
+    return view('inicio',compact('blogentrys'));
 
   }
   

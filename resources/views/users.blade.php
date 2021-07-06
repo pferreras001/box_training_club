@@ -59,7 +59,6 @@
     if (!isset($resultado))
         $users->links()
     ?>
-    
 </section>
 
 
