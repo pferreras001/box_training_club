@@ -16,6 +16,7 @@
 @import 'components/valores';
 @import 'components/365_dias';
 @import 'components/prueba';
+@import 'components/entrenamiento_personal';
 
 
 
@@ -82,4 +83,8 @@ input{
 
 ul{
   list-style-type: none;
+}
+
+a{
+  text-decoration: none;
 }
