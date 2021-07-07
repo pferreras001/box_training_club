@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Skill;
+use App\Models\Colaboradore;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use App\Mail\recoveryMailable;
@@ -46,7 +47,6 @@ class AdminController extends Controller
             }
             $users = $user_array;
         }
-        
         $resultado=count($users);
         return view('users',compact('users','resultado'));
     }
@@ -180,5 +180,60 @@ class AdminController extends Controller
             return redirect('/');
         }
     }
+    
+    public function gestionar_colaboradores(){
+        if(session('tipo')=='admin'){
+            $colaboradores=Colaboradore::all();
+            return view('colaboradores_admin',compact('colaboradores'));
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    public function anadir_colab(){
+        if(session('tipo')=='admin'){
+            $colaboradores=Colaboradore::all();
+            return view('anadir_colab',compact('colaboradores'));
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    public function insertar_colab(Request $req){
+      $req->validate([
+          'nombre'=>'required',
+          'link'=>'required',
+          'imagen'=>'required',
+      ]);
+      $imagename= uniqid().'-'. $req->input('nombre').'.'.$req->imagen->extension();
+      $req->imagen->move(public_path('images/colaboradores_socios'),$imagename);
+      Colaboradore::create([
+          'nombre'=>$req->input('nombre'),
+          'imagen'=>$imagename,
+          'link_web'=>$req->input('link'),
+      ]);
+      return redirect('gestionar_colaboradores');
+  }
+    public function editar_colab($id){
+        if(session('tipo')=='admin'){
+            $colaborador=Colaboradore::find($id);
+            return view('editar_colab',compact('colaborador'));
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    public function update_colab(Request $req){
+        $data=Colaboradore::find($req->id);
+        $data->nombre=$req->nombre;
+        $data->link_web=$req->link_web;;
+        $data->save();
+        return redirect('gestionar_colaboradores');
+    }
+    public function eliminar_colab($id){
+        $data = Colaboradore::find($id);   
+        $data->delete();
+        return redirect('gestionar_colaboradores');
+  }
     
 }

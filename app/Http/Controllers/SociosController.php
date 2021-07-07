@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Skill;
+use App\Models\Colaboradore;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use App\Mail\recoveryMailable;
@@ -14,7 +15,7 @@ session_start();
 
 class SociosController extends Controller
 {
-    public function perfil(){//vista de perfil desde punto de vista del usuario->TODO:hacer otra funcion para acceder desde admin para gestionar
+    public function perfil(){//vista de perfil desde punto de vista del usuario
     if(session('tipo')=='user'){
         $user = User::where('email',"=",session('email'))->first();
         $trofeos= Skill::where('user_mail',"=",session('email'))->get();
@@ -32,7 +33,16 @@ class SociosController extends Controller
     else{
         return redirect('/');
     }
-    
-
   }
+    public function colaboradores(){//vista de perfil desde punto de vista del usuario
+    if(session('tipo')=='user'){
+        $colaboradores=Colaboradore::all();
+        return view('colaboradores',compact('colaboradores'));
+    }
+    else{
+        return redirect('/');
+    }
+  }
+    
+    
 }

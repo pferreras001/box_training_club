@@ -23,7 +23,7 @@
         @foreach($blogentrys as $blogentry)
         <div class="noticias__entry">
           <div class="top">
-            <img src="{{asset('/images/'.$blogentry->image)}}" alt="{{ $blogentry->titulo }}">
+            <img src="{{asset('/images/blog/'.$blogentry->image)}}" alt="{{ $blogentry->titulo }}">
             <h2>{{ $blogentry->titulo }}</h2>
           </div>
           <div class="bottom">

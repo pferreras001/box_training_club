@@ -39,7 +39,7 @@ class BlogController extends Controller
           'autor'=>'required',
       ]);
       $imagename= uniqid().'-'. $req->titulo.'.'.$req->image->extension();
-      $req->image->move(public_path('images'),$imagename);
+      $req->image->move(public_path('images/blog'),$imagename);
       Blogentry::create([
           'titulo'=>$req->input('titulo'),
           'image'=>$imagename,
@@ -82,6 +82,5 @@ class BlogController extends Controller
         $data = Blogentry::find($id);   
         $data->delete();
         return redirect('blog');
-
   }
 }

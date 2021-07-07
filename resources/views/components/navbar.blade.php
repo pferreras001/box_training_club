@@ -39,12 +39,13 @@
                     <option selected value=" ">Box Family</option>
                    @if(session('tipo')!='admin')
                     <option value="{{ route('perfil') }}">Perfil</option>
-                    <option value="#">Colaboradores</option> 
+                    <option value="{{ route('colaboradores') }}">Colaboradores</option> 
                     <option value="">Normativa</option>
                     <option value="">Reservas</option>
                    @else
                     <option value="{{ route('users') }}">Gestion Usuarios</option>
                     <option value="{{ route('dar_alta') }}">Dar de alta</option>
+                    <option value="{{ route('gestionar_colaboradores') }}">Gestionar colaboradores</option>
                    @endif
                 </select>
             </li>

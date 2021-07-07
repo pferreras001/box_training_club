@@ -52,6 +52,12 @@ Route::get('/admin_perfil/{id}', 'App\Http\Controllers\AdminController@admin_per
 Route::get('/aumentarcopa/{id}', 'App\Http\Controllers\AdminController@aumentarcopa')->name('aumentarcopa');
 Route::get('/disminuircopa/{id}', 'App\Http\Controllers\AdminController@disminuircopa')->name('disminuircopa');
 Route::post('/search_user', 'App\Http\Controllers\AdminController@search_user')->name('search_user');
+Route::get('/gestionar_colaboradores', 'App\Http\Controllers\AdminController@gestionar_colaboradores')->name('gestionar_colaboradores');
+Route::get('/anadir_colab', 'App\Http\Controllers\AdminController@anadir_colab')->name('anadir_colab');
+Route::post('/insertar_colab', 'App\Http\Controllers\AdminController@insertar_colab')->name('insertar_colab');
+Route::get('/editar_colab/{id}', 'App\Http\Controllers\AdminController@editar_colab')->name('editar_colab');
+Route::post('/editar_colab', 'App\Http\Controllers\AdminController@update_colab')->name('update_colab');
+Route::get('/eliminar_colab/{id}', 'App\Http\Controllers\AdminController@eliminar_colab')->name('eliminar_colab');
 
 
 
@@ -70,5 +76,7 @@ Route::post('/update_pass', 'App\Http\Controllers\UserController@update_pass')->
 Route::put('/logout', 'App\Http\Controllers\UserController@logout')->name('logout');
 
 
+
 //parte de usuario loggeado
 Route::get('/perfil', 'App\Http\Controllers\SociosController@perfil')->name('perfil');
+Route::get('/colaboradores', 'App\Http\Controllers\SociosController@colaboradores')->name('colaboradores');

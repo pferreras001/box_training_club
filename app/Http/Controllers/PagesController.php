@@ -64,8 +64,13 @@ class PagesController extends Controller
   }
 
   public function login(){
+   if(session('tipo')==null){   
     $email = "";
     return view('login',compact('email'));
-
+   }
+   else{
+       return redirect('/');
+   }
+    
   }
 }
