@@ -1,12 +1,19 @@
 .wp-google-place{
-  display: none !important;
+  display:none !important;
 }
 
-.wp-google-reviews{
-  display:flex !important;
-  flex-direction: row;
+#wpac-google-review .wp-google-review{
+  background:$color-white !important;
+  padding: 23px !important; 
 }
 
-.wp-google-review{
+.wp-google-all{
+  display:none !important;
+}
 
+.resenias__container .resenias__btn{
+  font-family: $tg-apercu-medium;
+  margin: auto;
+  margin-top: 50px;
+  width: 200px;
 }

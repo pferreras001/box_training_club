@@ -38,7 +38,7 @@
 
   <x-tienda/>
 
-  <!--<x-resenias/>-->
+  <x-resenias/>
 
   <x-instagram/>
 

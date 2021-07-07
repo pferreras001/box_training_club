@@ -2,6 +2,7 @@
   <div class="resenias__container container">
     <h1 class="section-title">Opiniones ></h1>
     <div id="wpac-google-review"></div>
+    <div class="resenias__btn"><button class="btn nav__btn" onclick="location.href='https://maps.google.com/?cid=4998799587943471161'">Ver todas las reseñas</button></div>
   </div>
 <script type="text/javascript">
 wpac_init = window.wpac_init || [];
