@@ -713,13 +713,13 @@ nav ul.dropdown-list {
 .dias__container {
   align-self: center;
   color: black;
-  margin: 0 20%;
+  margin: 0 5%;
   width: 100%;
 }
 
 .dias__container h1 {
   font-size: 53px;
-  width: 80%;
+  width: 100%;
 }
 
 .dias__container h1 span {
@@ -744,6 +744,10 @@ nav ul.dropdown-list {
 
   .section__365 {
     height: 872px;
+  }
+
+  .dias__container {
+    margin: 0 20%;
   }
 
   .dias__container h1 {
@@ -842,89 +846,84 @@ nav ul.dropdown-list {
   }
 }
 .section__entrenamiento_personal {
-  margin-top: 0 !important;
+  display: flex;
+  background: url("/img/entrenamiento_personal/background-s.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 0 !important;
 }
 
 .entrenamiento_personal__container {
-  background: url("/img/entrenamiento_personal/background-s.png") no-repeat;
-  background-size: cover;
-  background-position: right;
-  display: flex;
-  height: 872px;
-  flex-direction: row;
-}
-
-.entrenamiento_personal__container .left {
-  background: none;
-  display: flex;
-  flex-direction: row;
-  width: 0%;
-}
-
-.entrenamiento_personal__container .right {
   align-self: center;
-  text-align: center;
+  color: black;
+  margin: 0 5%;
+  text-align: right;
   width: 100%;
 }
 
-.entrenamiento_personal__container .right h1, .entrenamiento_personal__container .right h3 {
-  margin: 0 auto;
-  width: 90%;
+.entrenamiento_personal__container h1 {
+  color: white;
+  font-size: 53px;
+  width: 100%;
 }
 
-.entrenamiento_personal__container .right h1 {
-  font-size: 40px;
+.entrenamiento_personal__container h1 p span {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
-.entrenamiento_personal__container .right h1 span {
+.entrenamiento_personal__container h1 span {
   color: #e9d800;
+  font-size: 71px;
 }
 
-.entrenamiento_personal__container .right h3 {
-  margin-top: 50px;
-}
-
-.entrenamiento_personal__container .right a {
+.entrenamiento_personal__container h3 a {
   color: white;
   text-decoration: none;
   transition: all 0.2s;
 }
 
-.entrenamiento_personal__container .right a:hover {
+.entrenamiento_personal__container h3 a:hover {
   color: #e9d800;
 }
 
 @media only screen and (min-width: 768px) {
-  .entrenamiento_personal__container .left {
-    width: 0%;
+  .entrenamiento_personal__container h1 {
+    font-size: 100px;
   }
 
-  .entrenamiento_personal__container .right {
-    text-align: right;
-    width: 100%;
-  }
-
-  .entrenamiento_personal__container .right h1 {
-    font-size: 51px;
+  .entrenamiento_personal__container h1 span {
+    font-size: 150px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .entrenamiento_personal__container {
+  .section__entrenamiento_personal {
     background: url("/img/entrenamiento_personal/background.png") no-repeat;
-    background-position: left;
+    background-size: cover;
   }
 
-  .entrenamiento_personal__container .left {
-    width: 50%;
+  .section__entrenamiento_personal {
+    height: 872px;
   }
 
-  .entrenamiento_personal__container .right {
-    width: 50%;
-    text-align: left;
+  .entrenamiento_personal__container {
+    margin: 0 20%;
   }
 
-  .entrenamiento_personal__container .right h1 {
-    font-size: 85px;
+  .entrenamiento_personal__container h1 {
+    font-size: 100px;
+    width: 100%;
+  }
+
+  .entrenamiento_personal__container h1 p span {
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+  }
+
+  .entrenamiento_personal__container h1 span {
+    font-size: 150px;
   }
 }
 .wp-google-place {
@@ -936,6 +935,73 @@ nav ul.dropdown-list {
   flex-direction: row;
 }
 
+.section__trabaja_con_nosotros {
+  display: flex;
+  background: url("/img/trabaja_con_nosotros/background-s.png") no-repeat, white;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 0 !important;
+}
+
+.trabaja_con_nosotros__container {
+  align-self: center;
+  color: black;
+  margin: 0 5%;
+  width: 100%;
+}
+
+.trabaja_con_nosotros__container h1 {
+  font-size: 53px;
+  width: 100%;
+}
+
+.trabaja_con_nosotros__container h1 span {
+  color: #e9d800;
+  font-size: 71px;
+}
+
+.trabaja_con_nosotros__container h3 a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.trabaja_con_nosotros__container h3 a:hover {
+  color: #e9d800;
+}
+
+@media only screen and (min-width: 768px) {
+  .trabaja_con_nosotros__container h1 {
+    font-size: 100px;
+  }
+
+  .trabaja_con_nosotros__container h1 span {
+    font-size: 150px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section__trabaja_con_nosotros {
+    background: url("/img/trabaja_con_nosotros/background.png") no-repeat, white;
+    background-size: cover;
+  }
+
+  .section__trabaja_con_nosotros {
+    height: 872px;
+  }
+
+  .trabaja_con_nosotros__container {
+    margin: 0 20%;
+  }
+
+  .trabaja_con_nosotros__container h1 {
+    font-size: 100px;
+    width: 611px;
+  }
+
+  .trabaja_con_nosotros__container h1 span {
+    font-size: 150px;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
@@ -999,5 +1065,5 @@ a {
 
 .section-title {
   color: #e9d800;
-  font-size: 60px;
+  font-size: 30px;
 }

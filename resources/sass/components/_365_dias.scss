@@ -9,13 +9,13 @@
 .dias__container{
   align-self: center;
   color: $color-black;
-  margin: 0 20%;
+  margin: 0 5%;
   width:100%;
 }
 
 .dias__container h1{
   font-size: 53px;
-  width: 80%;
+  width: 100%;
 }
 
 .dias__container h1 span{
@@ -44,6 +44,10 @@
 
 .section__365{
   height: 872px;
+}
+
+.dias__container{
+  margin: 0 20%;
 }
 
 .dias__container h1{
