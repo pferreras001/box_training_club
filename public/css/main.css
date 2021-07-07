@@ -1002,6 +1002,100 @@ nav ul.dropdown-list {
     font-size: 150px;
   }
 }
+.noticias__entrys {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticias__entry {
+  display: grid;
+  font-family: "ApercuPro-Medium", sans-serif;
+  grid-template-rows: 50% 50%;
+  height: 320px;
+  margin: auto;
+  padding: 20px 5px;
+  width: 100%;
+}
+
+.noticias__entry .top {
+  overflow: hidden;
+  position: relative;
+}
+
+.noticias__entry .top img {
+  height: auto;
+  width: 100%;
+}
+
+.noticias__entry .top h2 {
+  bottom: 0;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.noticias__entry .bottom {
+  background: white;
+  display: grid;
+  font-size: 12px;
+  grid-template-rows: 80% 20%;
+}
+
+.noticias__entry .bottom div:nth-child(1) {
+  height: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.noticias__entry .bottom p {
+  color: #878787;
+  text-align: justify;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+}
+
+.noticias__entry .bottom a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.noticias__entry .bottom a:hover {
+  color: #e9d800;
+}
+
+.noticias__entry .bottom p, .noticias__entry .bottom a {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .noticias__entry {
+    padding: 20px 156px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .noticias__entrys {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .noticias__entry {
+    height: 300px;
+    padding: 5px 5px;
+    width: calc(100%/5);
+  }
+
+  .noticias__entry .top img {
+    height: 100%;
+    width: auto;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
@@ -1060,10 +1154,22 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .section-title {
   color: #e9d800;
-  font-size: 30px;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-title {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section-title {
+    font-size: 30px;
+  }
 }

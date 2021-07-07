@@ -19,6 +19,7 @@
 @import 'components/entrenamiento_personal';
 @import 'components/resenias';
 @import 'components/trabaja_con_nosotros';
+@import 'components/noticias';
 
 
 
@@ -88,10 +89,31 @@ ul{
 }
 
 a{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .section-title{
   color:$color-yellow;
+  font-size:40px;
+  margin-bottom: 100px;
+}
+
+@media #{$breakpoints-medium} {
+
+.section-title{
+  font-size:60px;
+}
+}
+
+@media #{$breakpoints-large} {
+
+.section-title{
   font-size:30px;
+}
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
 }
