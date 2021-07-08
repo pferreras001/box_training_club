@@ -1,4 +1,4 @@
-<section class="section section__resenias">
+<section data-aos="fade-right" class="section section__resenias">
   <div class="resenias__container container">
     <h1 class="section-title">Opiniones ></h1>
     <div id="wpac-google-review"></div>

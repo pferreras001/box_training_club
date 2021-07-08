@@ -140,6 +140,10 @@
   text-transform: uppercase;
 }
 
+.valores__title h1 span{
+  color: $color-yellow;
+}
+
 .valores .lema{
   font-family: $tg-second-it;
   font-size: 12px;
@@ -150,11 +154,14 @@
 }
 
 .hidden{
+  height: 0px;
   opacity:0;
+  transition: all .2s;
 }
 
 .visible{
   opacity:1;
+  height: auto;
   transition: all .5s;
 }
 
@@ -196,7 +203,7 @@
 }
 
 .valores__title h1{
-  font-size: 100px;
+  font-size: 60px;
   text-align: left;
 }
 

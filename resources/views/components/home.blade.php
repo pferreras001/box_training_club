@@ -1,5 +1,5 @@
 <section class="section section__home">
-  <div class="home__container">
+  <div data-aos="fade-up" class="home__container">
     <div class="home__left">
       <div>
         <h1>Box Training Club Donostia</h1>

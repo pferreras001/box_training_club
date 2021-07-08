@@ -1,4 +1,4 @@
-<section class="section section__trabaja_con_nosotros">
+<section data-aos="fade-up" class="section section__trabaja_con_nosotros">
   <div class="trabaja_con_nosotros__container">
     <div>
       <h1>¿QUIERES <span>TRABAJAR</span> CON NOSOTROS?</h1>

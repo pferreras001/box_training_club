@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "765b78fe16be62f352da8d819a089f20",
+    "content-hash": "7cdf1163790c5d7a001abf63f11e3de9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -732,6 +732,60 @@
             "time": "2020-11-24T19:55:57+00:00"
         },
         {
+            "name": "dymantic/laravel-instagram-feed",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dymantic/laravel-instagram-feed.git",
+                "reference": "19c9be920e7351346d54064fbd079716878bccd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dymantic/laravel-instagram-feed/zipball/19c9be920e7351346d54064fbd079716878bccd3",
+                "reference": "19c9be920e7351346d54064fbd079716878bccd3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.5 | ^7.0",
+                "illuminate/config": "5.8.* | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/console": "5.8.* | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/database": "5.8.* | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/http": "5.8.* | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/mail": "5.8.* | ^6.0 | ^7.0 | ^8.0",
+                "illuminate/support": "5.8.* | ^6.0 | ^7.0 | ^8.0",
+                "php": "^7.1 | ^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dymantic\\InstagramFeed\\InstagramFeedServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dymantic\\InstagramFeed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Joyner",
+                    "email": "joyner.michael@gmail.com"
+                }
+            ],
+            "description": "Fetches the instagram feed for given authenticated profiles",
+            "time": "2021-07-04T02:23:07+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "2.1.25",
             "source": {
@@ -1063,10 +1117,6 @@
                 "rest",
                 "web service"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.3.0"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -7407,5 +7457,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "1.1.0"
 }

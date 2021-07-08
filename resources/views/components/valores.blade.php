@@ -1,6 +1,6 @@
 <section class="section section__valores valores">
   <div class="valores__container">
-    <div class="valores__hexagons">
+    <div data-aos="fade-right" class="valores__hexagons">
 
       <div class="valores__hexagons__small">
         <div id="box_10" class="box box__gray blink" onclick="step('#box_10','#box_11')">
@@ -241,8 +241,8 @@
       </div>
       <h2 class="lema hidden">FORTALECER ESPÍRITUS A TRAVÉS DEL CUERPO Y LA MENTE</h2>
     </div>
-    <div class="valores__title">
-      <h1>¿Qué es Box Training Club?</h1>
+    <div data-aos="fade-left" class="valores__title">
+      <h1>¿Qué es <span>Box Training Club?</span></h1>
     </div>
   </div>
 <script>

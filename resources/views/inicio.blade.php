@@ -16,7 +16,7 @@
 
   <x-empresas/>
 
-  <section class="section section__noticias">
+  <section data-aos="fade-right" class="section section__noticias">
     <div class="noticias__container container">
       <h1 class="section-title">Noticias ></h1>
       <div class="noticias__entrys">

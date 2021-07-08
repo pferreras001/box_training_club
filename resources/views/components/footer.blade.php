@@ -1,4 +1,4 @@
-<section class="section footer__section">
+<section data-aos="fade-up" class="section footer__section">
   <div class="footer__container">
     <div class="footer__left">
       <?php require('svg/navbar/logo.svg')?>
