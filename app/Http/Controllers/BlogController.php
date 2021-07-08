@@ -8,6 +8,7 @@ use App\Models\EtiquetasBlog;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\File; 
 
 class BlogController extends Controller
 {
@@ -56,9 +57,7 @@ class BlogController extends Controller
                     'etiqueta'=>$etiqueta,
                 ]);
             }
-           
       }
-         
       return redirect('blog');
   }
   public function show_entry($id){
@@ -75,6 +74,12 @@ class BlogController extends Controller
         $data->texto=$req->texto;
         $data->autor=$req->autor;
         $data->etiquetas=$req->etiquetas;
+        if(!empty($req->imagen)){
+            File::delete('images/blog'.$data->image);
+            $imagename= uniqid().'-'.$req->titulo.'.'.$req->imagen->extension();
+            $req->imagen->move(public_path('images/blog'),$imagename);
+            $data->image=$imagename;
+        }
         $data->save();
         return redirect('blog');
     }

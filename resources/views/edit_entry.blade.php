@@ -11,13 +11,13 @@
         </div>
     </div>
     <div>
-        <form action="{{route('update_entry')}}" method="POST">
+        <form action="{{route('update_entry')}}" enctype="multipart/form-data" method="POST">
             @csrf
             <input type="hidden" name="id" value="{{$entry->id}}"/>
             titulo <input type="text" name="titulo" value="{{$entry->titulo}}"/><br><br>
             autor <input type="text" name="autor" value="{{$entry->autor}}"/><br><br>
             texto <input type="text" name="texto" value="{{$entry->texto}}"/><br><br>
-            //TO DO-> EDITAR IMAGEN.
+            <b class="text-white">Selecciona una nueva imagen en caso de desear modificarla</b><input type="file" name="imagen" accept="image/*"/><br><br>
             etiquetas <input type="text" name="etiquetas" value="{{$entry->etiquetas}}"/><br><br>
             <input type="submit" value="modificar"/> 
         </form>

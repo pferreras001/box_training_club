@@ -1,10 +1,11 @@
+
 @extends('layout')
 
 @section('section')
 
 <section class="section section__users">
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<script src="{{ asset('/js/borrar.js')}}"></script>
+    <script src="{{ asset('/js/borrar.js')}}"></script>
     @isset($senor)
         <script>alert("correo de confirmación reenviado")</script>
     @endisset

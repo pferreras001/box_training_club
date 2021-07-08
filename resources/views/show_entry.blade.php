@@ -9,8 +9,10 @@
     </span><br><br>
     <p>{{$entry->texto}}</p>
     <br><br>
+    @if(session('tipo')=='admin')
     <a  href="{{route('edit_entry',['id' =>$entry->id])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Editar</a>
     <a  href="{{route('delete_entry',['id' =>$entry->id])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Borrar</a>
+    @endif
 </section>
 
 

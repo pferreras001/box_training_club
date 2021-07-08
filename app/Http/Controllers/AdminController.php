@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use App\Mail\recoveryMailable;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\File; 
 
 class AdminController extends Controller
 {
@@ -202,15 +203,20 @@ class AdminController extends Controller
     public function insertar_colab(Request $req){
       $req->validate([
           'nombre'=>'required',
-          'link'=>'required',
           'imagen'=>'required',
       ]);
       $imagename= uniqid().'-'. $req->input('nombre').'.'.$req->imagen->extension();
       $req->imagen->move(public_path('images/colaboradores_socios'),$imagename);
+        if(empty($req->input('link_web'))){
+            $link='';
+        }
+        else{
+            $link='https://'.$req->input('link_web');
+        }
       Colaboradore::create([
           'nombre'=>$req->input('nombre'),
           'imagen'=>$imagename,
-          'link_web'=>$req->input('link'),
+          'link_web'=>$link,
       ]);
       return redirect('gestionar_colaboradores');
   }
@@ -224,9 +230,27 @@ class AdminController extends Controller
         }
     }
     public function update_colab(Request $req){
+        if(empty($req->input('link_web'))){
+            $link='';
+        }
+        else{
+            $link='https://'.$req->input('link_web');
+        }
         $data=Colaboradore::find($req->id);
-        $data->nombre=$req->nombre;
-        $data->link_web=$req->link_web;;
+        $nombre=$data->nombre;
+        if(!empty($req->nombre)){
+            $data->nombre=$req->nombre;
+            $nombre=$req->nombre;
+        }
+        if(!empty($req->nombre)){
+            $data->link_web=$link;
+        }
+        if(!empty($req->imagen)){
+            File::delete('images/colaboradores_socios'.$data->imagen);
+            $imagename= uniqid().'-'.$nombre.'.'.$req->imagen->extension();
+            $req->imagen->move(public_path('images/colaboradores_socios'),$imagename);
+            $data->imagen=$imagename;
+        }
         $data->save();
         return redirect('gestionar_colaboradores');
     }

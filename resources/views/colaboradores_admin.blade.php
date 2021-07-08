@@ -3,6 +3,7 @@
 @section('section')
 
 <section class="section section__colaboradores_admin">
+<script src="{{ asset('/js/borrarcolab.js')}}"></script>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <a href="{{route('anadir_colab')}}">Añadir colaboradores</a>
     @foreach($colaboradores as $colaborador)
@@ -17,8 +18,8 @@
     </div>
     <div>
         <h1>{{$colaborador->nombre}}</h1>
-        <a href="{{route('editar_colab',['id' =>$colaborador->id])}}">Editar colaborador</a>
-        <a href="{{route('eliminar_colab',['id' =>$colaborador->id])}}">Eliminar colaborador</a>
+        <a href="{{route('editar_colab',['id' =>$colaborador->id])}}">Editar Colaborador</a>
+        <a onClick="eliminarcolab({{$colaborador->id}}); return false;" href="{{route('gestionar_colaboradores')}}">Eliminar Colaborador</a>
     </div>
     @endforeach
 
