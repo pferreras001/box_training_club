@@ -20,6 +20,7 @@
 @import 'components/resenias';
 @import 'components/trabaja_con_nosotros';
 @import 'components/noticias';
+@import 'components/saber_mas';
 
 
 
@@ -90,6 +91,10 @@ ul{
 
 a{
   text-decoration: none !important;
+}
+
+form{
+  font-family: $tg-apercu-medium;
 }
 
 .section-title{
