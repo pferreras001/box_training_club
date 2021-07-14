@@ -2,11 +2,6 @@
 
 @section('section')
 
-<section class="section section__contacto">
-
-  <x-contacto/>
-
-</section>
-
+<x-contacto/>
 
 @endsection

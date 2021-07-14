@@ -1,0 +1,159 @@
+.contacto__form{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.contacto__form div{
+}
+
+.contacto__form__left{
+  text-align: center;
+  width: 100%;
+}
+
+.contacto__form__left form{
+  margin:auto;
+  width: 100%;
+}
+
+.contacto__form form input, .contacto__form form textarea, .contacto__form form button{
+  margin-top: 60px;
+}
+
+.contacto__form form input, .contacto__form form textarea{
+  margin: inherit auto;
+  width: 90%;
+}
+
+.contacto__form form textarea{
+  height: 314px;
+}
+
+.contacto__form__right{
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px !important;
+}
+
+.contacto__form__right h1{
+  align-self: center;
+  font-size: 53px;
+  margin: auto;
+  width: 90%;
+}
+
+.contacto__form__right h1 span{
+  color: $color-yellow;
+}
+
+.contacto__telefono{
+  display: flex;
+  background: url('/img/contacto/telefono_background-s.png') no-repeat;
+  background-size:cover;
+  height: 812px;
+  margin-top: 100px;
+}
+
+.contacto__telefono h1{
+  align-self: center;
+  font-size: 53px;
+  margin: auto;
+  width: 90%;
+}
+
+.contacto__telefono h1 span{
+  color: $color-yellow;
+}
+
+.contacto__maps{
+  height: 612px;
+  position: relative;
+}
+
+.contacto__maps__info{
+  position: absolute;
+  right: 20px;
+  z-index: 5;
+}
+
+.contacto__yellow_box{
+  background: $color-yellow;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-family: $tg-apercu-medium;
+  margin-top: 20px;
+  padding: 10px;
+  width: 319px;
+}
+
+.contacto__yellow_box ul{
+  margin:0;
+}
+
+.contacto__yellow_box a{
+  color: $color-black;
+  text-decoration: none;
+}
+
+.contacto__maps iframe{
+  height: 100%;
+  width: 100%;
+}
+
+@media #{$breakpoints-medium} {
+
+
+.contacto__telefono h1{
+  width: 75%;
+}
+
+}
+
+@media #{$breakpoints-large} {
+
+.contacto__form{
+  display: flex;
+  flex-direction: row;
+}
+
+.contacto__form__right{
+  margin-bottom: 0px;
+  width: 50%;
+}
+
+.contacto__form__right h1{
+  width: 600px;
+}
+
+.contacto__form__left{
+  font-size: 1rem;
+  text-align: left;
+  width: 50%;
+}
+
+.contacto__form__left form{
+  width: 400px;
+}
+
+.contacto__form form input, .contacto__form form textarea{
+  width: 314px;
+}
+
+.contacto__telefono{
+  background: url('/img/contacto/telefono_background.png') no-repeat;
+}
+
+.contacto__telefono h1{
+  margin-left: 150px;
+  width: 602px;
+}
+
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
+}
+

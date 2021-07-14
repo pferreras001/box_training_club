@@ -21,6 +21,7 @@
 @import 'components/trabaja_con_nosotros';
 @import 'components/noticias';
 @import 'components/saber_mas';
+@import 'components/contacto';
 
 
 
@@ -67,12 +68,13 @@ body{
   -moz-border-radius: 10px;
   border-radius: 10px;
   border: 0px;
+  color: $color-black;
   height: 50px;
   padding:10px;
   text-align: left;
 }
 
-input{
+input, textarea{
 
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
