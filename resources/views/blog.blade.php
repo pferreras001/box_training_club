@@ -18,7 +18,7 @@
     <a  href="{{route('create_entry')}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl">Crear Entrada</a>
     @endif
 
-    <div class="noticias__entrys">
+    <div class="blog__noticias">
       @foreach($blogentrys as $blogentry)
         <div class="noticias__entry">
           <div class="top">
@@ -31,8 +31,8 @@
           </div>
         </div>
       @endforeach
+      {{$blogentrys->links()}}
     </div>
-    {{$blogentrys->links()}}
   </div>
 </section>
 
