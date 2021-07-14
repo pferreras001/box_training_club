@@ -14,17 +14,17 @@ class BlogController extends Controller
 {
     //control del blog ->TO DO: METERLO EN UN CONTROLADOR NUEVO
   public function blog(){  
-    $blogentrys = Blogentry::paginate(3);
+    $blogentrys = Blogentry::paginate(6);
     $etiquetas = EtiquetasBlog::all();
     return view('blog',compact('blogentrys','etiquetas'));
   }
   public function blog_search(Request $req){
     $data=$req->etiquetas;
-      if($data!='ninguna'){
-          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(3);
+      if($data!='Todos'){
+          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(6);
       }
       else{
-          $blogentrys = Blogentry::paginate(3);
+          $blogentrys = Blogentry::paginate(6);
       }
     $etiquetas = EtiquetasBlog::all();
     return view('blog',compact('blogentrys','etiquetas'));
