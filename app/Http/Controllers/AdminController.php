@@ -97,9 +97,9 @@ class AdminController extends Controller
      if(session('tipo')=='admin'){
          $num=strval(explode(' ',$id)[0]);
          $email=strval(explode(' ',$id)[1]);
-         $nombre=strval(explode(' ',$id)[2]);       
+         $nombre=strval(explode(' ',$id)[2]);
          $user = User::where('email',"=",$email)->first();
-         $trofeos= Skill::where('skill_name',"=",$nombre)->first();
+         $trofeos= Skill::where('skill_name',"=",$nombre)->where('user_mail',"=",$email)->first();
          $trophys=explode(',', $trofeos->trofeos); 
          $trophy=$trophys[$num];
          if($trophy!=3){
@@ -128,7 +128,7 @@ class AdminController extends Controller
          $email=strval(explode(' ',$id)[1]);
          $nombre=strval(explode(' ',$id)[2]);       
          $user = User::where('email',"=",$email)->first();
-         $trofeos= Skill::where('skill_name',"=",$nombre)->first();
+         $trofeos= Skill::where('skill_name',"=",$nombre)->where('user_mail',"=",$email)->first();
          $trophys=explode(',', $trofeos->trofeos);
          $trophy=$trophys[$num];
          if($trophy!=0){

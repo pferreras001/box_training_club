@@ -14,6 +14,9 @@
         @endforeach
       </select>
     </form>
+    @if(session('tipo')=='admin')
+    <a  href="{{route('create_entry')}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl">Crear Entrada</a>
+    @endif
 
     <div class="noticias__entrys">
       @foreach($blogentrys as $blogentry)
