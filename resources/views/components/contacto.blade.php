@@ -1,13 +1,13 @@
 <section class="section section__contacto">
   <div class="contacto__form">
     <div class="contacto__form__left">
-      <form method="POST" action="">
+      <form method="POST" action="{{route('contacto')}}">
       @csrf
         <span class="errmsg errmsg__contacto">*Rellene todos los campos del formulario</span><br>
 
         <input type="text" name="email" placeholder="Email"><br>
         <input type="text" name="asunto" placeholder="Asunto"><br>
-        <textarea name="mensake"placeholder="Mensaje..."></textarea><br>
+        <textarea name="mensaje"placeholder="Mensaje..."></textarea><br>
 
         <button type="submit" class="btn btn__contacto">Enviar</button><br>
 

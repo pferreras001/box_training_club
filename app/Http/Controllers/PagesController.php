@@ -8,6 +8,7 @@ use App\Models\Blogentry;
 use App\Models\EtiquetasBlog;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
+use App\Mail\contactoMailable;
 use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
@@ -49,6 +50,11 @@ class PagesController extends Controller
 
     return view('contacto');
 
+  }
+  public function enviar_contacto(Request $req){
+    $correo= new contactoMailable($req->input('email'),$req->input('asunto'),$req->input('mensaje'));
+    Mail::to('endikasier@gmail.com')->send($correo);//sustituir esto por el correo del cliente.
+    return view('contacto_enviado');
   }
     
  public function galeria(){
