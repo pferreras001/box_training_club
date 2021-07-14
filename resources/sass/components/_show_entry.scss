@@ -1,0 +1,55 @@
+.show_entry__entry{
+  background: $color-white;
+  color: $color-gray;
+  font-family: $tg-apercu-medium;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.show_entry__entry h1{
+  color: $color-black;
+  font-family: $tg-main;
+  margin: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.show_entry__img{
+  background-clip: content-box;
+  float: left;
+  margin: 0 0 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.show_entry__button{
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+@media #{$breakpoints-medium} {
+
+
+
+}
+
+@media #{$breakpoints-large} {
+
+.show_entry__entry{
+  font-size: 1rem;
+}
+
+.show_entry__img{
+  margin: 0 10px 0 0;
+  width: 400px;
+}
+
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
+}
