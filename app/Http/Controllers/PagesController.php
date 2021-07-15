@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail\gestionSociosMailable;
 use App\Mail\contactoMailable;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class PagesController extends Controller
 {
@@ -59,7 +60,10 @@ class PagesController extends Controller
     
  public function galeria(){
 
-    return view('galeria');
+    $directory = base_path().'/public/img/galeria/big';
+    $files = glob($directory."*.jpg");
+
+    return view('galeria',compact('files'));
 
   }
 

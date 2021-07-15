@@ -1,6 +1,6 @@
 <section class="section section__contacto">
   <div class="contacto__form">
-    <div class="contacto__form__left">
+    <div data-aos="fade-right" class="contacto__form__left">
       <form method="POST" action="{{route('contacto')}}">
       @csrf
         <span class="errmsg errmsg__contacto">*Rellene todos los campos del formulario</span><br>
@@ -13,7 +13,7 @@
 
       </form>
     </div>
-    <div class="contacto__form__right">
+    <div data-aos="fade-left" class="contacto__form__right">
       <h1>
         ENVÍANOS UN <span>MENSAJE</span> CON TUS PREGUNTAS.<br><br>
         ¡TE RESPONDEREMOS <span>LO ANTES POSIBLE</span>!
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="contacto__telefono">
-    <h1>
+    <h1 data-aos="fade-right">
       CONTACTA CON NOSOTROS VÍA <span>TELEFONO </span>O <span>WHATSAPP </span>AL <span>600 46 69 67</span>
     </h1>
   </div>
