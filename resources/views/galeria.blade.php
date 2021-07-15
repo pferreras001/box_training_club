@@ -10,7 +10,7 @@
       $file = end($explodedPath);
       $fileName = substr($file, 0, strrpos($file, '.'));
       ?>
-      <img class="galeria__container__img" id="{{$fileName}}" src="img/galeria/big/{{ $fileName }}.jpg" onclick="viewImage('{{$fileName}}')">
+      <img data-aos="zoom-in" class="galeria__container__img" id="{{$fileName}}" src="img/galeria/big/{{ $fileName }}.jpg" onclick="viewImage('{{$fileName}}')">
     @endforeach
   </div>
 

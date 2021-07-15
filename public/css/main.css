@@ -1382,14 +1382,14 @@ nav ul.dropdown-list {
 .galeria__container img {
   cursor: pointer;
   width: calc(100%/2);
-  transform: scale(1);
-  transition: all 0.3s;
-  z-index: 0;
+  transform: scale(1) !important;
+  transition: all 0.3s !important;
+  z-index: 0 !important;
 }
 
 .galeria__container img:hover {
-  transform: scale(1.4);
-  z-index: 5;
+  transform: scale(1.4) !important;
+  z-index: 5 !important;
 }
 
 .galeria__image_viewer {
