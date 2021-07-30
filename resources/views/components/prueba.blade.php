@@ -5,7 +5,7 @@
       <h3><a href="">Saber más...</a></h3>
     </div>
     <div data-aos="flip-left" class="right">
-      <h1>REGALO <span>EXPRERIENCIA</span></h1>
+      <h1>REGALO <span>EXPERIENCIA</span></h1>
       <h3><a href="">Saber más...</a></h3>
     </div>
   </div>
