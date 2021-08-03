@@ -1,3 +1,5 @@
-<div>
-    <!-- Order your soul. Reduce your wants. - Augustine -->
-</div>
+<section class="section section__horarios">
+  <div class="horarios__container container">
+    <iframe src="https://boxtrainingclub.aimharder.com/schedule"></iframe>
+  </div>  
+</section>
