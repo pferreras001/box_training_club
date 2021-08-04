@@ -121,6 +121,15 @@ form{
   filter: brightness(1.2) !important;
 }
 
+.opacity_transition{
+  opacity: 1  !important;
+  transition: all .4s !important;
+}
+
+.opacity_transition:hover{
+  opacity: .6  !important;
+}
+
 @media #{$breakpoints-medium} {
 
 .section-title{

@@ -1699,6 +1699,15 @@ form {
   filter: brightness(1.2) !important;
 }
 
+.opacity_transition {
+  opacity: 1 !important;
+  transition: all 0.4s !important;
+}
+
+.opacity_transition:hover {
+  opacity: 0.6 !important;
+}
+
 @media only screen and (min-width: 768px) {
   .section-title {
     font-size: 60px;
