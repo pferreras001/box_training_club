@@ -12,6 +12,8 @@
 
   <x-prueba/>
 
+  <x-cuotas_home/>
+
   <x-entrenamiento_personal/>
 
   <x-empresas/>
@@ -36,15 +38,11 @@
     </div>
   </section>
 
-  <x-tienda/>
-
   <x-resenias/>
 
   <x-instagram/>
 
   <x-trabaja_con_nosotros/>
-
-  <x-saber_mas/>
 
 </section>
 

@@ -1,0 +1,139 @@
+.section__cuotas_home{
+  margin: -100px 0 !important;
+}
+
+.cuotas_home__top{
+  display: flex;
+  height: 500px;
+  text-align: center;
+}
+
+.cuotas_home__top div{
+  align-self: center;
+  margin: auto;
+}
+
+.cuotas_home__top h1{
+  font-size: 50px;
+  margin:0 50px;
+}
+
+.cuotas_home__top h1 span{
+  color: $color-yellow;
+}
+
+.cuotas_home__top h3{
+  font-size: 27px;
+  margin-top: 30px;
+}
+
+.cuotas_home__tarifas{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.cuotas_home__tarifa{
+  display: grid;
+  grid-template-rows: 65% 35%;
+  height: 472px;
+  width: calc(100%);
+}
+
+.cuotas_home__tarifa--jab{
+  background: url('/img/cuotas_home/jab.png') no-repeat,white;
+  background-size:cover;
+}
+
+.cuotas_home__tarifa--cross{
+  background: url('/img/cuotas_home/cross.png') no-repeat,white;
+  background-size:cover;
+}
+
+.cuotas_home__tarifa--hook{
+  background: url('/img/cuotas_home/hook.png') no-repeat,white;
+  background-size:cover;
+}
+
+.cuotas_home__tarifa--tyson{
+  background: url('/img/cuotas_home/tyson.png') no-repeat,white;
+  background-size:cover;
+}
+
+.cuotas_home__tarifa__top, .cuotas_home__tarifa__bottom{
+  display: flex;
+  margin: 0 50px;
+}
+
+.cuotas_home__tarifa__top div, .cuotas_home__tarifa__bottom h3{
+  align-self: center;
+}
+
+.cuotas_home__tarifa__top h1{
+  color: $color-yellow;
+  font-size: 90px;
+}
+
+.cuotas_home__tarifa__top h2{
+  color: $color-black;
+  font-size: 38px;
+}
+
+
+.cuotas_home__tarifa__bottom h3{
+  color: $color-yellow;
+  font-family: $tg-second;
+  font-size: 38px;
+  text-align: left;
+  width: 100%;
+}
+
+@media #{$breakpoints-medium} {
+
+.cuotas_home__top h1{
+  font-size: 60px;
+}
+
+.cuotas_home__top h3{
+  font-size: 30px;
+}
+
+.cuotas_home__tarifa{
+  height: 872px;
+}
+
+.cuotas_home__tarifa__top h1{
+  font-size: 180px;
+}
+
+.cuotas_home__tarifa__top h2{
+  font-size: 80px;
+}
+
+.cuotas_home__tarifa__top, .cuotas_home__tarifa__bottom{
+  margin: 0 100px;
+}
+
+.cuotas_home__tarifa__bottom h3{
+  font-size: 50px;
+  text-align: right;
+}
+
+}
+
+@media #{$breakpoints-large} {
+
+.cuotas_home__tarifas{
+  flex-direction: row;
+}
+
+.cuotas_home__tarifa{
+  width: calc(100%/2);
+}
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
+}

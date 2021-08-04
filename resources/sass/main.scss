@@ -25,6 +25,7 @@
 @import 'components/show_entry';
 @import 'components/blog';
 @import 'components/galeria';
+@import 'components/cuotas_home';
 
 
 
@@ -107,6 +108,15 @@ form{
   color:$color-yellow;
   font-size:40px;
   margin-bottom: 100px;
+}
+
+.bright{
+  filter: brightness(1) !important;
+  transition: all .4s !important;
+}
+
+.bright:hover{
+  filter: brightness(1.2) !important;
 }
 
 @media #{$breakpoints-medium} {
