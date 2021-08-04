@@ -1607,6 +1607,11 @@ nav ul.dropdown-list {
     width: calc(100%/2);
   }
 }
+.horarios__container iframe {
+  width: 100%;
+  height: 1024px;
+}
+
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
