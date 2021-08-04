@@ -1612,6 +1612,11 @@ nav ul.dropdown-list {
   height: 1024px;
 }
 
+.tienda__container iframe {
+  width: 100%;
+  height: 1024px;
+}
+
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
