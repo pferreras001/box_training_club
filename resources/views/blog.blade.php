@@ -7,7 +7,7 @@
     <form action="{{route('blog')}}" method="POST">
       @csrf
       <select id="etiquetas" name="etiquetas" onchange="this.form.submit()">
-        <option selected="selected">--escoge un etiqueta--</option>
+        <option selected="selected">--escoge una categoría--</option>
         <option>Todos</option>
         @foreach($etiquetas as $etiqueta)
             <option>{{$etiqueta->etiqueta}}</option>
@@ -31,6 +31,7 @@
           </div>
         </div>
       @endforeach
+      <div style="width: 100%;"></div>
       {{$blogentrys->links()}}
     </div>
   </div>
