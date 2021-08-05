@@ -34,7 +34,22 @@
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             @auth
-            <li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label"><button>Box Famility</span> <span class="caret"></span></button></a>
+                <ul class="dropdown-menu">
+                    @if(session('tipo')!='admin')
+                    <li><a href="{{ route('perfil') }}">Perfil</a></li>
+                    <li><a href="{{ route('colaboradores') }}">Colaboradores</a></li>
+                    <li><a href="#">Normativa</a></li>
+                    <li><a href="#">Reservas</a></li>
+                    @else
+                    <li><a href="{{ route('users') }}">Gestionar usuarios</a></li>
+                    <li><a href="{{ route('dar_alta') }}">Dar de alta</a></li>
+                    <li><a href="{{ route('gestionar_colaboradores') }}">Gesstionar colaboradores</a></li>
+                    @endif
+                </ul>
+            </li>
+            <!--<li>
                 <select onchange="window.location.href=this.options[this.selectedIndex].value;">
                     <option selected value=" ">Box Family</option>
                    @if(session('tipo')!='admin')
@@ -48,12 +63,12 @@
                     <option value="{{ route('gestionar_colaboradores') }}">Gestionar colaboradores</option>
                    @endif
                 </select>
-            </li>
+            </li>!-->
             <li>
                 <form action="{{ route('logout') }}" method="post">
                   @csrf
                     @method('put')
-                     <button class="btn nav__btn">Cerrar Sesion</button>
+                     <button class="btn nav__btn">Cerrar Sesión</button>
                 </form>  
             </li>
             @else

@@ -64,6 +64,30 @@
     transition: width .3s;
 }
 
+.dropdown-toggle button{
+  border: $color-yellow;
+  border-radius: .25rem;
+  background: $color-yellow;
+  padding: 10px 20px;
+}
+
+.dropdown ul a{
+  color: $color-black !important;
+}
+
+.dropdown a::after, .dropdown span::after{
+  color: transparent;
+  display: inline-block;
+  background: none;
+  height: 0px;
+  margin: auto;
+  opacity: 1;
+}
+
+.dropdown a:hover::after{
+  width: 0 !important;
+}
+
 .nav-list a:hover::after {
     width: 100%;
     //transition: width .3s;
