@@ -1652,6 +1652,204 @@ nav ul.dropdown-list {
   height: 1024px;
 }
 
+.section__cuotas {
+  margin-top: -100px !important;
+}
+
+.cuotas__top {
+  display: flex;
+  height: 500px;
+  text-align: center;
+}
+
+.cuotas__top div {
+  align-self: center;
+  margin: auto;
+}
+
+.cuotas__top h1 {
+  font-size: 50px;
+  margin: 0 50px;
+}
+
+.cuotas__top h1 span {
+  color: #FFE33C;
+}
+
+.cuotas__top h3 {
+  font-size: 27px;
+  margin-top: 30px;
+}
+
+.cuotas__tarifa {
+  background: white;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cuotas__tarifa--jab {
+  background: url("/img/cuotas_home/jab.png") no-repeat, white;
+  background-size: cover;
+}
+
+.cuotas__tarifa--cross {
+  background: url("/img/cuotas_home/cross.png") no-repeat, white;
+  background-size: cover;
+}
+
+.cuotas__tarifa--hook {
+  background: url("/img/cuotas_home/hook.png") no-repeat, white;
+  background-size: cover;
+}
+
+.cuotas__tarifa--tyson {
+  background: url("/img/cuotas_home/tyson.png") no-repeat, white;
+  background-size: cover;
+}
+
+.cuotas__left {
+  color: black;
+  display: flex;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.cuotas__left ul {
+  align-self: center;
+  margin: auto;
+}
+
+.cuotas__left ul span {
+  color: #FFE33C;
+  font-size: 30px;
+}
+
+.cuotas__left, .cuotas__right {
+  width: 100%;
+}
+
+.cuotas__right {
+  display: grid;
+  grid-template-rows: 65% 35%;
+  height: 472px;
+}
+
+.cuotas__right__top, .cuotas__right__bottom {
+  display: flex;
+  margin: 0 50px;
+}
+
+.cuotas__right__top div, .cuotas__right__bottom h3 {
+  align-self: center;
+}
+
+.cuotas__right__top h1 {
+  color: #FFE33C;
+  font-size: 90px;
+}
+
+.cuotas__right__top h2 {
+  color: black;
+  font-size: 38px;
+}
+
+.cuotas__right__bottom h3 {
+  color: #FFE33C;
+  font-family: "Ethnocentric-Regular", sans-serif;
+  font-size: 38px;
+  text-align: left;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .cuotas__top h1 {
+    font-size: 60px;
+  }
+
+  .cuotas__top h3 {
+    font-size: 30px;
+  }
+
+  .cuotas__left {
+    font-size: 35px;
+  }
+
+  .cuotas__left ul span {
+    font-size: 60px;
+  }
+
+  .cuotas__right {
+    height: 872px;
+  }
+
+  .cuotas__right__top h1 {
+    font-size: 180px;
+  }
+
+  .cuotas__right__top h2 {
+    font-size: 80px;
+  }
+
+  .cuotas__right__top, .cuotas__right__bottom {
+    margin: 0 100px;
+  }
+
+  .cuotas__right__bottom h3 {
+    font-size: 50px;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cuotas__tarifa {
+    flex-direction: row;
+  }
+
+  .cuotas__left, .cuotas__right {
+    width: 50%;
+  }
+
+  .cuotas__tarifa--jab {
+    background: white;
+    background-size: cover;
+  }
+
+  .cuotas__tarifa--cross {
+    background: white;
+    background-size: cover;
+  }
+
+  .cuotas__tarifa--hook {
+    background: white;
+    background-size: cover;
+  }
+
+  .cuotas__tarifa--tyson {
+    background: white;
+    background-size: cover;
+  }
+
+  .cuotas__right--jab {
+    background: url("/img/cuotas_home/jab.png") no-repeat, white;
+    background-size: cover;
+  }
+
+  .cuotas__right--cross {
+    background: url("/img/cuotas_home/cross.png") no-repeat, white;
+    background-size: cover;
+  }
+
+  .cuotas__right--hook {
+    background: url("/img/cuotas_home/hook.png") no-repeat, white;
+    background-size: cover;
+  }
+
+  .cuotas__right--tyson {
+    background: url("/img/cuotas_home/tyson.png") no-repeat, white;
+    background-size: cover;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
