@@ -1726,6 +1726,19 @@ nav ul.dropdown-list {
   font-size: 30px;
 }
 
+.cuotas__left a {
+  color: black;
+  transition: all 0.2s;
+}
+
+.cuotas__left a:hover {
+  color: #FFE33C;
+}
+
+.cuotas__left ul li:last-child {
+  margin-top: 50px;
+}
+
 .cuotas__left, .cuotas__right {
   width: 100%;
 }

@@ -15,6 +15,7 @@
           <li><span>Trimestral: </span>195€ (matrícula gratuita)</li>
           <li><span>Semestral: </span>370€ (matrícula gratuita)</li>
           <li><span>Anual: </span>702€ (matrícula gratuita)</li>
+          <li><a href="{{route('contacto')}}">Saber más...</a></li>
         </ul>
       </div>
       <div data-aos="fade-left" class="cuotas__right cuotas__right--jab">
@@ -36,6 +37,7 @@
           <li><span>Trimestral: </span>225€ (matrícula gratuita)</li>
           <li><span>Semestral: </span>427€ (matrícula gratuita)</li>
           <li><span>Anual: </span>810€ (matrícula gratuita)</li>
+          <li><a href="{{route('contacto')}}">Saber más...</a></li>
         </ul>
       </div>
       <div data-aos="fade-left" class="cuotas__right cuotas__right--cross">
@@ -57,6 +59,7 @@
           <li><span>Trimestral: </span>255€ (matrícula gratuita)</li>
           <li><span>Semestral: </span>484€ (matrícula gratuita)</li>
           <li><span>Anual: </span>918€ (matrícula gratuita)</li>
+          <li><a href="{{route('contacto')}}">Saber más...</a></li>
         </ul>
       </div>
       <div data-aos="fade-left" class="cuotas__right cuotas__right--hook">
@@ -78,6 +81,7 @@
           <li><span>Trimestral: </span>300€ (matrícula gratuita)</li>
           <li><span>Semestral: </span>570€ (matrícula gratuita)</li>
           <li><span>Anual: </span>1080€ (matrícula gratuita)</li>
+          <li><a href="{{route('contacto')}}">Saber más...</a></li>
         </ul>
       </div>
       <div data-aos="fade-left" class="cuotas__right cuotas__right--tyson">
