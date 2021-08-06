@@ -1,11 +1,12 @@
 .cookie-consent{
-  background:$color-black;
+  background:linear-gradient(90deg, rgba(49,49,50,1) 0%, rgba(22,22,24,1) 100%);
   bottom: 0;
   font-family: $tg-apercu-medium;
   height: 100px;
   position: fixed;
   text-align: center;
   width: 100%;
+  z-index: 15;
 }
 
 .cookie-consent span, .cookie-consent button{
@@ -16,6 +17,7 @@
   background: $color-yellow;
   border: 1px $color-yellow solid;
   border-radius: .25rem;
+  font-size: 14px;
   padding: 5px;
   transition: all .2s;
 }

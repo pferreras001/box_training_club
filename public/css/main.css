@@ -1864,13 +1864,14 @@ nav ul.dropdown-list {
   }
 }
 .cookie-consent {
-  background: black;
+  background: linear-gradient(90deg, #313132 0%, #161618 100%);
   bottom: 0;
   font-family: "ApercuPro-Medium", sans-serif;
   height: 100px;
   position: fixed;
   text-align: center;
   width: 100%;
+  z-index: 15;
 }
 
 .cookie-consent span, .cookie-consent button {
@@ -1881,6 +1882,7 @@ nav ul.dropdown-list {
   background: #FFE33C;
   border: 1px #FFE33C solid;
   border-radius: 0.25rem;
+  font-size: 14px;
   padding: 5px;
   transition: all 0.2s;
 }
