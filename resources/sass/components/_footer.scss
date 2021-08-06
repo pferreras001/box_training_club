@@ -60,6 +60,15 @@
   width: 100%;
 }
 
+.footer__bottom a{
+  color: $color-white;
+  transition: all .2s;
+}
+
+.footer__bottom a:hover{
+  color: $color-yellow;
+}
+
 @media #{$breakpoints-medium} {
 
 }

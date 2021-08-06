@@ -415,6 +415,15 @@ nav ul.dropdown-list {
   width: 100%;
 }
 
+.footer__bottom a {
+  color: white;
+  transition: all 0.2s;
+}
+
+.footer__bottom a:hover {
+  color: #FFE33C;
+}
+
 @media only screen and (min-width: 1024px) {
   .footer__container {
     flex-direction: row;
