@@ -1,0 +1,27 @@
+.cookie-consent{
+  background:$color-black;
+  bottom: 0;
+  font-family: $tg-apercu-medium;
+  height: 100px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.cookie-consent span, .cookie-consent button{
+  margin-top: 40px;
+}
+
+.cookie-consent button{
+  background: $color-yellow;
+  border: 1px $color-yellow solid;
+  border-radius: .25rem;
+  padding: 5px;
+  transition: all .2s;
+}
+
+.cookie-consent button:hover{
+  background: $color-black;
+  border: 1px $color-white solid;
+  color: $color-white;
+}

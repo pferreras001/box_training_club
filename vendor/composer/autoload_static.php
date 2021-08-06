@@ -85,6 +85,7 @@ class ComposerStaticInit8159ad96989646808fc3677e8c5067f7
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\CookieConsent\\' => 21,
         ),
         'R' => 
         array (
@@ -312,6 +313,10 @@ class ComposerStaticInit8159ad96989646808fc3677e8c5067f7
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Spatie\\CookieConsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src',
         ),
         'Reliese\\' => 
         array (
@@ -553,6 +558,7 @@ class ComposerStaticInit8159ad96989646808fc3677e8c5067f7
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Mail\\contactoMailable' => __DIR__ . '/../..' . '/app/Mail/contactoMailable.php',
         'App\\Mail\\gestionSociosMailable' => __DIR__ . '/../..' . '/app/Mail/gestionSociosMailable.php',
         'App\\Mail\\recoveryMailable' => __DIR__ . '/../..' . '/app/Mail/recoveryMailable.php',
         'App\\Models\\Blogentry' => __DIR__ . '/../..' . '/app/Models/Blogentry.php',
@@ -568,6 +574,7 @@ class ComposerStaticInit8159ad96989646808fc3677e8c5067f7
         'App\\View\\Components\\actividades' => __DIR__ . '/../..' . '/app/View/Components/actividades.php',
         'App\\View\\Components\\contacto' => __DIR__ . '/../..' . '/app/View/Components/contacto.php',
         'App\\View\\Components\\cuotas' => __DIR__ . '/../..' . '/app/View/Components/cuotas.php',
+        'App\\View\\Components\\cuotas_home' => __DIR__ . '/../..' . '/app/View/Components/cuotas_home.php',
         'App\\View\\Components\\empresas' => __DIR__ . '/../..' . '/app/View/Components/empresas.php',
         'App\\View\\Components\\entrenamiento_personal' => __DIR__ . '/../..' . '/app/View/Components/entrenamiento_personal.php',
         'App\\View\\Components\\footer' => __DIR__ . '/../..' . '/app/View/Components/footer.php',
@@ -581,6 +588,7 @@ class ComposerStaticInit8159ad96989646808fc3677e8c5067f7
         'App\\View\\Components\\prueba' => __DIR__ . '/../..' . '/app/View/Components/prueba.php',
         'App\\View\\Components\\resenias' => __DIR__ . '/../..' . '/app/View/Components/resenias.php',
         'App\\View\\Components\\reseñas' => __DIR__ . '/../..' . '/app/View/Components/reseñas.php',
+        'App\\View\\Components\\saber_mas' => __DIR__ . '/../..' . '/app/View/Components/saber_mas.php',
         'App\\View\\Components\\tienda' => __DIR__ . '/../..' . '/app/View/Components/tienda.php',
         'App\\View\\Components\\trabaja_con_nosotros' => __DIR__ . '/../..' . '/app/View/Components/trabaja_con_nosotros.php',
         'App\\View\\Components\\valores' => __DIR__ . '/../..' . '/app/View/Components/valores.php',
@@ -4748,6 +4756,8 @@ class ComposerStaticInit8159ad96989646808fc3677e8c5067f7
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\CookieConsent\\CookieConsentMiddleware' => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src/CookieConsentMiddleware.php',
+        'Spatie\\CookieConsent\\CookieConsentServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src/CookieConsentServiceProvider.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Color' => __DIR__ . '/..' . '/symfony/console/Color.php',

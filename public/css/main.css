@@ -1863,6 +1863,34 @@ nav ul.dropdown-list {
     background-size: cover;
   }
 }
+.cookie-consent {
+  background: black;
+  bottom: 0;
+  font-family: "ApercuPro-Medium", sans-serif;
+  height: 100px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.cookie-consent span, .cookie-consent button {
+  margin-top: 40px;
+}
+
+.cookie-consent button {
+  background: #FFE33C;
+  border: 1px #FFE33C solid;
+  border-radius: 0.25rem;
+  padding: 5px;
+  transition: all 0.2s;
+}
+
+.cookie-consent button:hover {
+  background: black;
+  border: 1px white solid;
+  color: white;
+}
+
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
