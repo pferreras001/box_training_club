@@ -23,6 +23,7 @@ Route::get('/blog', 'App\Http\Controllers\PagesController@blog')->name('blog');
 Route::get('/galeria', 'App\Http\Controllers\PagesController@galeria')->name('galeria');
 Route::get('/tienda', 'App\Http\Controllers\PagesController@tienda')->name('tienda');
 Route::get('/login', 'App\Http\Controllers\PagesController@login')->name('login');
+Route::get('/aviso_legal', 'App\Http\Controllers\PagesController@avisoLegal')->name('aviso_legal');
 
 
 

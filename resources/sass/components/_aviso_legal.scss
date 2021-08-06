@@ -1,0 +1,35 @@
+.aviso_legal__container{
+  background: $color-white;
+  color: $color-gray;
+  font-family: $tg-apercu-medium;
+  padding: 50px;
+}
+
+.aviso_legal__container div{
+  text-align: justify;
+}
+
+.aviso_legal__container h1, .aviso_legal__container h2{
+  color: $color-black;
+  font-family: $tg-main;
+  text-align: left;
+}
+
+.aviso_legal__container h1{
+  font-size: 64px;
+  margin-bottom: 200px;
+  text-align: center;
+  width: 100%;
+}
+
+.aviso_legal__container span{
+  color: $color-black;
+}
+
+.aviso_legal__container h2{
+  margin-top: 80px;
+}
+
+.aviso_legal__container ol{
+  margin-left: 50px;
+}

@@ -81,6 +81,10 @@ class PagesController extends Controller
    else{
        return redirect('/');
    }
+}
+
+  public function avisoLegal(){
+   return view('aviso_legal');
     
   }
 }
