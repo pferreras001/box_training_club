@@ -1,13 +1,16 @@
-<section class="section section__contacto">
+<section class="section section__contacto_asunto">
   <div class="contacto__form">
     <div data-aos="fade-right" class="contacto__form__left">
       <form method="POST" action="{{route('contacto')}}">
       @csrf
         <span class="errmsg errmsg__contacto">*Rellene todos los campos del formulario</span><br>
-
-        <input type="text" name="email" placeholder="Email"><br>
-        <input type="text" name="asunto" placeholder="Asunto"><br>
-        <textarea name="mensaje"placeholder="Mensaje..."></textarea><br>
+        <input type="email" name="email" required="true" placeholder="Email"><br>
+          @isset($asunto)
+            <input type="text" name="asunto" required="true" value="{{$asunto}}"><br>
+          @else
+          <input type="text" name="asunto" required="true" placeholder="Asunto"><br>
+         @endisset
+        <textarea name="mensaje" required="true" placeholder="Mensaje..."></textarea><br>
 
         <button type="submit" class="btn btn__contacto">Enviar</button><br>
 

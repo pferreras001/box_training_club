@@ -48,10 +48,17 @@ class PagesController extends Controller
   }
   
   public function contacto(){
-
-    return view('contacto');
+    $asunto="";
+    return view('contacto',compact('asunto'));
 
   }
+    public function contacto_asunto($id){
+    $asunto=strval($id);
+    //dd($asunto);
+    return view('contacto',compact('asunto'));
+
+  }
+    
   public function enviar_contacto(Request $req){
     $correo= new contactoMailable($req->input('email'),$req->input('asunto'),$req->input('mensaje'));
     Mail::to('endikasier@gmail.com')->send($correo);//sustituir esto por el correo del cliente.

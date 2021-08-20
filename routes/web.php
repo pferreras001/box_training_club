@@ -18,6 +18,7 @@ Route::get('/horarios', 'App\Http\Controllers\PagesController@horarios')->name('
 Route::get('/actividades', 'App\Http\Controllers\PagesController@actividades')->name('actividades');
 Route::get('/cuotas', 'App\Http\Controllers\PagesController@cuotas')->name('cuotas');
 Route::get('/contacto', 'App\Http\Controllers\PagesController@contacto')->name('contacto');
+Route::get('/contacto_asunto/{id}', 'App\Http\Controllers\PagesController@contacto_asunto')->name('contacto_asunto');
 Route::post('/contacto', 'App\Http\Controllers\PagesController@enviar_contacto')->name('contacto');
 Route::get('/blog', 'App\Http\Controllers\PagesController@blog')->name('blog');
 Route::get('/galeria', 'App\Http\Controllers\PagesController@galeria')->name('galeria');
