@@ -27,7 +27,7 @@ class BlogController extends Controller
           $blogentrys = Blogentry::paginate(6);
       }
     $etiquetas = EtiquetasBlog::all();
-    return view('blog',compact('blogentrys','etiquetas'));
+    return view('blog',compact('blogentrys','etiquetas','data'));
   }
   public function create_entry(){
       return view('create_entry');

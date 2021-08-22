@@ -7,11 +7,22 @@
     <form action="{{route('blog')}}" method="POST">
       @csrf
       <select id="etiquetas" name="etiquetas" onchange="this.form.submit()">
-        <option selected="selected">--escoge una categoría--</option>
-        <option>Todos</option>
-        @foreach($etiquetas as $etiqueta)
-            <option>{{$etiqueta->etiqueta}}</option>
-        @endforeach
+          @isset($data)
+              <option>Todos</option>
+              @foreach($etiquetas as $etiqueta)
+                    @if($etiqueta->etiqueta==$data)
+                        <option selected="selected">{{$etiqueta->etiqueta}}</option>
+                    @else
+                        <option>{{$etiqueta->etiqueta}}</option>
+                    @endif
+              @endforeach
+          @else
+            <option selected="selected">--escoge una categoría--</option>
+            <option>Todos</option>
+            @foreach($etiquetas as $etiqueta)
+                <option>{{$etiqueta->etiqueta}}</option>
+            @endforeach
+          @endisset
       </select>
     </form>
     @if(session('tipo')=='admin')
