@@ -82,4 +82,6 @@ Route::put('/logout', 'App\Http\Controllers\UserController@logout')->name('logou
 
 //parte de usuario loggeado
 Route::get('/perfil', 'App\Http\Controllers\SociosController@perfil')->name('perfil');
+Route::get('/modificar_perfil/{id}', 'App\Http\Controllers\SociosController@modificar_perfil')->name('modificar_perfil');
+Route::post('/update_perfil', 'App\Http\Controllers\SociosController@update_perfil')->name('update_perfil');
 Route::get('/colaboradores', 'App\Http\Controllers\SociosController@colaboradores')->name('colaboradores');

@@ -46,14 +46,18 @@ class User extends Model implements AuthenticatableContract
 	];
 
 	protected $fillable = [
+		'image',
 		'name',
 		'surname',
+		'apodo',
+		'lema',
 		'email',
 		'password',
 		'confirmed',
 		'confirmation_code',
 		'recovery_code',
 		'birth_date',
+		'enter_date',
 		'remember_token'
 	];
 }

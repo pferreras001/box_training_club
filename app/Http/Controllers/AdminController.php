@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DateTime;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Skill;
@@ -21,7 +21,6 @@ class AdminController extends Controller
         else{
             return redirect('/');
         }
-
     }
     
     public function users(){
@@ -74,6 +73,16 @@ class AdminController extends Controller
             $data->name=$req->name;
             $data->email=$req->email;
             $data->surname=$req->surname;
+            $data->lema=$req->lema;
+            $data->apodo=$req->apodo;
+            if(!empty($req->image)){
+                if($data->image!='predeterminado.png'){
+                    File::delete('images/socios'.$data->image);
+                }
+                $imagename= uniqid().'-'.$req->name.'.'.$req->image->extension();
+                $req->image->move(public_path('images/socios'),$imagename);
+                $data->image=$imagename;
+            }
             $data->save();
             return redirect('users');
         }
@@ -174,8 +183,14 @@ class AdminController extends Controller
                     $nivel=$nivel+$trophy;
                 }
             }
+            $puntos=intval($nivel*3);
             $nivel=intval($nivel*1.2);
-            return view('admin_perfil',compact('user','trofeos','nivel'));
+            $fecha_entrada=$user->enter_date;
+            $date = new DateTime($fecha_entrada);
+            $now = new DateTime();
+            $interval = $date->diff($now);
+            $dias=$interval->format('%a');
+            return view('admin_perfil',compact('user','trofeos','nivel','dias','puntos'));
         }
         else{
             return redirect('/');

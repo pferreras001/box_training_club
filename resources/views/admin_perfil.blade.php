@@ -6,8 +6,12 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <div class="text-white">
         <a href="{{route('users')}}">Volver a gestionar los usuarios.</a>
-       <h1>{{$user->name}} {{$user->surname}}</h1>
-        <h2>NIVEL: {{$nivel}}</h2>
+      <img src="{{asset('/images/socios/'.$user->image)}}" width="200" height="250" >
+        <h1>{{$user->apodo}}</h1>
+        <h1>{{$user->name}} {{$user->surname}}</h1>
+        <h1>{{$user->lema}}</h1>
+        <h2>NIVEL: {{$nivel}}  PUNTOS :{{$puntos}}</h2>
+        <h3>Dias inscrito : {{$dias}}</h3>
         @foreach($trofeos as $trofeo)
         <table class="text-white">
         <tbody>
