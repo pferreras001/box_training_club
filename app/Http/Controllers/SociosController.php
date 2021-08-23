@@ -34,8 +34,35 @@ class SociosController extends Controller
         $now = new DateTime();
         $interval = $date->diff($now);
         $dias=$interval->format('%a');
-        
-        return view('perfil',compact('user','trofeos','nivel','puntos','dias'));
+        //para conseguir el ranking basta con hacer un for y comparar sus puntos con los de otro para ver en que posicion esta empezando por 1 y de ahi sumando.
+        $usuarios = User::all();
+            $rango=1;
+            foreach($usuarios as $usuario){
+                if($usuario->email!=$user->email){
+                    $trofeos_temp= Skill::where('user_mail',"=",$usuario->email)->get();
+                    $nivel_temp=0;
+                    foreach($trofeos_temp as $trofeo){
+                        $trophys=explode(',', $trofeo->trofeos);
+                        foreach($trophys as $trophy){
+                            $nivel_temp=$nivel_temp+$trophy;
+                        }
+                    }
+                    $puntos_temp=intval($nivel_temp*3);
+                    $nivel_temp=intval($nivel_temp*1.2);
+                    $fecha_entrada=$usuario->enter_date;
+                    $date = new DateTime($fecha_entrada);
+                    $now = new DateTime();
+                    $interval = $date->diff($now);
+                    $dias_temp=$interval->format('%a');
+                    if($puntos_temp>$puntos){
+                        $rango=$rango+1;
+                    }
+                    if($puntos_temp=$puntos and $dias_temp>$dias){
+                        $rango=$rango+1;
+                    }
+                }  
+            }
+        return view('perfil',compact('user','trofeos','nivel','puntos','dias','rango'));
     }
     else{
         return redirect('/');

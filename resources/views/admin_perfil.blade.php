@@ -12,6 +12,7 @@
         <h1>{{$user->lema}}</h1>
         <h2>NIVEL: {{$nivel}}  PUNTOS :{{$puntos}}</h2>
         <h3>Dias inscrito : {{$dias}}</h3>
+        <h3>Rango : {{$rango}}</h3>
         @foreach($trofeos as $trofeo)
         <table class="text-white">
         <tbody>
