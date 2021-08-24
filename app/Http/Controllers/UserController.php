@@ -119,7 +119,6 @@ class UserController extends Controller
         $email=strip_tags($email);
         $password=$req->input('password');
         $remember=true;
-        echo'<script>console.log("mail:'.$email.'  contraseña: '.$password.'")</script>';
         
         if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
             $req->session()->regenerate();
@@ -133,7 +132,8 @@ class UserController extends Controller
             return redirect()->intended('/');
         }
         else{
-            return view('login',compact('email'));
+            $fail='true';
+            return view('login',compact('email','fail'));
         }
         
     }

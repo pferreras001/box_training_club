@@ -12,10 +12,15 @@
     @csrf
 
     <fieldset class="fieldset fieldset__login">
-
-      <span class="errmsg errmsg__login">*Usuario o contraseña incorrectos</span>
-
-      <input type="text" name="email" placeholder="Email" value="{{ $email }}"><br>
+        @isset($fail)
+        <span class="errmsg errmsg__login">*Usuario o contraseña incorrectos</span>->hay que hacer visible este span
+        @endisset
+        
+        @isset($email)
+            <input type="text" name="email" value="{{ $email }}"><br>
+        @else
+            <input type="text" name="email" placeholder="Email"><br>
+        @endisset
       <input type="password" name="password" placeholder="Contraseña"><br>
 
       <button type="submit" class="btn btn__login">Iniciar Sesión</button><br>

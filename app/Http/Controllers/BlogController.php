@@ -18,10 +18,11 @@ class BlogController extends Controller
     $etiquetas = EtiquetasBlog::all();
     return view('blog',compact('blogentrys','etiquetas'));
   }
+    
   public function blog_search(Request $req){
     $data=$req->etiquetas;
-      if($data!='Todos'){
-          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(6);
+      if($data!='Todas'){
+          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(9);
       }
       else{
           $blogentrys = Blogentry::paginate(6);
@@ -29,9 +30,11 @@ class BlogController extends Controller
     $etiquetas = EtiquetasBlog::all();
     return view('blog',compact('blogentrys','etiquetas','data'));
   }
+    
   public function create_entry(){
       return view('create_entry');
   }
+    
   public function insert_entry(Request $req){
       $req->validate([
           'titulo'=>'required',
@@ -60,14 +63,17 @@ class BlogController extends Controller
       }
       return redirect('blog');
   }
+    
   public function show_entry($id){
     $entry = Blogentry::find($id);   
     return view('show_entry',compact('entry'));
   }
+    
   public function edit_entry($id){
     $entry = Blogentry::find($id);   
    return view('edit_entry',compact('entry'));
   }
+    
     public function update_entry(Request $req){
         $data=Blogentry::find($req->id);
         $data->titulo=$req->titulo;
@@ -83,6 +89,7 @@ class BlogController extends Controller
         $data->save();
         return redirect('blog');
     }
+    
     public function delete_entry($id){
         $data = Blogentry::find($id);   
         $data->delete();

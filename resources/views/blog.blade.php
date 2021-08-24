@@ -8,7 +8,6 @@
       @csrf
       <select id="etiquetas" name="etiquetas" onchange="this.form.submit()">
           @isset($data)
-              <option>Todos</option>
               @foreach($etiquetas as $etiqueta)
                     @if($etiqueta->etiqueta==$data)
                         <option selected="selected">{{$etiqueta->etiqueta}}</option>
@@ -18,7 +17,6 @@
               @endforeach
           @else
             <option selected="selected">--escoge una categoría--</option>
-            <option>Todos</option>
             @foreach($etiquetas as $etiqueta)
                 <option>{{$etiqueta->etiqueta}}</option>
             @endforeach
