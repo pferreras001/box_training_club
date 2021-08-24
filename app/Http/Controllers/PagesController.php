@@ -48,8 +48,7 @@ class PagesController extends Controller
   }
   
   public function contacto(){
-    $asunto="";
-    return view('contacto',compact('asunto'));
+    return view('contacto');
 
   }
     public function contacto_asunto($id){
