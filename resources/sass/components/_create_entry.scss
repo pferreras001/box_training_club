@@ -1,0 +1,34 @@
+.create_entry__container form{
+  font-family: $tg-apercu-medium;
+  margin: auto;
+  width: 90%;
+}
+.create_entry__container input, .create_entry__container textarea{
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.create_entry__container textarea{
+  height: 300px;
+}
+
+@media #{$breakpoints-medium} {
+
+}
+
+@media #{$breakpoints-large} {
+
+.create_entry__container form{
+  width: 400px;
+}
+
+.create_entry__container input, .create_entry__container textarea{
+  width: 400px;
+}
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
+}

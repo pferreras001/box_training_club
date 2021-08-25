@@ -1938,6 +1938,30 @@ nav ul.dropdown-list {
   margin-left: 50px;
 }
 
+.create_entry__container form {
+  font-family: "ApercuPro-Medium", sans-serif;
+  margin: auto;
+  width: 90%;
+}
+
+.create_entry__container input, .create_entry__container textarea {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.create_entry__container textarea {
+  height: 300px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .create_entry__container form {
+    width: 400px;
+  }
+
+  .create_entry__container input, .create_entry__container textarea {
+    width: 400px;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;

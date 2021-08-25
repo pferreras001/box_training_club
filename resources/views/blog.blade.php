@@ -23,9 +23,6 @@
           @endisset
       </select>
     </form>
-    @if(session('tipo')=='admin')
-    <a  href="{{route('create_entry')}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl">Crear Entrada</a>
-    @endif
 
     <div class="blog__noticias">
       @foreach($blogentrys as $blogentry)
@@ -43,6 +40,10 @@
       <div style="width: 100%;"></div>
       {{$blogentrys->links()}}
     </div>
+
+    @if(session('tipo')=='admin')
+      <a href="{{route('create_entry')}}"><button class="btn"> Crear Entrada</button></a>
+    @endif
   </div>
 </section>
 
