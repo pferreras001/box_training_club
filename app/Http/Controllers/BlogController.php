@@ -22,7 +22,7 @@ class BlogController extends Controller
   public function blog_search(Request $req){
     $data=$req->etiquetas;
       if($data!='Todas'){
-          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(9);
+          $blogentrys = Blogentry::where('etiquetas','like','%'.$data.'%')->paginate(6);
       }
       else{
           $blogentrys = Blogentry::paginate(6);

@@ -34,6 +34,7 @@
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             @auth
+            <!--
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label"><button>Box Famility</span> <span class="caret"></span></button></a>
                 <ul class="dropdown-menu">
@@ -45,10 +46,11 @@
                     @else
                     <li><a href="{{ route('users') }}">Gestionar usuarios</a></li>
                     <li><a href="{{ route('dar_alta') }}">Dar de alta</a></li>
-                    <li><a href="{{ route('gestionar_colaboradores') }}">Gesstionar colaboradores</a></li>
+                    <li><a href="{{ route('gestionar_colaboradores') }}">Gestionar colaboradores</a></li>
                     @endif
                 </ul>
             </li>
+            -->
             <li>
                 <form action="{{ route('logout') }}" method="post">
                   @csrf
