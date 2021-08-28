@@ -13,7 +13,7 @@
 
     <fieldset class="fieldset fieldset__login">
         @isset($fail)
-        <span class="errmsg errmsg__login">*Usuario o contraseña incorrectos</span>->hay que hacer visible este span
+        <span class="errmsg errmsg__login">*Usuario o contraseña incorrectos</span>
         @endisset
         
         @isset($email)
