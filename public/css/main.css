@@ -2161,6 +2161,24 @@ nav ul.dropdown-list {
     height: 550px;
   }
 }
+.recover_password__container {
+  margin-top: 200px;
+}
+
+.recover_password__container form {
+  margin: auto;
+  text-align: center;
+  width: 90%;
+}
+
+.recover_password__container input {
+  width: 300px;
+}
+
+.recover_password__container form button {
+  margin-top: 50px;
+}
+
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
