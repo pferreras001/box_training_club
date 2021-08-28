@@ -1,4 +1,7 @@
 <section class="section section__home">
+  <video onloadedmetadata="this.muted=true" autoplay loop>
+    <source src="videos/welcome-video.mp4">
+  </video>
   <div data-aos="fade-up" class="home__container">
     <div class="home__left">
       <div>
@@ -11,3 +14,4 @@
     </div>
   </div>
 </section>
+

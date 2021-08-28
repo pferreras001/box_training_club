@@ -1,0 +1,198 @@
+.actividades__actividad{
+  display: flex;
+  flex-direction: column;
+}
+
+.actividades__actividad__1{
+  background: url('/img/actividades/box_training.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__2{
+  background: url('/img/actividades/pads_&_mits.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__3{
+  background: url('/img/actividades/bag_assaults.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__4{
+  background: url('/img/actividades/fightwod.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__5{
+  background: url('/img/actividades/hit_circuit.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__6{
+  background: url('/img/actividades/hit_&_run.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__7{
+  background: url('/img/actividades/skills.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__8{
+  background: url('/img/actividades/combat.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__9{
+  background: url('/img/actividades/kids_&_you.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__10{
+  background: url('/img/actividades/personal_training.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad .left{
+  display:flex;
+  width: 100%;
+}
+
+.actividades__actividad .left svg{
+  align-self: center;
+  margin: auto;
+}
+
+.actividades__actividad img{
+  width: 100%;
+}
+
+.section__actividades{
+  margin-top: -100px !important;
+}
+
+.actividades__actividad .center{
+  display:flex;
+  width: 100%;
+}
+
+.actividades__actividad ul{
+  align-self: center;
+  color: $color-yellow;
+  font-family: $tg-second;
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+.actividades__actividad .right{
+  display:flex;
+  width: 100%;
+}
+
+.actividades__actividad table{
+  align-self: center;
+  font-family: $tg-second;
+  font-size: 15px;
+  margin: auto;
+}
+
+.actividades__actividad table .title{
+  color: $color-white !important;
+  padding-right: 20px;
+}
+
+.actividades__actividad table th{
+  color: $color-yellow;
+}
+
+.actividades__rectangle{
+  border: 3px $color-black solid;
+  height: 30px;
+  width: 30px;
+}
+
+.actividades__rectangle__active{
+  background-color: $color-yellow;
+}
+
+.actividades__rectangle__inactive{
+  background-color: $color-gray;
+}
+
+.actividades__description{
+  display:flex;
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.actividades__description h3{
+  align-self: center;
+  font-family: $tg-second;
+  font-size: 15px;
+  margin: 0 10px;
+}
+
+.actividades__actividad .left, .actividades__actividad .center, .actividades__actividad .right{
+  height: auto;
+}
+
+@media #{$breakpoints-medium} {
+
+.actividades__actividad table{
+  font-size: 25px;
+}
+
+.actividades__rectangle{
+  height: 40px;
+  width: 40px;
+}
+
+.actividades__description h3{
+  font-size: 1.75rem;
+}
+
+}
+
+@media #{$breakpoints-large} {
+
+.actividades__actividad{
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 650px;
+}
+
+.actividades__actividad .left{
+  display:flex;
+  width: 25%;
+}
+
+.actividades__actividad .center{
+  display:flex;
+  width: 25%;
+}
+
+.actividades__actividad .right{
+  display:flex;
+  width: 50%;
+}
+
+.actividades__description{
+  margin-top: -200px;
+}
+
+.actividades__description h3{
+  margin: 0 300px;
+}
+
+.actividades__actividad .left, .actividades__actividad .center, .actividades__actividad .right{
+  height: 550px;
+}
+
+}
+
+
+@media #{$breakpoints-xlarge} {
+
+}
