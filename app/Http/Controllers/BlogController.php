@@ -40,7 +40,6 @@ class BlogController extends Controller
           'titulo'=>'required',
           'image'=>'required',
           'texto'=>'required',
-          'autor'=>'required',
       ]);
       $imagename= uniqid().'-'. $req->titulo.'.'.$req->image->extension();
       $req->image->move(public_path('images/blog'),$imagename);
@@ -48,7 +47,6 @@ class BlogController extends Controller
           'titulo'=>$req->input('titulo'),
           'image'=>$imagename,
           'texto'=>$req->input('texto'),
-          'autor'=>$req->input('autor'),
           'etiquetas'=>$req->input('etiquetas'),
       ]);
       $etiquetacoll=$req->input('etiquetas');
