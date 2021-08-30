@@ -10,11 +10,11 @@
     </div>
     <div class="footer__right">
       <ul>
-        <li><a href="https://www.instagram.com/boxtrainingclub/"><?php require('imports/svg/instagram.svg')?></a></li>
-        <li><a href="https://www.facebook.com/boxtrainingclub"><?php require('imports/svg/facebook1.svg')?></a></li>
-        <li><a href="https://www.tiktok.com/@boxtrainingclub"><?php require('svg/footer/tik-tok.svg')?></a></li>
-        <li><a href="https://www.youtube.com/user/BoxTrainingDonostia"><?php require('imports/svg/youtube.svg')?></a></li>
-        <li><a href="https://www.linkedin.com/company/box-training-club"><?php require('svg/footer/linkedin.svg')?></a></li>
+        <li><a href="https://www.instagram.com/boxtrainingclub/" target="_blank"><?php require('imports/svg/instagram.svg')?></a></li>
+        <li><a href="https://www.facebook.com/boxtrainingclub" target="_blank"><?php require('imports/svg/facebook1.svg')?></a></li>
+        <li><a href="https://www.tiktok.com/@boxtrainingclub" target="_blank"><?php require('svg/footer/tik-tok.svg')?></a></li>
+        <li><a href="https://www.youtube.com/user/BoxTrainingDonostia" target="_blank"><?php require('imports/svg/youtube.svg')?></a></li>
+        <li><a href="https://www.linkedin.com/company/box-training-club" target="_blank"><?php require('svg/footer/linkedin.svg')?></a></li>
       </ul>
     </div>
   </div>
