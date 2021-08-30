@@ -1,3 +1,7 @@
+.section__actividades{
+  margin-top: 0 !important;
+}
+
 .actividades__actividad{
   display: flex;
   flex-direction: column;
@@ -65,10 +69,6 @@
 
 .actividades__actividad img{
   width: 100%;
-}
-
-.section__actividades{
-  margin-top: -100px !important;
 }
 
 .actividades__actividad .center{
