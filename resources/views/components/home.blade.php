@@ -1,7 +1,12 @@
 <section class="section section__home">
-  <video onloadedmetadata="this.muted=true" autoplay loop>
+  <a href="https://www.youtube.com/watch?v=itHZ6-GngTI">
+  <video onloadedmetadata="this.muted=true" muted autoplay loop id="vid">
     <source src="videos/welcome-video.mp4">
   </video>
+  </a>
+  <script>
+    document.getElementById('vid').play();
+  </script>
   <div data-aos="fade-up" class="home__container">
     <div class="home__left">
       <div>
