@@ -442,8 +442,11 @@ nav ul.dropdown-list {
     margin-top: 0;
   }
 }
+.section__home {
+  margin-top: -36px !important;
+}
+
 .section__home video {
-  margin-top: -242px;
   width: 100%;
   z-index: -5;
 }
@@ -666,6 +669,7 @@ nav ul.dropdown-list {
 
 .valores__title h1 span {
   font-family: "Ethnocentric-Regular", sans-serif;
+  font-size: 40px;
   color: #FFE33C;
 }
 
@@ -1421,6 +1425,10 @@ nav ul.dropdown-list {
     width: calc(100%/3);
   }
 }
+.section__galeria {
+  margin-top: 0 !important;
+}
+
 .galeria__container {
   display: flex;
   flex-direction: column;
@@ -1969,6 +1977,10 @@ nav ul.dropdown-list {
     width: 400px;
   }
 }
+.section__actividades {
+  margin-top: 0 !important;
+}
+
 .actividades__actividad {
   display: flex;
   flex-direction: column;
@@ -2036,10 +2048,6 @@ nav ul.dropdown-list {
 
 .actividades__actividad img {
   width: 100%;
-}
-
-.section__actividades {
-  margin-top: -100px !important;
 }
 
 .actividades__actividad .center {
@@ -2189,6 +2197,8 @@ body {
 
 .section {
   margin: 100px 0;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .btn {
