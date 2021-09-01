@@ -181,7 +181,7 @@
               <h3>ENTRENAMIENTO FUNCIONAL</h3>
               <ul>
                 <li>+ FIGHTER FITNESS</li>
-                <li>+ CROSS TRINING</li>
+                <li>+ CROSS TRAINING</li>
               </ul>
             </div>
           </div>

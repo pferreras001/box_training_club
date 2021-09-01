@@ -295,13 +295,27 @@ nav ul.dropdown-list {
   text-align: center;
 }
 
-.login__container {
-  margin-top: 150px;
-}
-
 .login__section .icon--logotipo {
   fill: #FFE33C;
   width: 200px;
+}
+
+.login__container h3 {
+  color: #FFE33C;
+  font-family: "Ethnocentric-Regular", sans-serif;
+  margin-top: 50px;
+}
+
+.login__container a h3 {
+  color: white;
+  font-size: 1.25rem;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+
+.login__container a h3:hover {
+  color: #FFE33C;
+  transform: scale(1.1);
 }
 
 .fieldset__login {
@@ -1164,9 +1178,14 @@ nav ul.dropdown-list {
   opacity: 0;
 }
 
+.section__contacto {
+  margin-top: -136px !important;
+}
+
 .contacto__form {
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 100px;
 }
 
 .contacto__form__left {
@@ -2102,13 +2121,13 @@ nav ul.dropdown-list {
 .actividades__description {
   display: flex;
   margin-top: 100px;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
 .actividades__description h3 {
   align-self: center;
-  font-family: "Ethnocentric-Regular", sans-serif;
+  font-family: "Fajalla", sans-serif;
   font-size: 15px;
   margin: 0 10px;
 }

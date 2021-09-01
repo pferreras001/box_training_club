@@ -8,6 +8,8 @@
 
     <?php require('svg/login/logotipo.svg')?>
 
+    <h3>VIP ZONE</h3>
+
     <form method="POST" action="{{route('session_start')}}">
     @csrf
 
@@ -30,6 +32,8 @@
     </fieldset>
 
     </form>
+
+    <a href="{{route('contacto')}}"><h3>¡ÚNETE AL CLUB!</h3></a>
 
   </div>
 

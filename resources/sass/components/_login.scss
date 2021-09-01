@@ -4,12 +4,30 @@
 }
 
 .login__container{
-  margin-top: 150px;
 }
 
 .login__section .icon--logotipo{
   fill: $color-yellow;
   width: 200px;
+}
+
+.login__container h3{
+  color: $color-yellow;
+  font-family: $tg-second;
+  margin-top: 50px;
+}
+
+
+.login__container a h3{
+  color: $color-white;
+  font-size: 1.25rem;
+  transform: scale(1);
+  transition: all .2s;
+}
+
+.login__container a h3:hover{
+  color: $color-yellow;
+  transform: scale(1.1);
 }
 
 .fieldset__login{

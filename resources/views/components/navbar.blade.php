@@ -25,7 +25,7 @@
               <a href="{{ route('blog') }}">Blog</a>
             </li>
             <li class="{{ (Request::route()->getName()=='galeria') ? 'active' : '' }}">
-              <a href="{{ route('galeria') }}">Galeria</a>
+              <a href="{{ route('galeria') }}">Galería</a>
             </li>
             <li class="{{ (Request::route()->getName()=='tienda') ? 'active' : '' }}">
               <a href="{{ route('tienda') }}">Tienda</a>

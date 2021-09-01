@@ -1,4 +1,9 @@
-<section class="section section__contacto_asunto">
+<section class="section section__contacto">
+  <div class="contacto__telefono">
+    <h1 data-aos="fade-right">
+      CONTACTA CON NOSOTROS VÍA <span>TELÉFONO </span>O <span>WHATSAPP </span>AL <span>600 46 69 67</span>
+    </h1>
+  </div>
   <div class="contacto__form">
     <div data-aos="fade-right" class="contacto__form__left">
       <form method="POST" action="{{route('contacto')}}">
@@ -21,11 +26,6 @@
         ¡TE RESPONDEREMOS <span>LO ANTES POSIBLE</span>!
       </h1>
     </div>
-  </div>
-  <div class="contacto__telefono">
-    <h1 data-aos="fade-right">
-      CONTACTA CON NOSOTROS VÍA <span>TELEFONO </span>O <span>WHATSAPP </span>AL <span>600 46 69 67</span>
-    </h1>
   </div>
   <div class="contacto__maps">
     <div class="contacto__maps__info">

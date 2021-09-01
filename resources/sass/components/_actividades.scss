@@ -123,13 +123,13 @@
 .actividades__description{
   display:flex;
   margin-top: 100px;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
 .actividades__description h3{
   align-self: center;
-  font-family: $tg-second;
+  font-family: $tg-main;
   font-size: 15px;
   margin: 0 10px;
 }
