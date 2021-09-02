@@ -8,66 +8,70 @@
 }
 
 .actividades__actividad__1{
-  background: url('/img/actividades/box_training.png') no-repeat;
+  background: url('/img/actividades/box_training-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__2{
-  background: url('/img/actividades/pads_&_mits.png') no-repeat;
+  background: url('/img/actividades/pads_&_mits-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__3{
-  background: url('/img/actividades/bag_assaults.png') no-repeat;
+  background: url('/img/actividades/bag_assaults-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__4{
-  background: url('/img/actividades/fightwod.png') no-repeat;
+  background: url('/img/actividades/fightwod-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__5{
-  background: url('/img/actividades/hit_circuit.png') no-repeat;
+  background: url('/img/actividades/hit_circuit-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__6{
-  background: url('/img/actividades/hit_&_run.png') no-repeat;
+  background: url('/img/actividades/hit_&_run-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__7{
-  background: url('/img/actividades/skills.png') no-repeat;
+  background: url('/img/actividades/skills-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__8{
-  background: url('/img/actividades/combat.png') no-repeat;
+  background: url('/img/actividades/combat-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__9{
-  background: url('/img/actividades/kids_&_you.png') no-repeat;
+  background: url('/img/actividades/kids_&_you-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad__10{
-  background: url('/img/actividades/personal_training.png') no-repeat;
+  background: url('/img/actividades/personal_training-s.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__11{
+  background: url('/img/actividades/summer_camp-s.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__12{
+  background: url('/img/actividades/summer_camp_teens-s.png') no-repeat;
   background-size:cover;
 }
 
 .actividades__actividad .left{
-  display:flex;
   width: 100%;
 }
-
-.actividades__actividad .left svg{
-  align-self: center;
-  margin: auto;
-}
-
 .actividades__actividad img{
+  margin-top: 0px;
   width: 100%;
 }
 
@@ -131,7 +135,8 @@
   align-self: center;
   font-family: $tg-main;
   font-size: 15px;
-  margin: 0 10px;
+  text-transform: uppercase;
+  margin: 50px 100px;
 }
 
 .actividades__actividad .left, .actividades__actividad .center, .actividades__actividad .right{
@@ -157,6 +162,66 @@
 
 @media #{$breakpoints-large} {
 
+.actividades__actividad__1{
+  background: url('/img/actividades/box_training.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__2{
+  background: url('/img/actividades/pads_&_mits.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__3{
+  background: url('/img/actividades/bag_assaults.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__4{
+  background: url('/img/actividades/fightwod.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__5{
+  background: url('/img/actividades/hit_circuit.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__6{
+  background: url('/img/actividades/hit_&_run.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__7{
+  background: url('/img/actividades/skills.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__8{
+  background: url('/img/actividades/combat.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__9{
+  background: url('/img/actividades/kids_&_you.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__10{
+  background: url('/img/actividades/personal_training.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__11{
+  background: url('/img/actividades/summer_camp.png') no-repeat;
+  background-size:cover;
+}
+
+.actividades__actividad__12{
+  background: url('/img/actividades/summer_camp_teens.png') no-repeat;
+  background-size:cover;
+}
+
 .actividades__actividad{
   flex-direction: row;
   flex-wrap: wrap;
@@ -164,17 +229,20 @@
 }
 
 .actividades__actividad .left{
-  display:flex;
   width: 25%;
 }
 
 .actividades__actividad img{
-  width: auto;
+  margin-top: 66px;
+  width: 400px;
 }
 
 .actividades__actividad .center{
   display:flex;
   width: 25%;
+}
+
+.actividades__actividad ul{
 }
 
 .actividades__actividad .right{

@@ -30,7 +30,7 @@
   <div class="contacto__maps">
     <div class="contacto__maps__info">
       <div class="contacto__yellow_box contacto__yellow_box__transporte">
-        <a href="">Descargar información de transporte y comunicaciones</a>
+        <a download="" href="img/contacto/transporte.jpg">Descargar información de transporte y comunicaciones</a>
       </div>
       <div class="contacto__yellow_box contacto__yellow_box__contacto">
         <ul>
