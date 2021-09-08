@@ -34,6 +34,12 @@
 @import 'components/create_entry';
 @import 'components/actividades';
 @import 'components/recover_password';
+@import 'components/users';
+@import 'components/modificar';
+@import 'components/dar_alta';
+@import 'components/colaboradores_admin';
+@import 'components/contacto_enviado';
+@import 'components/colaboradores';
 
 
 
@@ -80,9 +86,9 @@ body{
 
 .errmsg{
   background: $color-yellow;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  border-radius: .25rem;
   border: 0px;
   color: $color-black;
   height: 50px;
@@ -92,9 +98,9 @@ body{
 
 input, textarea{
 
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  border-radius: .25rem;
   border: 0px;
   color: $color-gray;
   height: 50px;

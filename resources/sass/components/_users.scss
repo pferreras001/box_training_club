@@ -1,0 +1,33 @@
+.users__container{
+  font-family: $tg-apercu-medium;
+}
+
+.users__container form{
+  text-align: center;
+  width: 100%;
+}
+
+.users__container table{
+  margin-top: 100px;
+  width: 100%;
+}
+
+.users__container table thead tr{
+  border-bottom: 2px $color-white solid;
+  height: 50px;
+}
+
+.users__container table tbody tr{
+  border-bottom: .5px $color-white solid;
+  height: 45px;
+}
+
+.users__container table a{
+  color: $color-yellow;
+  opacity: 1;
+  transition: all .2s;
+}
+
+.users__container table a:hover{
+  opacity: .6;
+}

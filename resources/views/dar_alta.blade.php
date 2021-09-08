@@ -2,24 +2,27 @@
 
 @section('section')
 
-<section class="section dar_alta__section">
+<section class="section section__dar_alta">
+  <div class="dar_alta__container container">
     @isset($user)
-    <label class="w-1/5 mb-4 text-white bg-red-700 rounded-2x py-4">
-            Ya existe el correo: {{$user->email}}
-    </label>
+    <span class="errmsg errmsg__dar_alta">*Ya existe el correo: {{$user->email}}</span>
     @endisset
     <form method="POST" action="{{route('send_register')}}">
     @csrf
-
-      <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required><br>
-      <input type="text" name="nombre" placeholder="Nombre"  value="{{ old('nombre') }}" required><br>
-      <input type="text" name="apellidos" placeholder="Apellidos"  value="{{ old('apellidos') }}" required><br>
-      <input type="date" name="birth_date" value="{{ old('date') }}"><br>
+      Email: <br>
+      <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required><br><br>
+      Nombre: <br>
+      <input type="text" name="nombre" placeholder="Nombre"  value="{{ old('nombre') }}" required><br><br>
+      Apellidos: <br>
+      <input type="text" name="apellidos" placeholder="Apellidos"  value="{{ old('apellidos') }}" required><br><br>
+      Fecha de Nacimiento: <br>
+      <input type="date" name="birth_date" value="{{ old('date') }}"><br><br>
         
 
-      <button type="submit" class="btn btn__login">dar de alta</button><br>
+      <input type="submit" class="btn btn__dar_alta" value="Dar de alta"/>
 
     </form>
+  </div>
 
 </section>
 

@@ -3,7 +3,64 @@
 @section('section')
 
 <section class="section section__perfil">
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <div class="perfil__container container">
+    <div class="perfil__info">
+      <div class="div_img">
+        <img src="{{asset('/images/socios/'.$user->image)}}"/>
+      </div>
+      <div class="div_name">
+        <h1>{{$user->apodo}}</h1>
+        <h3>{{$user->name}} {{$user->surname}}</h3>
+      </div>
+      <div class="div_rank puntuacion">
+        Rank.<span>{{$rango}}</span>
+      </div>
+      <div class="div_lema">
+        {{$user->lema}}
+      </div>
+    </div>
+    <div class="perfil__puntuaciones">
+      <div class="div_lvl puntuacion">
+        Lvl.<span>{{$nivel}}</span>
+      </div>
+      <div class="div_pnts puntuacion">
+        Pnts.<span>{{$puntos}}</span>
+      </div>
+      <div class="div_dias puntuacion">
+        Días de Socio.<span>{{$dias}}</span>
+      </div>
+    </div>
+    <div class="perfil__copas">
+      <div class="perfil__manual">
+        <div>
+          <div class="copa_oro"><?php require('svg/perfil/punio.svg') ?></div>
+          <h3>ORO</h3>
+        </div>
+        <div>
+          <div class="copa_plata"><?php require('svg/perfil/punio.svg') ?></div>
+          <h3>PLATA</h3>
+        </div>
+        <div>
+          <div class="copa_bronce"><?php require('svg/perfil/punio.svg') ?></div>
+          <h3>BRONCE</h3>
+        </div>
+        <div>
+          <div class="copa_bloqueada"><?php require('svg/perfil/punio.svg') ?></div>
+          <h3>BLOQUEADO</h3>
+        </div>
+      </div>
+      <div class="perfil__palmares">
+        @foreach($trofeos as $trofeo)
+        <div class="perfil__disciplina">
+          <h1>{{$trofeo->skill_name}}</h1>
+          <?php $copas=explode(',',$trofeo->trofeos) ?>
+          @foreach($copas as $copa)
+          <div class="copa"></div>
+        </div>
+        @endforeach
+      </div>
+    </div>
+  </div>
     <div class="text-white">
         <a href="{{route('modificar_perfil',['id' =>$user->id])}}">Editar perfil.</a>
         <img src="{{asset('/images/socios/'.$user->image)}}" width="200" height="250" >

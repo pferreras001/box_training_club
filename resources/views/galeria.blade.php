@@ -4,6 +4,7 @@
 
 <section class="section section__galeria">
   <div class="galeria__container">
+    {{--@foreach(File::glob('img/galeria/big'.'/*') as $path)--}}
     @foreach(File::glob(public_path('img/galeria/big').'/*') as $path)
       <?php 
       $explodedPath = explode('/', $path);

@@ -2271,6 +2271,119 @@ nav ul.dropdown-list {
   margin-top: 50px;
 }
 
+.users__container {
+  font-family: "ApercuPro-Medium", sans-serif;
+}
+
+.users__container form {
+  text-align: center;
+  width: 100%;
+}
+
+.users__container table {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.users__container table thead tr {
+  border-bottom: 2px white solid;
+  height: 50px;
+}
+
+.users__container table tbody tr {
+  border-bottom: 0.5px white solid;
+  height: 45px;
+}
+
+.users__container table a {
+  color: #FFE33C;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.users__container table a:hover {
+  opacity: 0.6;
+}
+
+.modificar__container form {
+  margin: auto;
+  width: 500px;
+}
+
+.modificar__container form input {
+  width: 100%;
+}
+
+.dar_alta__container form {
+  margin: auto;
+  width: 500px;
+}
+
+.dar_alta__container form input {
+  width: 100%;
+}
+
+.colaboradores_admin__container a {
+  margin: auto !important;
+  width: 350px;
+}
+
+.contacto_enviado__container {
+  font-family: "ApercuPro-Medium", sans-serif;
+  text-align: center;
+}
+
+.contacto_enviado__container a {
+  margin-top: 100px;
+}
+
+.colaboradores__colaborador {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.colaboradores__colaborador .div_img, .colaboradores__colaborador .div_info {
+  width: 100%;
+}
+
+.colaboradores__colaborador .div_info {
+  padding: 50px;
+}
+
+.colaboradores__colaborador .div_img {
+  display: flex;
+  overflow: hidden;
+}
+
+.colaboradores__colaborador .div_img img {
+  align-self: center;
+  width: 100%;
+}
+
+.colaboradores__colaborador .div_info h1 {
+  color: black;
+  text-transform: uppercase;
+}
+
+.colaboradores__colaborador .div_info div {
+  color: #878787;
+  font-family: "ApercuPro-Medium", sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 1024px) {
+  .colaboradores__colaborador {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .colaboradores__colaborador .div_img, .colaboradores__colaborador .div_info {
+    width: 50%;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
@@ -2310,7 +2423,7 @@ body {
 
 .errmsg {
   background: #FFE33C;
-  border-radius: 10px;
+  border-radius: 0.25rem;
   border: 0px;
   color: black;
   height: 50px;
@@ -2319,7 +2432,7 @@ body {
 }
 
 input, textarea {
-  border-radius: 10px;
+  border-radius: 0.25rem;
   border: 0px;
   color: #9A9A9A;
   height: 50px;

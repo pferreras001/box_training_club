@@ -34,7 +34,7 @@
               <a href="{{ route('contacto') }}">Contacto</a>
             </li>
             @auth
-            <!--
+            
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label"><button>Box Famility</span> <span class="caret"></span></button></a>
                 <ul class="dropdown-menu">
@@ -50,7 +50,7 @@
                     @endif
                 </ul>
             </li>
-            -->
+            
             <li>
                 <form action="{{ route('logout') }}" method="post">
                   @csrf
