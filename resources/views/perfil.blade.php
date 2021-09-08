@@ -56,6 +56,7 @@
           <?php $copas=explode(',',$trofeo->trofeos) ?>
           @foreach($copas as $copa)
           <div class="copa"></div>
+          @endforeach
         </div>
         @endforeach
       </div>
