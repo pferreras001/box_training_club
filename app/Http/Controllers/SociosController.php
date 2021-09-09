@@ -24,6 +24,7 @@ class SociosController extends Controller
         foreach($trofeos as $trofeo){
             $trophys=explode(',', $trofeo->trofeos);
             foreach($trophys as $trophy){
+                $trophy=explode('/',$trophy)[0];
                 $nivel=$nivel+$trophy;
             }
         }
@@ -44,6 +45,7 @@ class SociosController extends Controller
                     foreach($trofeos_temp as $trofeo){
                         $trophys=explode(',', $trofeo->trofeos);
                         foreach($trophys as $trophy){
+                            $trophy=explode('/',$trophy)[0];
                             $nivel_temp=$nivel_temp+$trophy;
                         }
                     }
@@ -57,7 +59,7 @@ class SociosController extends Controller
                     if($puntos_temp>$puntos){
                         $rango=$rango+1;
                     }
-                    if($puntos_temp=$puntos and $dias_temp>$dias){
+                    if($puntos_temp==$puntos and $dias_temp>$dias){
                         $rango=$rango+1;
                     }
                 }  

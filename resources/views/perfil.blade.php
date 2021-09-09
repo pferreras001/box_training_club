@@ -77,17 +77,31 @@
           <tr>
             <td>{{$trofeo->skill_name}}</td>
             <?php $copas=explode(',',$trofeo->trofeos) ?>
+            <?php $num = 0?>
             @foreach($copas as $copa)
-            <td>@if($copa=='0')
-                 Copa Bloqueada
-                 @elseif($copa=='1')
-                 Copa bronce
-                @elseif($copa=='2')
-                 Copa Plata
-                @elseif($copa=='3')
-                 Copa oro
+            <?php $numcopa = explode('/',$copa)[0]?>
+            <?php $nombrecopa = explode('/',$copa)[1]?> 
+            <td>
+                {{$nombrecopa}} <br>
+                @if($numcopa=='0')
+                    @if($num==0)
+                        0/1
+                    @else
+                        0/3
+                    @endif
+                 @elseif($numcopa=='1')
+                 1/3
+                @elseif($numcopa=='2')
+                 2/3
+                @elseif($numcopa=='3')
+                    @if($num==0)
+                        1/1
+                    @else
+                        3/3
+                    @endif
                 @endif
             </td>
+            <?php $num = 1?>
             @endforeach
           </tr>
         </tbody>

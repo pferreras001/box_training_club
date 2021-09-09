@@ -41,42 +41,42 @@ class UserController extends Controller
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'Boxing',
-            'trofeos'=>'0,0,0,0,0,0,0,0,0,0'
+            'trofeos'=>'0/iniciación,0/Desplazamientos,0/Jab,0/Cross,0/Head Hook,0/Body Hook,0/Uppercut,0/Combos,0/Cambios Guardia,0/Paradas'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'ThaiBoxing',
-            'trofeos'=>'0,0,0'
+            'trofeos'=>'0/Codos,0/Rodillas,0/Puño-Codo Salto'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'Taekwondo',
-            'trofeos'=>'0,0,0,0,0,0'
+            'trofeos'=>'0/Frontal,0/Circular,0/Cöz,0/Tornado,0/Combos,0/Cambios Guardia'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'JumpRope',
-            'trofeos'=>'0,0,0'
+            'trofeos'=>'0/Básico,0/Medio,0/Avanzado'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'SpeedBag',
-            'trofeos'=>'0,0,0'
+            'trofeos'=>'0/Básico,0/Medio,0/Avanzado'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'PunchMitts',
-            'trofeos'=>'0'
+            'trofeos'=>'0/Básico'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'KickingPads',
-            'trofeos'=>'0'
+            'trofeos'=>'0/Básico'
         ]);
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'RopeClimb',
-            'trofeos'=>'0'
+            'trofeos'=>'0/Básico'
         ]);
         $correo= new gestionSociosMailable(preg_replace('/[^A-Za-z0-9\-]/', '', $confirmation));
         Mail::to($req->input('email'))->send($correo);
@@ -123,7 +123,7 @@ class UserController extends Controller
         if (Auth::attempt(['email' => $email, 'password' => $password, 'confirmed' => 1], $remember)) {
             $req->session()->regenerate();
             session(['email' => $email]);
-            if($email=='pabloadmin@gmail.com'){
+            if($email=='admin@boxtrainingclub.com'){
                 session(['tipo' => 'admin']);
             }
             else{
