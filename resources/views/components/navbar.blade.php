@@ -41,6 +41,7 @@
                     @if(session('tipo')!='admin')
                     <li><a href="{{ route('perfil') }}">Perfil</a></li>
                     <li><a href="{{ route('colaboradores') }}">Colaboradores</a></li>
+                    <li><a href="{{ route('ranking') }}">Ranking</a></li>
                     <li><a href="#">Normativa</a></li>
                     <li><a href="#">Reservas</a></li>
                     @else
