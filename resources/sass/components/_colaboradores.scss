@@ -36,6 +36,14 @@
   text-align: justify;
 }
 
+.colaboradores__container ul li{
+  display: inline;
+}
+
+.colaboradores__container ul{
+  margin-top: 20px;
+}
+
 @media #{$breakpoints-medium} {
 
 }

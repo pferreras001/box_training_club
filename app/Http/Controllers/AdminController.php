@@ -247,8 +247,11 @@ class AdminController extends Controller
       $req->validate([
           'nombre'=>'required',
           'imagen'=>'required',
+          'descripcion'=>'required',
       ]);
       $imagename= uniqid().'-'. $req->input('nombre').'.'.$req->imagen->extension();
+      //ON SERVER
+      //$req->image->move("/hosting/www/boxtrainingclub.com/public/images/colaboradores_socios", $imagename); 
       $req->imagen->move(public_path('images/colaboradores_socios'),$imagename);
         if(empty($req->input('link_web'))){
             $link='';
@@ -258,6 +261,7 @@ class AdminController extends Controller
         }
       Colaboradore::create([
           'nombre'=>$req->input('nombre'),
+          'descripcion'=>$req->input('descripcion'),
           'imagen'=>$imagename,
           'link_web'=>$link,
       ]);

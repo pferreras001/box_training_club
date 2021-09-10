@@ -74,7 +74,7 @@
 
 
 function addRequiredClass() {
-    if (window.innerWidth < 860) {
+    if (window.innerWidth < 1025) {
         document.body.classList.add('mobile')
     } else {
         document.body.classList.remove('mobile') 

@@ -3,10 +3,10 @@
 @section('section')
 
 <section class="section confirmacion_enviada__section">
-
-  <h1 class="text-white">¡El correo de confimacion ha sido enviado!</h1>
-    <a class="text-white" href="{{route('users')}}">volver a la zona de usuarios</a>
-
+  <div class="contacto_enviado__container container">
+    <h1>¡El correo de confimacion ha sido enviado!</h1>
+    <a class="btn" href="{{route('users')}}">Volver a la zona de usuarios</a>
+  </div>
 
 </section>
 

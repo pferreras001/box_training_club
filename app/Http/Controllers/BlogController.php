@@ -42,6 +42,8 @@ class BlogController extends Controller
           'texto'=>'required',
       ]);
       $imagename= uniqid().'-'. $req->titulo.'.'.$req->image->extension();
+      //ON SERVER
+      //$req->image->move("/hosting/www/boxtrainingclub.com/public/images/blog", $imagename); 
       $req->image->move(public_path('images/blog'),$imagename);
       Blogentry::create([
           'titulo'=>$req->input('titulo'),

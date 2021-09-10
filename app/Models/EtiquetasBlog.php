@@ -21,4 +21,10 @@ class EtiquetasBlog extends Model
 	protected $primaryKey = 'etiqueta';
 	public $incrementing = false;
 	public $timestamps = false;
+
+  protected $fillable = [
+    'etiqueta'
+  ];
 }
+
+

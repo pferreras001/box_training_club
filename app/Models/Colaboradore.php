@@ -26,6 +26,7 @@ class Colaboradore extends Model
 	protected $fillable = [
 		'nombre',
 		'link_web',
+    'descripcion',
 		'imagen'
 	];
 }
