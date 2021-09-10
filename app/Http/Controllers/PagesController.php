@@ -60,7 +60,7 @@ class PagesController extends Controller
     
   public function enviar_contacto(Request $req){
     $correo= new contactoMailable($req->input('email'),$req->input('asunto'),$req->input('mensaje'));
-    Mail::to('endikasier@gmail.com')->send($correo);//sustituir esto por el correo del cliente.
+    Mail::to('info@boxtrainingclub.com')->send($correo);
     return view('contacto_enviado');
   }
     
