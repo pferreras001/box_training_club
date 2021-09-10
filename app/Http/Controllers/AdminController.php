@@ -110,13 +110,27 @@ class AdminController extends Controller
          $user = User::where('email',"=",$email)->first();
          $trofeos= Skill::where('skill_name',"=",$nombre)->where('user_mail',"=",$email)->first();
          $trophys=explode(',', $trofeos->trofeos); 
-         $trophy=$trophys[$num];
+         $trophy=explode('/', $trophys[$num])[0];
+         $skill=explode('/', $trophys[$num])[1];
          if($trophy!=3){
              if($num==0){
-                $trophys[$num]=3;
+                $trofeo='3/'.$skill;
+                $trophys[$num]=$trofeo;
+
              }
              else{
-                 $trophys[$num]=$trophy+1;
+                 if($trophy==0){
+                    $trophy=1;
+                 }
+                 else if($trophy==1){
+                    $trophy=2;
+                 }
+                 else if($trophy==2){
+                  $trophy=3;
+                 }
+                 $trofeo=$trophy;
+                 $trofeo=$trophy.'/'.$skill;
+                 $trophys[$num]=$trofeo;
              }
             $trophys2=implode(',',$trophys);
             $trofeos->trofeos=$trophys2;
@@ -139,13 +153,26 @@ class AdminController extends Controller
          $user = User::where('email',"=",$email)->first();
          $trofeos= Skill::where('skill_name',"=",$nombre)->where('user_mail',"=",$email)->first();
          $trophys=explode(',', $trofeos->trofeos);
-         $trophy=$trophys[$num];
+         $trophy=explode('/', $trophys[$num])[0];
+         $skill=explode('/', $trophys[$num])[1];
          if($trophy!=0){
              if($num==0){
-                $trophys[$num]=0;
+                $trofeo='0/'.$skill;
+                $trophys[$num]=$trofeo;
              }
              else{
-                 $trophys[$num]=$trophy-1;
+                 if($trophy==3){
+                    $trophy=2;
+                 }
+                 else if($trophy==2){
+                    $trophy=1;
+                 }
+                 else if($trophy==1){
+                  $trophy=0;
+                 }
+                 $trofeo=$trophy;
+                 $trofeo=$trophy.'/'.$skill;
+                 $trophys[$num]=$trofeo;
              }
             $trophys2=implode(',',$trophys);
             $trofeos->trofeos=$trophys2;
@@ -180,6 +207,7 @@ class AdminController extends Controller
              foreach($trofeos as $trofeo){
                 $trophys=explode(',', $trofeo->trofeos);
                 foreach($trophys as $trophy){
+                    $trophy=explode('/',$trophy)[0];
                     $nivel=$nivel+$trophy;
                 }
             }
@@ -200,6 +228,7 @@ class AdminController extends Controller
                     foreach($trofeos_temp as $trofeo){
                         $trophys=explode(',', $trofeo->trofeos);
                         foreach($trophys as $trophy){
+                            $trophy=explode('/',$trophy)[0];
                             $nivel_temp=$nivel_temp+$trophy;
                         }
                     }
@@ -213,7 +242,7 @@ class AdminController extends Controller
                     if($puntos_temp>$puntos){
                         $rango=$rango+1;
                     }
-                    if($puntos_temp=$puntos and $dias_temp>$dias){
+                    if($puntos_temp==$puntos and $dias_temp>$dias){
                         $rango=$rango+1;
                     }
                 }  

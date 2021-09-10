@@ -6,63 +6,97 @@
   <div class="perfil__container container">
     <div class="perfil__info">
       <div class="div_img">
-        <img src="{{asset('/images/socios/'.$user->image)}}"/>
+        <div><img src="{{asset('/images/socios/'.$user->image)}}"/></div>
       </div>
       <div class="div_name">
-        <h1>{{$user->apodo}}</h1>
-        <h3>{{$user->name}} {{$user->surname}}</h3>
+        <div>
+          <h1>{{$user->apodo}}</h1>
+          <h3>{{$user->name}} {{$user->surname}}</h3>
+        </div>
       </div>
       <div class="div_rank puntuacion">
-        Rank.<span>{{$rango}}</span>
+        <div>Rank.<span>{{$rango}}</span></div>
       </div>
       <div class="div_lema">
-        {{$user->lema}}
+        <div><h2>{{$user->lema}}</h2></div>
+      </div>
+      <div class="div_editar">
+        <a class="btn" href="{{route('modificar_perfil',['id' =>$user->id])}}">Editar perfil</a>
       </div>
     </div>
     <div class="perfil__puntuaciones">
       <div class="div_lvl puntuacion">
-        Lvl.<span>{{$nivel}}</span>
+        <div>Lvl.<span>{{$nivel}}</span></div>
       </div>
       <div class="div_pnts puntuacion">
-        Pnts.<span>{{$puntos}}</span>
+        <div>Pnts.<span>{{$puntos}}</span></div>
       </div>
       <div class="div_dias puntuacion">
-        Días de Socio.<span>{{$dias}}</span>
+        <div>Días de Socio.<span>{{$dias}}</span></div>
       </div>
     </div>
     <div class="perfil__copas">
       <div class="perfil__manual">
         <div>
-          <div class="copa_oro"><?php require('svg/perfil/punio.svg') ?></div>
+          <span class="copa_oro"><?php require('svg/perfil/punio.svg') ?></span>
           <h3>ORO</h3>
         </div>
         <div>
-          <div class="copa_plata"><?php require('svg/perfil/punio.svg') ?></div>
+          <span class="copa_plata"><?php require('svg/perfil/punio.svg') ?></span>
           <h3>PLATA</h3>
         </div>
         <div>
-          <div class="copa_bronce"><?php require('svg/perfil/punio.svg') ?></div>
+          <span class="copa_bronce"><?php require('svg/perfil/punio.svg') ?></span>
           <h3>BRONCE</h3>
         </div>
         <div>
-          <div class="copa_bloqueada"><?php require('svg/perfil/punio.svg') ?></div>
+          <span class="copa_bloqueada"><?php require('svg/perfil/punio.svg') ?></span>
           <h3>BLOQUEADO</h3>
         </div>
       </div>
-      <div class="perfil__palmares">
-        @foreach($trofeos as $trofeo)
-        <div class="perfil__disciplina">
-          <h1>{{$trofeo->skill_name}}</h1>
-          <?php $copas=explode(',',$trofeo->trofeos) ?>
-          @foreach($copas as $copa)
-          <div class="copa"></div>
-          @endforeach
+      @foreach($trofeos as $trofeo)
+      <div class="perfil__disciplina">
+        <h1>{{$trofeo->skill_name}}</h1>
+        <div class="perfil__palmares">
+        <?php $copas=explode(',',$trofeo->trofeos) ?>
+        <?php $num = 0?>
+        @foreach($copas as $copa)
+        <div>
+        <?php $numcopa = explode('/',$copa)[0]?>
+        <?php $nombrecopa = explode('/',$copa)[1]?>
+          @if($numcopa=='0')
+          <span class="copa_bloqueada"><?php require('svg/perfil/punio.svg') ?></span>
+          <h3>{{$nombrecopa}}</h3>
+              @if($num==0)
+                <h3>0/1</h3>
+              @else
+                <h3>0/3</h3>
+              @endif
+          @elseif($numcopa=='1')
+          <span class="copa_bronce"><?php require('svg/perfil/punio.svg') ?></span>
+          <h3>{{$nombrecopa}}</h3>
+          <h3>1/3</h3>
+          @elseif($numcopa=='2')
+          <span class="copa_plata"><?php require('svg/perfil/punio.svg') ?></span>
+          <h3>{{$nombrecopa}}</h3>
+          <h3>2/3</h3>
+          @elseif($numcopa=='3')
+          <span class="copa_oro"><?php require('svg/perfil/punio.svg') ?></span>
+          <h3>{{$nombrecopa}}</h3>
+              @if($num==0)
+                <h3>1/1</h3>
+              @else
+                <h3>3/3</h3>
+              @endif
+          @endif
+          <?php $num = 1?>
         </div>
         @endforeach
+        </div>
       </div>
-    </div>
-  </div>
-    <div class="text-white">
+      @endforeach
+
+    <!--<div class="text-white">
         <a href="{{route('modificar_perfil',['id' =>$user->id])}}">Editar perfil.</a>
         <img src="{{asset('/images/socios/'.$user->image)}}" width="200" height="250" >
         <h1>{{$user->apodo}}</h1>
@@ -107,7 +141,9 @@
         </tbody>
         </table>
         @endforeach
+    </div>-->
     </div>
+  </div>
 </section>
 
 

@@ -2397,6 +2397,205 @@ nav ul.dropdown-list {
     width: 50%;
   }
 }
+.perfil__container .perfil__info, .perfil__container .perfil__puntuaciones {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  width: 100%;
+}
+
+.perfil__container .perfil__info .div_img, .perfil__container .perfil__info .div_name, .perfil__container .perfil__info .div_rank {
+  width: calc(100%);
+}
+
+.perfil__container .perfil__info .div_lema {
+  display: flex;
+  width: 100%;
+}
+
+.perfil__container .perfil__info .div_img div {
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  height: 200px;
+  margin: 0 auto;
+  width: 200px;
+  overflow: hidden;
+}
+
+.perfil__container .perfil__info .div_img img {
+  align-self: center;
+  width: 100%;
+}
+
+.perfil__container .perfil__info .div_name {
+  display: flex;
+}
+
+.perfil__container .perfil__info .div_name div {
+  align-self: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.perfil__container .perfil__info .div_name h1 {
+  font-size: 70px;
+}
+
+.perfil__container .perfil__info .div_rank {
+  display: flex;
+}
+
+.perfil__container .perfil__info .div_rank div {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.perfil__container .puntuacion {
+  font-size: 30px;
+}
+
+.perfil__container .puntuacion span {
+  color: #FFE33C;
+  font-size: 90px;
+}
+
+.perfil__container .perfil__info .div_lema div {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.perfil__container .perfil__info .div_lema h2 {
+  color: #FFE33C;
+  font-family: "Ethnocentric-Regular", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.perfil__container .perfil__info .div_editar {
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.perfil__container .perfil__puntuaciones {
+  margin-top: 100px;
+}
+
+.perfil__container .perfil__puntuaciones .div_lvl, .perfil__container .perfil__puntuaciones .div_pnts, .perfil__container .perfil__puntuaciones .div_dias {
+  display: flex;
+}
+
+.perfil__container .perfil__puntuaciones .div_lvl, .perfil__container .perfil__puntuaciones .div_pnts {
+  width: calc(100%/2);
+}
+
+.perfil__container .perfil__puntuaciones .div_dias {
+  width: 100%;
+}
+
+.perfil__container .perfil__puntuaciones .div_lvl div, .perfil__container .perfil__puntuaciones .div_pnts div, .perfil__container .perfil__puntuaciones .div_dias div {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.perfil__container .perfil__copas .perfil__manual {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.perfil__container .perfil__copas .perfil__manual {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  margin: 200px auto;
+  width: 80%;
+}
+
+.perfil__container .perfil__copas .perfil__manual div {
+  text-align: center;
+  width: calc(100%/2);
+}
+
+.perfil__container .perfil__copas svg {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.perfil__container .perfil__copas h3 {
+  font-size: 15px;
+}
+
+.perfil__container .copa_oro svg {
+  fill: #FFE33C;
+}
+
+.perfil__container .copa_plata svg {
+  fill: #9C9C9C;
+}
+
+.perfil__container .copa_bronce svg {
+  fill: #D23D00;
+}
+
+.perfil__container .copa_bloqueada svg {
+  fill: black;
+}
+
+.perfil__container .perfil__disciplina h1 {
+  color: #FFE33C;
+  font-family: "Ethnocentric-Regular", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.perfil__container .perfil__disciplina {
+  margin: 200px 0;
+}
+
+.perfil__container .perfil__disciplina .perfil__palmares {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.perfil__container .perfil__disciplina .perfil__palmares div {
+  margin-top: 50px;
+  width: calc(100%/2);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.perfil__container .perfil__disciplina .perfil__palmares ul li {
+  display: inline;
+}
+
+@media only screen and (min-width: 768px) {
+  .perfil__container .perfil__info .div_img, .perfil__container .perfil__info .div_name, .perfil__container .perfil__info .div_rank {
+    width: calc(100%/3);
+  }
+
+  .perfil__container .perfil__copas .perfil__manual div {
+    text-align: center;
+    width: calc(100%/4);
+  }
+
+  .perfil__container .perfil__copas svg {
+    width: 100px;
+  }
+
+  .perfil__container .perfil__disciplina .perfil__palmares div {
+    width: calc(100%/4);
+  }
+
+  .perfil__container .perfil__disciplina h1 {
+    font-size: 2.5rem;
+  }
+}
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
