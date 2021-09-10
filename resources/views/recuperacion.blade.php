@@ -7,7 +7,7 @@
 <body>
     <p>Para recuperar su contraseña, haga clic en el siguiente enlace </p>
     <div>
-        http://localhost/box_training_club/public/recover_form/{{$code}}
+        https://boxtrainingclub.com/recover_form/{{$code}}
     </div>
 </body>
 </htlm>

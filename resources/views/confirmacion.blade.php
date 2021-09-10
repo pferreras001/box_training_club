@@ -7,7 +7,7 @@
 <body>
     <p>Bienvenido a Box Family, para registrar su cuenta, haga clic en el siguiente enlace: </p>
     <div>
-        http://localhost/box_training_club/public/signup_form/{{$code}}
+        https://boxtrainingclub.com/signup_form/{{$code}}
     </div>
 </body>
 </htlm>
