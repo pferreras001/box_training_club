@@ -85,3 +85,4 @@ Route::get('/perfil', 'App\Http\Controllers\SociosController@perfil')->name('per
 Route::get('/modificar_perfil/{id}', 'App\Http\Controllers\SociosController@modificar_perfil')->name('modificar_perfil');
 Route::post('/update_perfil', 'App\Http\Controllers\SociosController@update_perfil')->name('update_perfil');
 Route::get('/colaboradores', 'App\Http\Controllers\SociosController@colaboradores')->name('colaboradores');
+Route::get('/ranking', 'App\Http\Controllers\SociosController@ranking')->name('ranking');
