@@ -1,0 +1,30 @@
+.normatia__container{
+  background: $color-white;
+  color: $color-gray;
+  padding: 50px;
+}
+
+.normatia__container h1, .normatia__container h2, .normatia__container h3{
+  color: $color-black;
+}
+
+.normatia__container h1{
+  margin-bottom:100px;
+  text-align: center;
+  width: 100%;
+}
+
+.normatia__container h3{
+  font-style: italic;
+  margin-bottom:100px;
+  text-align: center;
+  width: 100%;
+}
+
+.normatia__container h2{
+  margin-top: 100px;
+}
+
+.normatia__container div{
+  font-family: $tg-apercu-medium;
+}

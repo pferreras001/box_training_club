@@ -31,6 +31,7 @@
         </thead>
         <tbody>
              @foreach($users as $user)
+             @if($user->email!='admin@boxtrainingclub.com')
                 <tr>
                     <td>{{$user->name}}</td>
                     <td>{{$user->surname}}</td>
@@ -53,6 +54,7 @@
                         <a  href="{{route('admin_perfil',['id' =>$user->email])}}" class="uppercase font-extrabold py-4 px-8 rounded-3xl"> Gestionar Trofeos</a>
                     </td>
                 </tr>
+            @endif
             @endforeach
         </tbody>
     </table>

@@ -86,3 +86,5 @@ Route::get('/modificar_perfil/{id}', 'App\Http\Controllers\SociosController@modi
 Route::post('/update_perfil', 'App\Http\Controllers\SociosController@update_perfil')->name('update_perfil');
 Route::get('/colaboradores', 'App\Http\Controllers\SociosController@colaboradores')->name('colaboradores');
 Route::get('/ranking', 'App\Http\Controllers\SociosController@ranking')->name('ranking');
+Route::get('/normativa', 'App\Http\Controllers\SociosController@normativa')->name('normativa');
+Route::get('/reservas', 'App\Http\Controllers\SociosController@reservas')->name('reservas');

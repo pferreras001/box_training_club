@@ -8,6 +8,7 @@
 }
 
 .users__container table{
+  text-align: center;
   margin-top: 100px;
   width: 100%;
 }
@@ -30,4 +31,18 @@
 
 .users__container table a:hover{
   opacity: .6;
+}
+
+.users__container table td div{
+  background: $color-white;
+  border-radius: 50%;
+  height: 40px;
+  margin: 5px auto;
+  width: 40px;
+  overflow: hidden;
+}
+
+.users__container table td div img{
+  height: auto !important;
+  width: 100%;
 }

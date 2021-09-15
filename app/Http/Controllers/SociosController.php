@@ -73,7 +73,7 @@ class SociosController extends Controller
     public function ranking(){//vista de perfil desde punto de vista del usuario
     if(session('tipo')=='user'){
         $rankingUsers = [];
-        $users = User::all();
+        $users = User::where('email',"!=",'admin@boxtrainingclub.com')->get();
         foreach ($users as $user){
             $trofeos= Skill::where('user_mail',"=",$user->email)->get();
             $nivel=0;
@@ -92,7 +92,7 @@ class SociosController extends Controller
             $interval = $date->diff($now);
             $dias=$interval->format('%a');
             //para conseguir el ranking basta con hacer un for y comparar sus puntos con los de otro para ver en que posicion esta empezando por 1 y de ahi sumando.
-            $usuarios = User::all();
+            $usuarios = User::where('email',"!=",'admin@boxtrainingclub.com')->get();;
                 $rango=1;
                 foreach($usuarios as $usuario){
                     if($usuario->email!=$user->email){
@@ -151,6 +151,8 @@ class SociosController extends Controller
                     File::delete('images/socios'.$data->image);
                 }
                 $imagename= uniqid().'-'.$req->name.'.'.$req->image->extension();
+                //ON SERVER
+                //$req->image->move("/hosting/www/boxtrainingclub.com/public/images/socios", $imagename);
                 $req->image->move(public_path('images/socios'),$imagename);
                 $data->image=$imagename;
             }
@@ -172,6 +174,15 @@ class SociosController extends Controller
         return redirect('/');
     }
   }
+    
+    
+    public function normativa(){
+      return view('normativa');
+    }
+    
+    public function reservas(){
+      return view('reservas');
+    }
     
     
 }

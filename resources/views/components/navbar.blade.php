@@ -42,8 +42,8 @@
                     <li><a href="{{ route('perfil') }}">Perfil</a></li>
                     <li><a href="{{ route('colaboradores') }}">Colaboradores</a></li>
                     <li><a href="{{ route('ranking') }}">Ranking</a></li>
-                    <li><a href="#">Normativa</a></li>
-                    <li><a href="#">Reservas</a></li>
+                    <li><a href="{{ route('normativa') }}">Normativa</a></li>
+                    <li><a href="{{ route('reservas') }}">Reservas</a></li>
                     @else
                     <li><a href="{{ route('users') }}">Gestionar usuarios</a></li>
                     <li><a href="{{ route('dar_alta') }}">Dar de alta</a></li>

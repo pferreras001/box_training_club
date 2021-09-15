@@ -324,6 +324,8 @@ class AdminController extends Controller
         if(!empty($req->imagen)){
             File::delete('images/colaboradores_socios'.$data->imagen);
             $imagename= uniqid().'-'.$nombre.'.'.$req->imagen->extension();
+            //ON SERVER
+            //$req->imagen->move("/hosting/www/boxtrainingclub.com/public/images/colaboradores_socios", $imagename); 
             $req->imagen->move(public_path('images/colaboradores_socios'),$imagename);
             $data->imagen=$imagename;
         }

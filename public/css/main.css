@@ -2281,6 +2281,7 @@ nav ul.dropdown-list {
 }
 
 .users__container table {
+  text-align: center;
   margin-top: 100px;
   width: 100%;
 }
@@ -2305,6 +2306,20 @@ nav ul.dropdown-list {
   opacity: 0.6;
 }
 
+.users__container table td div {
+  background: white;
+  border-radius: 50%;
+  height: 40px;
+  margin: 5px auto;
+  width: 40px;
+  overflow: hidden;
+}
+
+.users__container table td div img {
+  height: auto !important;
+  width: 100%;
+}
+
 .modificar__container form {
   margin: auto;
   width: 500px;
@@ -2317,6 +2332,12 @@ nav ul.dropdown-list {
 .dar_alta__container form {
   margin: auto;
   width: 500px;
+}
+
+.dar_alta__container h1 {
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
 }
 
 .dar_alta__container form input {
@@ -2596,6 +2617,37 @@ nav ul.dropdown-list {
     font-size: 2.5rem;
   }
 }
+.normatia__container {
+  background: white;
+  color: #9A9A9A;
+  padding: 50px;
+}
+
+.normatia__container h1, .normatia__container h2, .normatia__container h3 {
+  color: black;
+}
+
+.normatia__container h1 {
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.normatia__container h3 {
+  font-style: italic;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.normatia__container h2 {
+  margin-top: 100px;
+}
+
+.normatia__container div {
+  font-family: "ApercuPro-Medium", sans-serif;
+}
+
 body {
   background: url("/img/body/background.jpg") no-repeat;
   background-attachment: fixed;
