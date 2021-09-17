@@ -44,10 +44,12 @@
                     <li><a href="{{ route('ranking') }}">Ranking</a></li>
                     <li><a href="{{ route('normativa') }}">Normativa</a></li>
                     <li><a href="{{ route('reservas') }}">Reservas</a></li>
+                    <li><a href="{{ route('Fightwood') }}">Fightwood</a></li>
                     @else
                     <li><a href="{{ route('users') }}">Gestionar usuarios</a></li>
                     <li><a href="{{ route('dar_alta') }}">Dar de alta</a></li>
                     <li><a href="{{ route('gestionar_colaboradores') }}">Gestionar colaboradores</a></li>
+                    <li><a href="{{ route('Fightwood') }}">Gestionar Fightwood</a></li>
                     @endif
                 </ul>
             </li>

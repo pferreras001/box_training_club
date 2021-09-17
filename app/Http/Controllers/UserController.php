@@ -41,11 +41,11 @@ class UserController extends Controller
         Skill::create([
             'user_mail'=>$email,
             'skill_name'=>'Boxing',
-            'trofeos'=>'0/iniciación,0/Desplazamientos,0/Jab,0/Cross,0/Head Hook,0/Body Hook,0/Uppercut,0/Combos,0/Cambios Guardia,0/Paradas'
+            'trofeos'=>'0/Iniciación,0/Desplazamientos,0/Jab,0/Cross,0/Head Hook,0/Body Hook,0/Uppercut,0/Combos,0/Cambios Guardia,0/Paradas'
         ]);
         Skill::create([
             'user_mail'=>$email,
-            'skill_name'=>'ThaiBoxing',
+            'skill_name'=>'Thai Boxing',
             'trofeos'=>'0/Codos,0/Rodillas,0/Puño-Codo Salto'
         ]);
         Skill::create([
@@ -55,27 +55,27 @@ class UserController extends Controller
         ]);
         Skill::create([
             'user_mail'=>$email,
-            'skill_name'=>'JumpRope',
+            'skill_name'=>'Jump Rope',
             'trofeos'=>'0/Básico,0/Medio,0/Avanzado'
         ]);
         Skill::create([
             'user_mail'=>$email,
-            'skill_name'=>'SpeedBag',
+            'skill_name'=>'Speed Bag',
             'trofeos'=>'0/Básico,0/Medio,0/Avanzado'
         ]);
         Skill::create([
             'user_mail'=>$email,
-            'skill_name'=>'PunchMitts',
+            'skill_name'=>'Punch Mitts',
             'trofeos'=>'0/Básico'
         ]);
         Skill::create([
             'user_mail'=>$email,
-            'skill_name'=>'KickingPads',
+            'skill_name'=>'Kicking Pads',
             'trofeos'=>'0/Básico'
         ]);
         Skill::create([
             'user_mail'=>$email,
-            'skill_name'=>'RopeClimb',
+            'skill_name'=>'Rope Climb',
             'trofeos'=>'0/Básico'
         ]);
         $correo= new gestionSociosMailable(preg_replace('/[^A-Za-z0-9\-]/', '', $confirmation));

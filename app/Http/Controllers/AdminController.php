@@ -93,8 +93,13 @@ class AdminController extends Controller
     
      public function delete($id){
      if(session('tipo')=='admin'){
-        $data = User::find($id);   
+        $data = User::find($id);
+        $email= $data->email;
         $data->delete();
+        $dataArray = Skill::where('user_mail',"=",$email)->get();
+        foreach($dataArray as $data){
+            $data->delete();    
+        }
         return redirect('users');
      }
         else{
@@ -102,6 +107,20 @@ class AdminController extends Controller
         }
 
   }
+    public function update_fightwood(Request $req){
+        if(session('tipo')=='admin'){
+        if(!empty($req->imagen)){
+                File::delete('images/fightwood/fightwood.png');
+                $imagename= 'fightwood.png';
+                $req->imagen->move(public_path('images/fightwood'),$imagename);
+            }
+            return redirect('fightwood');
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    
     public function aumentarcopa($id){
      if(session('tipo')=='admin'){
          $num=strval(explode(' ',$id)[0]);

@@ -73,6 +73,8 @@ class SociosController extends Controller
     public function ranking(){//vista de perfil desde punto de vista del usuario
     if(session('tipo')=='user'){
         $rankingUsers = [];
+        $arrayPuntos = [];
+        $arrayDias = [];
         $users = User::where('email',"!=",'admin@boxtrainingclub.com')->get();
         foreach ($users as $user){
             $trofeos= Skill::where('user_mail',"=",$user->email)->get();
@@ -122,11 +124,18 @@ class SociosController extends Controller
                 }
             if($rango<=10){
                 $rankingUsers[$rango-1]=$user;
+                $fecha_entrada=$user->enter_date;
+                $date = new DateTime($fecha_entrada);
+                $now = new DateTime();
+                $interval = $date->diff($now);
+                $dias=$interval->format('%a');
+                $arrayPuntos[$rango-1]=$puntos;
+                $arrayDias[$rango-1]=$dias;
             }
         }
         //array_reverse($rankingUsers,true);
         //dd($rankingUsers[2]->name);
-        return view('ranking',compact('rankingUsers'));
+        return view('ranking',compact('rankingUsers','arrayPuntos','arrayDias'));
     }
     else{
         return redirect('/');
@@ -136,6 +145,19 @@ class SociosController extends Controller
         if(session('tipo')=='user'){
             $user=User::find($id);
             return view('modificar_perfil',compact('user'));
+        }
+        else{
+            return redirect('/');
+        }
+    }
+    
+     public function fightwood(){
+        if(session('tipo')=='user'){
+            return view('fightwood');
+        }
+        else if(session('tipo')=='admin'){
+            $admin='';
+            return view('fightwood',compact('admin'));
         }
         else{
             return redirect('/');

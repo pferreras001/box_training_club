@@ -11,6 +11,8 @@
             <th>Foto</th>
             <th>Apodo</th>
             <th>Lema</th>
+            <th>Puntos</th>
+            <th>Dias Inscrito</th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +23,8 @@
                         <td><div><img src="{{asset('/images/socios/'.$rankingUsers[$i]->image)}}" height="20" width="20"/></div></td>
                         <?php echo '<td>'.$rankingUsers[$i]->apodo.'</td>';
                         echo '<td>'.$rankingUsers[$i]->lema.'</td>';
+                        echo '<td>'.$arrayPuntos[$i].'</td>';
+                        echo '<td>'.$arrayDias[$i].'</td>';
                     echo '</tr>';
                 $num++;
             }

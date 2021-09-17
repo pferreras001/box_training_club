@@ -29,7 +29,6 @@ Route::get('/aviso_legal', 'App\Http\Controllers\PagesController@avisoLegal')->n
 
 
 
-
 //rutas para el blog
 Route::get('/blog', 'App\Http\Controllers\BlogController@blog')->name('blog');
 Route::post('/blog', 'App\Http\Controllers\BlogController@blog_search')->name('blog');
@@ -61,6 +60,7 @@ Route::post('/insertar_colab', 'App\Http\Controllers\AdminController@insertar_co
 Route::get('/editar_colab/{id}', 'App\Http\Controllers\AdminController@editar_colab')->name('editar_colab');
 Route::post('/editar_colab', 'App\Http\Controllers\AdminController@update_colab')->name('update_colab');
 Route::get('/eliminar_colab/{id}', 'App\Http\Controllers\AdminController@eliminar_colab')->name('eliminar_colab');
+Route::post('/update_fightwood', 'App\Http\Controllers\AdminController@update_fightwood')->name('update_fightwood');
 
 
 
@@ -88,3 +88,4 @@ Route::get('/colaboradores', 'App\Http\Controllers\SociosController@colaboradore
 Route::get('/ranking', 'App\Http\Controllers\SociosController@ranking')->name('ranking');
 Route::get('/normativa', 'App\Http\Controllers\SociosController@normativa')->name('normativa');
 Route::get('/reservas', 'App\Http\Controllers\SociosController@reservas')->name('reservas');
+Route::get('/fightwood', 'App\Http\Controllers\SociosController@fightwood')->name('fightwood');
