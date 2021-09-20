@@ -20,7 +20,6 @@ class UserController extends Controller
           'email'=>'required',
           'nombre'=>'required',
           'apellidos'=>'required',
-          'birth_date'=>'required',
       ]);
       $confirmation=Hash::make(random_int(10000,99999));
       $recovery=Hash::make(random_int(10000,99999));
@@ -32,7 +31,6 @@ class UserController extends Controller
           'email'=>$req->input('email'),
           'name'=>$req->input('nombre'),
           'surname'=>$req->input('apellidos'),
-          'birth_date'=>$req->input('birth_date'),
           'confirmed'=>0,
           'confirmation_code'=>preg_replace('/[^A-Za-z0-9\-]/', '', $confirmation),
           'recovery_code'=>preg_replace('/[^A-Za-z0-9\-]/', '', $recovery),
