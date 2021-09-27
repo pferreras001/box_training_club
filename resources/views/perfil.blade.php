@@ -23,6 +23,9 @@
       <div class="div_editar">
         <a class="btn" href="{{route('modificar_perfil',['id' =>$user->id])}}">Editar perfil</a>
       </div>
+      <div class="div_uso">
+        Recuerda que tu perfil solo se mantiene mientras estés dado de alta, si te das de baja perderás tus trofeos.
+      </div>
     </div>
     <div class="perfil__puntuaciones">
       <div class="div_lvl puntuacion">
@@ -95,53 +98,6 @@
         </div>
       </div>
       @endforeach
-
-    <!--<div class="text-white">
-        <a href="{{route('modificar_perfil',['id' =>$user->id])}}">Editar perfil.</a>
-        <img src="{{asset('/images/socios/'.$user->image)}}" width="200" height="250" >
-        <h1>{{$user->apodo}}</h1>
-        <h1>{{$user->name}} {{$user->surname}}</h1>
-        <h1>{{$user->lema}}</h1>
-        <h2>NIVEL: {{$nivel}}  PUNTOS :{{$puntos}}</h2>
-        <h3>Dias inscrito : {{$dias}}</h3>
-        <h3>Rango : {{$rango}}</h3>
-        @foreach($trofeos as $trofeo)
-        <table class="text-white">
-        <tbody>
-          <tr>
-            <td>{{$trofeo->skill_name}}</td>
-            <?php $copas=explode(',',$trofeo->trofeos) ?>
-            <?php $num = 0?>
-            @foreach($copas as $copa)
-            <?php $numcopa = explode('/',$copa)[0]?>
-            <?php $nombrecopa = explode('/',$copa)[1]?> 
-            <td>
-                {{$nombrecopa}} <br>
-                @if($numcopa=='0')
-                    @if($num==0)
-                        0/1
-                    @else
-                        0/3
-                    @endif
-                 @elseif($numcopa=='1')
-                 1/3
-                @elseif($numcopa=='2')
-                 2/3
-                @elseif($numcopa=='3')
-                    @if($num==0)
-                        1/1
-                    @else
-                        3/3
-                    @endif
-                @endif
-            </td>
-            <?php $num = 1?>
-            @endforeach
-          </tr>
-        </tbody>
-        </table>
-        @endforeach
-    </div>-->
     </div>
   </div>
 </section>

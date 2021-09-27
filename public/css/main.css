@@ -2500,6 +2500,14 @@ nav ul.dropdown-list {
   width: 100%;
 }
 
+.perfil__container .perfil__info .div_uso {
+  color: #FFE33C;
+  font-family: "ApercuPro-Medium", sans-serif;
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
 .perfil__container .perfil__puntuaciones {
   margin-top: 100px;
 }

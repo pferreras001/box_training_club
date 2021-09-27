@@ -250,6 +250,7 @@ function step(selfItem, nextItem) {
   $(selfItem).removeClass("blink");
   $(nextItem).removeClass("blocked");
   $(nextItem).addClass("blink");
+  $(selfItem).attr('onclick','');
 }
 
 function showLema(selfItem){

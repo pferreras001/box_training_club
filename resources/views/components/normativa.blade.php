@@ -137,8 +137,35 @@ Para aguas menores, los SOCIOS MASCULINOS que usen SOLO EL URINARIO DE PARED.
     <div>
 Por favor, participemos tod@s del mantenimiento en buen estado del Club y sus instalaciones; secándose dentro de la ducha y FREGANDO AL TERMINAR LA DUCHA si se hace charco, CERRANDO GRIFOS, tirando las basuras al cubo etc. 
     </div>
+    <h2>COMUNICACIONES CON EL CLUB</h2>
+    <div>
+- Boca a boca con los Coach.<br>
+- Buzón de sugerencias.<br>
+- Mensajes por la App Aimharder.<br>
+- WhatsApp y teléfono del Club 600466967 (08:00 a 20:00h) - 843631510.<br>
+- info@boxtrainingclub.com
+    </div>
+    <h2>CANAL DE NOTICIAS CLUB</h2>
+    <div>
+Abre este enlace para unirte al grupo de notificaciones de BOX TRAINING CLUB en:<br><br>
+<a href="https://chat.whatsapp.com/JpYlsTjNRMDA0aU9LaZYmD">WHATSAPP</a><br>
+<a href="https://t.me/joinchat/AAAAAFQOd9BHrgE-uOoRVQ  ">TELEGRAM</a>
+    </div><br>
+    <div>
+Estar en forma ES promover la salud por medio de hábitos saludables, alimentación sana y un pensamiento correcto y positivo.<br><br>
+
+Estar en forma ES tener un corazón fuerte y resistente, una musculatura capaz de trabajo extenso e intenso, una mente lúcida y desarrollada y una voluntad que sea capaz de propulsar tus deseos.<br><br>
+
+Y estar en forma definitivamente ES, no ir en contra de uno mismo en cualquiera de sus aspectos, muy al contrario es desearse lo mejor para el bienestar personal.<br><br>
+    </div>
     <div>
 ¡Mejoremos y crezcamos juntos, aportando lo mejor de nosotros y cuidando del excelente ambiente que disfrutamos la BOX FAMILITY! 
+    </div>
+    <div style="width: 100%; text-align: center;"><br><br>
+Strengthen spirits through mind & physique<br>
+(Fortalecer espíritus a través de la mente y el cuerpo)<br>
+BOX TRAINING CLUB<br>
+–Since 2004–
     </div>
   </div>
 </section>
