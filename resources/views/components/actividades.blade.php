@@ -532,7 +532,7 @@ Individual, en pareja o corporativo.</h3>
       <div class="right">
         <table>
           <tr>
-            <th>SESIÓN 120'</th>
+            <th>10 SESIONES DE 120'</th>
           </tr>
         </table>
       </div>
@@ -553,7 +553,7 @@ golpeo y habilidades varias de agilidad y destreza.</h3>
       <div class="right">
         <table>
           <tr>
-            <th>SESIÓN 120'</th>
+            <th>10 SESIONES DE 120'</th>
           </tr>
         </table>
       </div>

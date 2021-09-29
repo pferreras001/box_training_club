@@ -3,6 +3,7 @@
 }
 
 .actividades__actividad{
+  border-top: 2px $color-yellow solid;
   display: flex;
   flex-direction: column;
 }
@@ -223,6 +224,7 @@
 }
 
 .actividades__actividad{
+  border: 0px;
   flex-direction: row;
   flex-wrap: wrap;
   height: 650px;

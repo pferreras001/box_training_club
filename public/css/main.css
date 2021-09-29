@@ -2000,6 +2000,7 @@ nav ul.dropdown-list {
 }
 
 .actividades__actividad {
+  border-top: 2px #FFE33C solid;
   display: flex;
   flex-direction: column;
 }
@@ -2217,6 +2218,7 @@ nav ul.dropdown-list {
   }
 
   .actividades__actividad {
+    border: 0px;
     flex-direction: row;
     flex-wrap: wrap;
     height: 650px;
@@ -2654,6 +2656,14 @@ nav ul.dropdown-list {
 
 .normatia__container div {
   font-family: "ApercuPro-Medium", sans-serif;
+}
+
+.fightwood__container img {
+  width: 100%;
+}
+
+.fightwood__container .btn {
+  margin: auto;
 }
 
 body {
