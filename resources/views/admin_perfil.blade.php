@@ -70,8 +70,8 @@
           @endif
           
           <ul>
-            <li><a class="btn" href="{{route('disminuircopa',['id' =>$num.' '.$user->email.' '.$trofeo->skill_name])}}">-</a></li>
-            <li><a class="btn" href="{{route('aumentarcopa',['id' =>$num.' '.$user->email.' '.$trofeo->skill_name])}}">+</a></li>
+            <li><a class="btn" href="{{route('disminuircopa',['id' =>$num.','.$user->email.','.$trofeo->skill_name])}}">-</a></li>
+            <li><a class="btn" href="{{route('aumentarcopa',['id' =>$num.','.$user->email.','.$trofeo->skill_name])}}">+</a></li>
           </ul>
         </div>
         <?php $num = $num + 1?>

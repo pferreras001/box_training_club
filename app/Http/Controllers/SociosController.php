@@ -91,10 +91,10 @@ class SociosController extends Controller
             $fecha_entrada=$user->enter_date;
             $date = new DateTime($fecha_entrada);
             $now = new DateTime();
-            $interval = $date->diff($now);
-            $dias=$interval->format('%a');
+            $dias =$now->getTimestamp() - $date->getTimestamp();
+            //$dias=$interval->format('%S');
             //para conseguir el ranking basta con hacer un for y comparar sus puntos con los de otro para ver en que posicion esta empezando por 1 y de ahi sumando.
-            $usuarios = User::where('email',"!=",'admin@boxtrainingclub.com')->get();;
+            $usuarios = User::where('email',"!=",'admin@boxtrainingclub.com')->where('email',"!=",$user->email)->get();
                 $rango=1;
                 foreach($usuarios as $usuario){
                     if($usuario->email!=$user->email){
@@ -111,17 +111,18 @@ class SociosController extends Controller
                         $nivel_temp=intval($nivel_temp*1.2);
                         $fecha_entrada=$usuario->enter_date;
                         $date = new DateTime($fecha_entrada);
-                        $now = new DateTime();
                         $interval = $date->diff($now);
-                        $dias_temp=$interval->format('%a');
+                        $dias_temp=$now->getTimestamp() - $date->getTimestamp();
                         if($puntos_temp>$puntos){
                             $rango=$rango+1;
                         }
-                        if($puntos_temp==$puntos and $dias_temp>$dias){
+                        else if($puntos_temp===$puntos and $dias_temp>$dias){
                             $rango=$rango+1;
                         }
                     }  
                 }
+            //dd($rango);
+            //dd($rango,$user->email,$puntos);
             if($rango<=10){
                 $rankingUsers[$rango-1]=$user;
                 $fecha_entrada=$user->enter_date;
