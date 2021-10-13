@@ -941,7 +941,7 @@ nav ul.dropdown-list {
 
 .entrenamiento_personal__container h1 span {
   color: #FFE33C;
-  font-size: 71px;
+  font-size: 52px;
 }
 
 .entrenamiento_personal__container h3 a {
@@ -1220,7 +1220,8 @@ nav ul.dropdown-list {
 .contacto__form__right h1 {
   align-self: center;
   font-size: 53px;
-  margin: auto;
+  margin: 50px auto;
+  text-align: center;
   width: 90%;
 }
 
@@ -1240,6 +1241,7 @@ nav ul.dropdown-list {
   align-self: center;
   font-size: 53px;
   margin: auto;
+  text-align: center;
   width: 90%;
 }
 
@@ -1298,6 +1300,8 @@ nav ul.dropdown-list {
   }
 
   .contacto__form__right h1 {
+    margin: auto;
+    text-align: left;
     width: 600px;
   }
 
@@ -1322,6 +1326,7 @@ nav ul.dropdown-list {
 
   .contacto__telefono h1 {
     margin-left: 150px;
+    text-align: left;
     width: 602px;
   }
 }
@@ -1734,25 +1739,29 @@ nav ul.dropdown-list {
 .cuotas__tarifa--jab {
   background: url("/img/cuotas_home/jab.png") no-repeat, white;
   background-size: cover;
+  background-position: right;
 }
 
 .cuotas__tarifa--cross {
   background: url("/img/cuotas_home/cross.png") no-repeat, white;
   background-size: cover;
+  background-position: right;
 }
 
 .cuotas__tarifa--hook {
   background: url("/img/cuotas_home/hook.png") no-repeat, white;
   background-size: cover;
+  background-position: right;
 }
 
 .cuotas__tarifa--tyson {
   background: url("/img/cuotas_home/tyson.png") no-repeat, white;
   background-size: cover;
+  background-position: right;
 }
 
 .cuotas__left {
-  color: black;
+  color: white;
   display: flex;
   font-size: 20px;
   padding: 20px;
@@ -1806,7 +1815,7 @@ nav ul.dropdown-list {
 }
 
 .cuotas__right__top h2 {
-  color: black;
+  color: white;
   font-size: 38px;
 }
 
@@ -1821,6 +1830,10 @@ nav ul.dropdown-list {
 @media only screen and (min-width: 768px) {
   .cuotas__top h1 {
     font-size: 60px;
+  }
+
+  .cuotas__top h2 {
+    color: black;
   }
 
   .cuotas__top h3 {
@@ -1859,6 +1872,10 @@ nav ul.dropdown-list {
 @media only screen and (min-width: 1025px) {
   .cuotas__tarifa {
     flex-direction: row;
+  }
+
+  .cuotas__left {
+    color: black;
   }
 
   .cuotas__left, .cuotas__right {
@@ -1903,6 +1920,10 @@ nav ul.dropdown-list {
   .cuotas__right--tyson {
     background: url("/img/cuotas_home/tyson.png") no-repeat, white;
     background-size: cover;
+  }
+
+  .cuotas__right__top h2 {
+    color: black;
   }
 }
 .cookie-consent {
@@ -2008,61 +2029,73 @@ nav ul.dropdown-list {
 .actividades__actividad__1 {
   background: url("/img/actividades/box_training-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__2 {
   background: url("/img/actividades/pads_&_mits-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__3 {
   background: url("/img/actividades/bag_assaults-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__4 {
   background: url("/img/actividades/fightwod-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__5 {
   background: url("/img/actividades/hit_circuit-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__6 {
   background: url("/img/actividades/hit_&_run-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__7 {
   background: url("/img/actividades/skills-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__8 {
   background: url("/img/actividades/combat-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__9 {
   background: url("/img/actividades/kids_&_you-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__10 {
   background: url("/img/actividades/personal_training-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__11 {
   background: url("/img/actividades/summer_camp-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad__12 {
   background: url("/img/actividades/summer_camp_teens-s.png") no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .actividades__actividad .left {
@@ -2160,61 +2193,73 @@ nav ul.dropdown-list {
   .actividades__actividad__1 {
     background: url("/img/actividades/box_training.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__2 {
     background: url("/img/actividades/pads_&_mits.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__3 {
     background: url("/img/actividades/bag_assaults.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__4 {
     background: url("/img/actividades/fightwod.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__5 {
     background: url("/img/actividades/hit_circuit.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__6 {
     background: url("/img/actividades/hit_&_run.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__7 {
     background: url("/img/actividades/skills.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__8 {
     background: url("/img/actividades/combat.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__9 {
     background: url("/img/actividades/kids_&_you.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__10 {
     background: url("/img/actividades/personal_training.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__11 {
     background: url("/img/actividades/summer_camp.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad__12 {
     background: url("/img/actividades/summer_camp_teens.png") no-repeat;
     background-size: cover;
+    background-position: left;
   }
 
   .actividades__actividad {

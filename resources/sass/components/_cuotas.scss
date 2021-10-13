@@ -38,25 +38,29 @@
 .cuotas__tarifa--jab{
   background: url('/img/cuotas_home/jab.png') no-repeat,white;
   background-size:cover;
+  background-position: right;
 }
 
 .cuotas__tarifa--cross{
   background: url('/img/cuotas_home/cross.png') no-repeat,white;
   background-size:cover;
+  background-position: right;
 }
 
 .cuotas__tarifa--hook{
   background: url('/img/cuotas_home/hook.png') no-repeat,white;
   background-size:cover;
+  background-position: right;
 }
 
 .cuotas__tarifa--tyson{
   background: url('/img/cuotas_home/tyson.png') no-repeat,white;
   background-size:cover;
+  background-position: right;
 }
 
 .cuotas__left{
-  color: $color-black;
+  color: $color-white;
   display: flex;
   font-size: 20px;
   padding: 20px;
@@ -110,7 +114,7 @@
 }
 
 .cuotas__right__top h2{
-  color: $color-black;
+  color: $color-white;
   font-size: 38px;
 }
 
@@ -129,6 +133,10 @@
 
 .cuotas__top h1{
   font-size: 60px;
+}
+
+.cuotas__top h2{
+  color: $color-black;
 }
 
 .cuotas__top h3{
@@ -170,6 +178,10 @@
 
 .cuotas__tarifa{
   flex-direction: row;
+}
+
+.cuotas__left{
+  color: $color-black;
 }
 
 .cuotas__left,.cuotas__right{
@@ -214,6 +226,10 @@
 .cuotas__right--tyson{
   background: url('/img/cuotas_home/tyson.png') no-repeat,white;
   background-size:cover;
+}
+
+.cuotas__right__top h2{
+  color: $color-black;
 }
 
 }

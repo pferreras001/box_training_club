@@ -43,7 +43,8 @@
 .contacto__form__right h1{
   align-self: center;
   font-size: 53px;
-  margin: auto;
+  margin: 50px auto;
+  text-align: center;
   width: 90%;
 }
 
@@ -63,6 +64,7 @@
   align-self: center;
   font-size: 53px;
   margin: auto;
+  text-align: center;
   width: 90%;
 }
 
@@ -128,6 +130,8 @@
 }
 
 .contacto__form__right h1{
+  margin: auto;
+  text-align: left;
   width: 600px;
 }
 
@@ -152,6 +156,7 @@
 
 .contacto__telefono h1{
   margin-left: 150px;
+  text-align: left;
   width: 602px;
 }
 
