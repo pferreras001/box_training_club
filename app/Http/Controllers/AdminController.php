@@ -222,7 +222,7 @@ class AdminController extends Controller
     public function admin_perfil($id){
         if(session('tipo')=='admin'){
              $user = User::where('email',"=",$id)->first();
-             $trofeos= Skill::where('user_mail',"=",$id)->get();
+             $trofeos= Skill::where('user_mail',"=",$id)->orderBy('skill_name')->get();
              $nivel=0;
              foreach($trofeos as $trofeo){
                 $trophys=explode(',', $trofeo->trofeos);

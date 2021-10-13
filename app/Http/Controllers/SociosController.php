@@ -19,7 +19,7 @@ class SociosController extends Controller
     public function perfil(){//vista de perfil desde punto de vista del usuario
     if(session('tipo')=='user'){
         $user = User::where('email',"=",session('email'))->first();
-        $trofeos= Skill::where('user_mail',"=",session('email'))->get();
+        $trofeos= Skill::where('user_mail',"=",session('email'))->orderBy('skill_name')->get();
         $nivel=0;
         foreach($trofeos as $trofeo){
             $trophys=explode(',', $trofeo->trofeos);
