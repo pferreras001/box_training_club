@@ -123,7 +123,7 @@ class SociosController extends Controller
                 }
             //dd($rango);
             //dd($rango,$user->email,$puntos);
-            if($rango<=10){
+            if($rango<=20){
                 $rankingUsers[$rango-1]=$user;
                 $fecha_entrada=$user->enter_date;
                 $date = new DateTime($fecha_entrada);
