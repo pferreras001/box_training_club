@@ -16,6 +16,7 @@
         <li><a href="https://www.tiktok.com/@boxtrainingclub" target="_blank"><?php require('svg/footer/tik-tok.svg')?></a></li>
         <li><a href="https://www.youtube.com/user/BoxTrainingDonostia" target="_blank"><?php require('imports/svg/youtube.svg')?></a></li>
         <li><a href="https://www.linkedin.com/company/box-training-club" target="_blank"><?php require('svg/footer/linkedin.svg')?></a></li>
+        <li><a href="https://twitter.com/BOXTRAININGCLUB target="_blank"><?php require('imports/svg/twitter.svg')?></a></li>
       </ul>
     </div>
   </div>
