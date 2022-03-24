@@ -20,11 +20,11 @@
              for ($i = 0; $i <= count($rankingUsers)-1; $i++) {
                     echo '<tr>';
                         echo '<td>'.$num.'</td>';?>
-                        <td><div><img src="{{asset('/images/socios/'.$rankingUsers[$i]->image)}}" height="20" width="20"/></div></td>
-                        <?php echo '<td>'.$rankingUsers[$i]->apodo.'</td>';
-                        echo '<td>'.$rankingUsers[$i]->lema.'</td>';
-                        echo '<td>'.$arrayPuntos[$i].'</td>';
-                        echo '<td>'.$arrayDias[$i].'</td>';
+                        <td><div><img src="{{asset('/images/socios/'.$rankingUsers[$i][1]->image)}}" height="20" width="20"/></div></td>
+                        <?php echo '<td>'.$rankingUsers[$i][1]->apodo.'</td>';
+                        echo '<td>'.$rankingUsers[$i][1]->lema.'</td>';
+                        echo '<td>'.$rankingUsers[$i][0].'</td>';
+                        echo '<td>'.$rankingUsers[$i][2].'</td>';
                     echo '</tr>';
                 $num++;
             }
