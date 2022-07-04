@@ -73,8 +73,6 @@ class SociosController extends Controller
     public function ranking(){//vista de perfil desde punto de vista del usuario
     if(session('tipo')=='user'){
         $rankingUsers = [];
-        $arrayPuntos = [];
-        $arrayDias = [];
         $users = User::where('email',"!=",'admin@boxtrainingclub.com')->get();
         foreach ($users as $user){
             $trofeos= Skill::where('user_mail',"=",$user->email)->get();
@@ -91,10 +89,13 @@ class SociosController extends Controller
             $fecha_entrada=$user->enter_date;
             $date = new DateTime($fecha_entrada);
             $now = new DateTime();
-            $dias =$now->getTimestamp() - $date->getTimestamp();
+            $interval = $date->diff($now);
+            $dias=$interval->format('%a');
+            $tupla=[$puntos,$user,$dias];
+            array_push($rankingUsers,$tupla);
             //$dias=$interval->format('%S');
             //para conseguir el ranking basta con hacer un for y comparar sus puntos con los de otro para ver en que posicion esta empezando por 1 y de ahi sumando.
-            $usuarios = User::where('email',"!=",'admin@boxtrainingclub.com')->where('email',"!=",$user->email)->get();
+            /*$usuarios = User::where('email',"!=",'admin@boxtrainingclub.com')->where('email',"!=",$user->email)->get();
                 $rango=1;
                 foreach($usuarios as $usuario){
                     if($usuario->email!=$user->email){
@@ -132,17 +133,39 @@ class SociosController extends Controller
                 $dias=$interval->format('%a');
                 $arrayPuntos[$rango-1]=$puntos;
                 $arrayDias[$rango-1]=$dias;
-            }
+            }*/
         }
+        usort($rankingUsers, function($a, $b)
+              {
+                if ($a[0] == $b[0]) {
+                    if ($a[2] == $b[2]) {
+                        return 0;
+                    }
+                    else if($a[2] > $b[2]){
+                        return -1;
+                    }
+                    return 1;
+                }   
+                else if($a[0] > $b[0]){
+                        return -1;
+                }
+                  return 1;
+              });
         //array_reverse($rankingUsers,true);
-        //dd($rankingUsers[2]->name);
-        return view('ranking',compact('rankingUsers','arrayPuntos','arrayDias'));
+        //dd($rankingUsers[2][1]->name);
+        return view('ranking',compact('rankingUsers'));
     }
     else{
         return redirect('/');
     }
   }
-    public function modificar_perfil($id){
+    public function cmp($a, $b) {
+        if ($a[0] == $b[0]) {
+        return 0;
+        }   
+        return ($a < $b) ? -1 : 1; 
+    }
+    function modificar_perfil($id){
         if(session('tipo')=='user'){
             $user=User::find($id);
             return view('modificar_perfil',compact('user'));
