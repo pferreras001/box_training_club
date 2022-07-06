@@ -112,6 +112,10 @@
   width: 0 !important;
 }
 
+.dropdown-item {
+  color: black !important;
+}
+
 .nav-list a:hover::after {
   width: 100%;
 }
@@ -655,6 +659,7 @@ nav ul.dropdown-list {
 
 .box__info h3 {
   font-size: 12px;
+  margin-bottom: 7px;
 }
 
 .box__info .icon {
@@ -664,7 +669,7 @@ nav ul.dropdown-list {
 
 .box__info ul {
   font-size: 7px;
-  margin: auto;
+  margin: -6px auto;
   width: 145px;
 }
 

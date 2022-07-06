@@ -16,7 +16,7 @@
                     @endif
               @endforeach
           @else
-            <option selected="selected">--escoge una categoría--</option>
+            <option selected="selected">--{{ __('blog.escoge') }}--</option>
             @foreach($etiquetas as $etiqueta)
                 <option>{{$etiqueta->etiqueta}}</option>
             @endforeach

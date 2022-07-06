@@ -1,36 +1,35 @@
 <section class="section section__contacto">
   <div class="contacto__telefono">
     <h1 data-aos="fade-right">
-      CONTACTA CON NOSOTROS VÍA <span>TELÉFONO </span>O <span>WHATSAPP </span>AL <span>600 46 69 67</span>
+      {!! __('contacto.contacta') !!}
     </h1>
   </div>
   <div class="contacto__form">
     <div data-aos="fade-right" class="contacto__form__left">
       <form method="POST" action="{{route('contacto')}}">
       @csrf
-        <input type="email" name="email" required="true" placeholder="Email"><br>
+        <input type="email" name="email" required="true" placeholder="{{ __('contacto.email') }}"><br>
           @isset($asunto)
             <input type="text" name="asunto" required="true" value="{{$asunto}}"><br>
           @else
-          <input type="text" name="asunto" required="true" placeholder="Asunto"><br>
+          <input type="text" name="asunto" required="true" placeholder="{{ __('contacto.asunto') }}"><br>
          @endisset
-        <textarea name="mensaje" required="true" placeholder="Mensaje..."></textarea><br>
+        <textarea name="mensaje" required="true" placeholder="{{ __('contacto.mensaje') }}..."></textarea><br>
 
-        <button type="submit" class="btn btn__contacto">Enviar</button><br>
+        <button type="submit" class="btn btn__contacto">{{ __('contacto.enviar') }}</button><br>
 
       </form>
     </div>
     <div data-aos="fade-left" class="contacto__form__right">
       <h1>
-        ENVÍANOS UN <span>MENSAJE</span> CON TUS PREGUNTAS.<br><br>
-        ¡TE RESPONDEREMOS <span>LO ANTES POSIBLE</span>!
+        {!! __('contacto.envianos') !!}
       </h1>
     </div>
   </div>
   <div class="contacto__maps">
     <div class="contacto__maps__info">
       <div class="contacto__yellow_box contacto__yellow_box__transporte">
-        <a download="" href="img/contacto/transporte.jpg">Descargar información de transporte y comunicaciones</a>
+        <a download="" href="img/contacto/transporte.jpg">{{ __('contacto.descargar') }}</a>
       </div>
       <div class="contacto__yellow_box contacto__yellow_box__contacto">
         <ul>

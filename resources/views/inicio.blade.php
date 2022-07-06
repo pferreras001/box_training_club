@@ -20,7 +20,7 @@
 
   <section data-aos="fade-right" class="section section__noticias">
     <div class="noticias__container container">
-      <h1 class="section-title">Noticias ></h1>
+      <h1 class="section-title">{{ __('noticias.noticias') }} ></h1>
       <div class="noticias__entrys">
         @foreach($blogentrys as $blogentry)
         <div class="noticias__entry">

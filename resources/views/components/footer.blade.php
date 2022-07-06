@@ -21,6 +21,6 @@
     </div>
   </div>
   <div class="footer__bottom">
-    <span>Box Training Club © {{ now()->year }} | <a href="{{route('aviso_legal')}}">Aviso Legal</a></span>
+    <span>Box Training Club © {{ now()->year }} | <a href="{{route('aviso_legal')}}">{{ __('footer.aviso') }}</a></span>
   </div>
 </section>

@@ -88,6 +88,10 @@
   width: 0 !important;
 }
 
+.dropdown-item{
+  color: $color-black !important;
+}
+
 .nav-list a:hover::after {
     width: 100%;
     //transition: width .3s;

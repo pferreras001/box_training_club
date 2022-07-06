@@ -10,28 +10,37 @@
         </div>
         <ul class="nav-list">
             <li class="{{ (Request::route()->getName()=='inicio') ? 'active' : '' }}">
-                <a href="{{ route('inicio') }}">Inicio</a>
+                <a href="{{ route('inicio') }}">{{ __('menu.inicio') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='horarios') ? 'active' : '' }}">
-              <a href="{{ route('horarios') }}">Horarios</a>
+              <a href="{{ route('horarios') }}">{{ __('menu.horarios') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='actividades') ? 'active' : '' }}">
-                <a href="{{ route('actividades') }}">Actividades</a>
+                <a href="{{ route('actividades') }}">{{ __('menu.actividades') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='cuotas') ? 'active' : '' }}">
-              <a href="{{ route('cuotas') }}">Cuotas</a>
+              <a href="{{ route('cuotas') }}">{{ __('menu.cuotas') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='blog') ? 'active' : '' }}">
-              <a href="{{ route('blog') }}">Blog</a>
+              <a href="{{ route('blog') }}">{{ __('menu.blog') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='galeria') ? 'active' : '' }}">
-              <a href="{{ route('galeria') }}">Galería</a>
+              <a href="{{ route('galeria') }}">{{ __('menu.galeria') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='tienda') ? 'active' : '' }}">
-              <a href="{{ route('tienda') }}">Tienda</a>
+              <a href="{{ route('tienda') }}">{{ __('menu.tienda') }}</a>
             </li>
             <li class="{{ (Request::route()->getName()=='contacto') ? 'active' : '' }}">
-              <a href="{{ route('contacto') }}">Contacto</a>
+              <a href="{{ route('contacto') }}">{{ __('menu.contacto') }}</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ __('menu.idiomas') }}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{ url('locale/es') }}">Castellano</a>
+                <a class="dropdown-item" href="{{ url('locale/eus') }}">Euskara</a>
+              </div>
             </li>
             @auth
             

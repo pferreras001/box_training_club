@@ -15,25 +15,25 @@
 
     <fieldset class="fieldset fieldset__login">
         @isset($fail)
-        <span class="errmsg errmsg__login">*Usuario o contraseña incorrectos</span>
+        <span class="errmsg errmsg__login">{{ __('login.incorrecto') }}</span>
         @endisset
         
         @isset($email)
             <input type="text" name="email" value="{{ $email }}"><br>
         @else
-            <input type="text" name="email" placeholder="Email"><br>
+            <input type="text" name="email" placeholder="{{ __('login.email') }}"><br>
         @endisset
-      <input type="password" name="password" placeholder="Contraseña"><br>
+      <input type="password" name="password" placeholder="{{ __('login.contrasena') }}"><br>
 
-      <button type="submit" class="btn btn__login">Iniciar Sesión</button><br>
+      <button type="submit" class="btn btn__login">{{ __('login.iniciar') }}</button><br>
 
-      <span><a href="{{route('recover_password')}}">He olvidado mi contraseña</a></span>
+      <span><a href="{{route('recover_password')}}">{{ __('login.olvidado') }}</a></span>
 
     </fieldset>
 
     </form>
 
-    <a href="{{route('contacto')}}"><h3>¡ÚNETE AL CLUB!</h3></a>
+    <a href="{{route('contacto')}}"><h3>{{ __('login.unete') }}</h3></a>
 
   </div>
 
