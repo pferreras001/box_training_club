@@ -165,6 +165,11 @@ nav ul.dropdown-list {
     animation: moveUp .5s ease-in-out forwards;
 }
 
+.nav-list li .icon{
+  height: 23px;
+  fill: $color-gray-1;
+}
+
 @keyframes moveUp {
     0% {
         opacity: 0;

@@ -20,4 +20,74 @@ wpac_init.push({widget: 'GoogleReview', id: 31137, place_id: 'ChIJC68IisGvUQ0ROV
 <script>
   $(".wp-google-review").addClass("custom__review");
 </script>
+
+
+<?php
+
+/**
+ * Get google reviews
+ * @return array Google reviews data
+ */
+function get_google_reviews(){
+
+  // URL to fetch
+  $google_api = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJC68IisGvUQ0ROVi9jr1NX0U&sensor=true&key=31137';
+
+  // Fetch reviews with cURL
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_URL, $google_api);
+
+  $response = curl_exec($ch);
+  curl_close($ch);
+
+  // JSON decode the text to associative array
+  return json_decode($response, 'assoc');
+}
+
+// Get reviews
+$g_response = get_google_reviews();
+
+// See if we got some reviews
+if ($g_response && $g_response['result'] && $g_response['result']['reviews']) {
+  // Loop through the reviews
+  foreach ($g_response['result']['reviews'] as $review) {
+    // Output HTML for reviews
+    ?>
+    <dl>
+      <dt> date </dt>
+      <dd><?php echo $review['time'] ?></dd>
+      <dt> rating </dt>
+      <dd><?php echo $review['rating'] ?></dd>
+      <dt> name </dt>
+      <dd><?php echo $review['author_name'] ?></dd>
+      <dt> content </dt>
+      <dd><?php echo $review['text'] ?></dd>
+    </dl>
+    <?php
+  }
+}
+?>
+
+<!-- OPTIONAL: Some styles to make things look nicer -->
+<style>
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    font: 1rem/1.4 sans-serif;
+    max-width: 500px;
+    margin: 2em auto 3em;
+  }
+  dt, dd {
+    margin: .5em 0;
+  }
+  dt {
+    flex: 1 1 25%;
+  }
+  dd {
+    flex: 1 1 75%;
+  }
+</style>
 </section>

@@ -7,7 +7,7 @@
 <body>
     <p>Para recuperar su contraseña, haga clic en el siguiente enlace </p>
     <div>
-        https://boxtrainingclub.com/recover_form/{{$code}}
+        https://begolardiespsicologia/recover_form/{{$code}}
     </div>
 </body>
 </htlm>
