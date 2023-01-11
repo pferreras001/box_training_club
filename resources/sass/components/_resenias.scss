@@ -17,3 +17,27 @@
   margin-top: 50px;
   width: 200px;
 }
+
+.resenias__box{
+  background-color: $color-white-google;
+  color: $color-black;
+  font-family: Helvetica, Sans-Serif;
+  padding:20px;
+  width:60%;
+  margin: 0 auto;
+}
+
+.resenias__box__head{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  gap: 10px;
+}
+
+.resenias__box li{
+  display:inline;
+}
+
+.resenias__box li img{
+  height: 15px;
+}

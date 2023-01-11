@@ -191,6 +191,11 @@ nav ul.dropdown-list {
           animation: moveUp 0.5s ease-in-out forwards;
 }
 
+.nav-list li .icon {
+  height: 23px;
+  fill: #9A9A9A;
+}
+
 @-webkit-keyframes moveUp {
   0% {
     opacity: 0;
@@ -1015,6 +1020,30 @@ nav ul.dropdown-list {
   margin: auto;
   margin-top: 50px;
   width: 200px;
+}
+
+.resenias__box {
+  background-color: #fff;
+  color: black;
+  font-family: Helvetica, Sans-Serif;
+  padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.resenias__box__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.resenias__box li {
+  display: inline;
+}
+
+.resenias__box li img {
+  height: 15px;
 }
 
 .section__trabaja_con_nosotros {
